@@ -1,0 +1,189 @@
+{
+    "apiVersion": "1.0.0",
+    "swaggerVersion": "1.2",
+        "info":  {
+  "title": "CUAHSI HIS WaterOneFlow Web Services",
+    "description": "WaterOneFlow: using the series and service information, retrieve data from distributed data services. More information at <a href='http://his.cuahsi.org/wofws.html'>HIS Website</a>",
+
+
+  "contact": "busmgr@cuahsi.org"
+  
+},
+    "basePath": "http://water.sdsc.edu/lbrsdsc/ecrest",
+    "resourcePath": "/",
+    "produces": [
+        "application/xml"
+    ],
+    "authorizations": { },
+    "apis": [
+
+        {
+            "path": "/ecRest_1_0.svc/featureOfInterest",
+
+            "operations": [
+                {
+                    "httpMethod": "GET",
+                    "method": "GET",
+                    "summary": "Get siteListing",
+                    "produces": [
+                        "application/xml"
+                    ],
+                    "consumes": [ "text/xml" ],
+                    "nickname": "Sites",
+                    "authorizations": { },
+                    "parameters": [
+                        {
+
+                            "name": "station",
+                            "description": "site identifier",
+                            "required": false,
+                            "type": "string",
+                            "paramType": "query",
+                            "defaultValue": "LBR:USU-LBR-Mendon"
+                        },
+                        {
+                            "name": "network",
+                            "description": "Data Source",
+                            "required": false,
+                            "type": "string",
+                            "paramType": "query",
+                            "defaultValue": "http://water.sdsc.edu/lbrsdsc/ecrest",
+                            "enum": [
+                                "http://water.sdsc.edu/lbrsdsc/ecrest",
+                                "http://water.sdsc.edu/czo_udel/REST/waterml_2.svc/",
+                                "http://water.sdsc.edu/czo_psu/REST/waterml_2.svc/",
+                                "http://water.sdsc.edu/czo_merced/REST/waterml_2.svc/"
+                            ]
+
+                        }
+                    ],
+                    "responseMessages": [
+
+                        {
+                            "code": 404,
+                            "message": "Invalid location specified"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "path": "/ecRest_1_0.svc/observedProperty",
+
+            "operations": [
+                {
+                    "httpMethod": "GET",
+                    "method": "GET",
+                    "summary": "Get Variables",
+                    "produces": [
+                        "text/xml"
+                    ],
+                    "nickname": "Variables",
+                    "authorizations": { },
+                    "parameters": [
+                        {
+
+                            "name": "variable",
+                            "description": "variable",
+                            "required": false,
+                            "type": "string",
+                            "paramType": "query",
+                            "defaultValue": "LBR:USU10"
+                        },
+                        {
+                            "name": "network",
+                            "description": "Data Source",
+                            "required": false,
+                            "type": "string",
+                            "paramType": "query",
+                            "defaultValue": "http://water.sdsc.edu/lbrsdsc/ecrest",
+                            "enum": [
+                                "http://water.sdsc.edu/lbrsdsc/ecrest",
+                                "http://water.sdsc.edu/czo_udel/REST/waterml_2.svc/",
+                                "http://water.sdsc.edu/czo_psu/REST/waterml_2.svc/",
+                                "http://water.sdsc.edu/czo_merced/REST/waterml_2.svc/"
+                            ]
+                        }
+                    ],
+                    "responseMessages": [
+
+                        {
+                            "code": 404,
+                            "message": "Invalid variable specified"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "path": "/ecRest_1_0.svc/values",
+
+            "operations": [
+                {
+                    "httpMethod": "GET",
+                    "method": "GET",
+                    "summary": "Get WaterML2 timeseries",
+                    "produces": [
+                        "text/xml"
+                    ],
+                    "nickname": "Values",
+                    "authorizations": { },
+                    "parameters": [
+                        {
+                            "name": "station",
+                            "description": "site identifier",
+                            "required": true,
+                            "type": "string",
+                            "paramType": "query",
+                            "defaultValue": "LBR:USU-LBR-Mendon"
+                        },
+                        {
+                            "name": "variable",
+                            "description": "paramter code",
+                            "required": true,
+                            "type": "string",
+                            "paramType": "query",
+                            "defaultValue": "LBR:USU10"
+                        },
+                        {
+                            "name": "starttime",
+                            "description": "start date time",
+                            "required": false,
+                            "type": "dateTime",
+                            "paramType": "query"
+                        },
+                        {
+                            "name": "endtime",
+                            "description": "end date time",
+                            "required": false,
+                            "type": "dateTime",
+                            "paramType": "query"
+                        },
+                        {
+                            "name": "network",
+                            "description": "Data Source",
+                            "required": false,
+                            "type": "string",
+                            "paramType": "query",
+                            "defaultValue": "http://water.sdsc.edu/lbrsdsc/ecrest",
+                            "enum": [
+                                "http://water.sdsc.edu/lbrsdsc/ecrest",
+                                "http://water.sdsc.edu/czo_udel/REST/waterml_2.svc/",
+                                "http://water.sdsc.edu/czo_psu/REST/waterml_2.svc/",
+                                "http://water.sdsc.edu/czo_merced/REST/waterml_2.svc/"
+                            ]
+                        }
+                    ],
+                    "responseMessages": [
+
+                        {
+                            "code": 404,
+                            "message": "Invalid location,or variable specified"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+

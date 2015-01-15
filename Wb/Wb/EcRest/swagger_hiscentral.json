@@ -1,0 +1,243 @@
+{
+    "apiVersion": "1.0.0",
+    "swaggerVersion": "1.2",
+   "info":  {
+  "title": "CUAHSI HIS Central Web Services",
+    "description": "Search HIS Central, and retrieve series, and service information to access these data series. More information at <a href='http://his.cuahsi.org/hiscentral.html'>HIS Website</a> <div>These services interact with legacy rest interfaces and do not presently use EC web service query parameter names",
+
+  "contact": "busmgr@cuahsi.org"
+  
+},
+    "basePath": "http://water.sdsc.edu/hiscentral/webservices/hiscentral.asmx",
+    "resourcePath": "/",
+    "produces": [
+        "application/xml"
+    ],
+    "authorizations": {},
+    "apis": [
+        
+        {
+            "path": "/GetSearchableConcepts",
+            
+            "operations": [
+                {
+                    "httpMethod": "GET",
+                    "method": "GET",
+                    "summary": "Get Listing of Searchable Concepts",
+                    "produces": [
+                        "application/xml"
+                    ],
+					"consumes": ["text/xml"],
+                    "nickname": "Get Searchable Concepts",
+                    "authorizations": {},
+                    
+                    "responseMessages": [
+                        
+
+                    ]
+                }
+            ]
+        },
+		
+		 {
+            "path": "/getOntologyTree",
+            
+            "operations": [
+                {
+                    "httpMethod": "GET",
+                    "method": "GET",
+                    "summary": "Get the Ontology Tree of Concepts",
+                    "produces": [
+                        "application/xml"
+                    ],
+					"consumes": ["text/xml"],
+                    "nickname": "Get Searchable Concepts",
+                    "authorizations": {},
+                    "parameters": [
+                        {
+                            "name": "conceptKeyword",
+                            "description": "concept Keyword. Try Streamflow",
+                            "required": true,
+                            "type": "string",
+                            "paramType": "query"
+                        }
+						],
+                    "responseMessages": [
+                        
+
+                    ]
+                }
+            ]
+        },
+		{
+            "path": "/GetWaterOneFlowServiceInfo",
+            
+            "operations": [
+                {
+                    "httpMethod": "GET",
+                    "method": "GET",
+                    "summary": "Get Listing of Water One Flow Services in catalog",
+                    "produces": [
+                        "application/xml"
+                    ],
+					"consumes": ["text/xml"],
+                    "nickname": "Service Info",
+                    "authorizations": {},
+                    
+                    "responseMessages": [
+                        
+                        {
+                            "code": 500,
+                            "message": "Service Error"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "path": "/GetSeriesCatalogForBox2",
+            
+            "operations": [
+                {
+                    "httpMethod": "GET",
+                    "method": "GET",
+                    "summary": "Series Catalog in Box",
+                    "produces": [
+                        "text/xml"
+                    ],
+                    "nickname": "Series Catalog",
+                    "authorizations": {},
+
+                    "parameters": [
+                        {
+                            "name": "xmin",
+                            "description": "xmin, try -114",
+                            "required": "required",
+                            "type": "string",
+                            "paramType": "query",
+                            "defaultValue": "-114"
+                        },
+						{
+                            "name": "xmax",
+                            "description": "xmax, try -110",
+                            "required": "required",
+                            "type": "string",
+                            "paramType": "query",
+                            "defaultValue": "-110"
+                        },
+						{
+                            "name": "ymin",
+                            "description": "ymin, try 40",
+                            "required": "required",
+                            "type": "string",
+                            "paramType": "query",
+                            "defaultValue": "40"
+                        },
+						{
+                            "name": "ymax",
+                            "description": "ymax, try 42",
+                            "required": "required",
+                            "type": "string",
+                            "paramType": "query",
+                            "defaultValue": "42"
+                        },
+						{
+                            "name": "conceptKeyword",
+                            "description": "conceptKeyword, try streamflow",
+                            "required": "required",
+                            "type": "string",
+                            "paramType": "query",
+                            "defaultValue": "Temperature"
+                        }
+						,
+						{
+                            "name": "networkIDs",
+                            "description": "networkIDs,(try '52' or '1,2,4') comma separated network identifiers from GetWaterOneFlowServiceInfo or GetServicesInBox",
+                            "required": "required",
+                            "type":   "string",
+                            "paramType": "query",
+                            "defaultValue": "52"
+                        },
+						{
+                            "name": "beginDate",
+                            "description": "starttime  as ISO, try 2012-01-01",
+                            "required": "required",
+                            "type": "string",
+                            "paramType": "query",
+                            "defaultValue": "2012-01-01"
+                        },
+						{
+                            "name": "endDate",
+                            "description": "endtime as ISO, try 2014-01-01",
+                            "required": "required",
+                            "type": "string",
+                            "paramType": "query",
+                            "defaultValue": "2014-01-01"
+                        }
+                    ],
+                    "responseMessages": [
+
+                    ]
+                }
+            ]
+        },
+        {
+            "path": "/GetServicesInBox2",
+            
+            "operations": [
+                {
+                    "httpMethod": "GET",
+                    "method": "GET",
+                    "summary": "Get list of services in a bounding box",
+                    "produces": [
+                        "text/xml"
+                    ],
+                    "nickname": "Services In Box",
+                    "authorizations": {},
+                    "parameters": [
+                        {
+                            "name": "xmin",
+                            "description": "xmin, try -114",
+                            "required": "required",
+                            "type": "string",
+                            "paramType": "query",
+                            "defaultValue": "-114"
+                        },
+                        {
+                            "name": "xmax",
+                            "description": "xmax, try -110",
+                            "required": "required",
+                            "type": "string",
+                            "paramType": "query",
+                            "defaultValue": "-110"
+                        },
+                        {
+                            "name": "ymin",
+                            "description": "ymin, try 40",
+                            "required": "required",
+                            "type": "string",
+                            "paramType": "query",
+                            "defaultValue": "40"
+                        },
+                        {
+                            "name": "ymax",
+                            "description": "ymax, try 42",
+                            "required": "required",
+                            "type": "string",
+                            "paramType": "query",
+                            "defaultValue": "42"
+                        }
+                    ],
+                    "responseMessages": [
+                        
+                        {
+                            "code": 404,
+                            "message": "Invalid location specified"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+

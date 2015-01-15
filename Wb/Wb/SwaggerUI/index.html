@@ -1,0 +1,71 @@
+<html>
+<head>
+    <title>Example Earthcube web service Rest UI's for CUAHSI Services </title>
+    <link href="../Styles/Site.css" rel="stylesheet" type="text/css" />
+ 
+ 
+    <style type="text/css">
+        .swagger-ui-wrap {
+            max-width: 960px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .icon-btn {
+            cursor: pointer;
+        }
+
+        #message-bar {
+            min-height: 30px;
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        .message-success {
+            color: #89BF04;
+        }
+
+        .message-fail {
+            color: #cc0000;
+        }
+    </style>
+
+ 
+</head>
+
+<body>
+   
+   <div class="page">
+         <div class="header">
+             <div class="title heading1"><h1>Rest Web Services for CUAHSI Services</h1></div> 
+             <div class="clear hideSkiplink" ></div>
+
+         </div>  
+ 
+        <div class="main">
+            
+ 
+                <div class="p">This is a basic set of services documentation for the Earthcube web services project. Basic CUAHSI workflow applies.
+                    Search HIS Central, and retrieve series, and service information to access these data series.
+                    Go to each service, and retrieve data.
+                </div> 
+                <ul >
+                    <li><a href="hiscentralrest.html"> Rest UI for HIS Central Catalog Web Services</a></li>
+                    <li><a href="EcRest.html">  Rest UI for a CUAHSI WaterOneFlow web service.</a> This meets the EC Web Services API specification</li>
+                </ul>
+    
+                <div> For CUAHSI services the steps to discover and access data are as follows:
+                    
+                        <ul>
+                            <li> <a href="http://hiscentral.cuahsi.org/">HIS Central </a> Discovery: Get listing of terms from GetSearchableConcepts</li>
+                            <li> <a href="http://hiscentral.cuahsi.org/">HIS Central </a> Discovery: Search for services in a small bounding</li>
+                            <li> <a href="http://hiscentral.cuahsi.org/">HIS Central </a> Discovery: Use a term to search for series in a small bounding</li>
+                            <li> <a href="http://his.cuahsi.org/wofws.html">WaterOneFlow</a> : using the series and service inforamtion, retrieve data from distributed data services</li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>
