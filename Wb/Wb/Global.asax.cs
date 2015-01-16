@@ -25,7 +25,7 @@ namespace Wb
             RouteConfig2.RegisterRoutes(RouteTable.Routes);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             BundleConfig2.RegisterBundles(BundleTable.Bundles);
-
+          
         }
     }
 }

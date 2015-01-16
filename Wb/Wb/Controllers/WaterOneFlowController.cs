@@ -23,10 +23,17 @@ namespace Wb.Controllers
             return client;
         }
 
+        /// <summary>
+        /// Get Site Listing
+        /// </summary>
+        /// <param name="station">site identifier, {network:identifier}</param>
+        /// <param name="servUrl">WOF1.1 Service Enpoint</param>
+        /// <returns></returns>
+        /// <response code="500">Service Error</response>
         [HttpGet()]
         [ActionName("GetSites")]
         [Route("sites")]
-
+        [SwaggerDefaultValue("servUrl", "http://water.sdsc.edu/lbrsdsc/cuahsi_1_1.asmx")]
         public IEnumerable<SiteInfoResponseTypeSite> GetSites([FromUri] string[] station =null, [FromUri] String servUrl = null)
         {
             return CallGetSites(station);
@@ -40,25 +47,22 @@ namespace Wb.Controllers
             return respnse.site;
         }
 
-        //[HttpGet()]
-        //[ActionName("FeatureOfInterest")]
-        //[Route("siteinfo")]
 
-        //public IEnumerable<SiteInfoResponseTypeSite> GetSiteInfo([FromUri]string[] sites)
-        //{
-        //    return CallGetSiteInfo(sites);
-        //}
-        //private IEnumerable<SiteInfoResponseTypeSite> CallGetSiteInfo(string[] sitees)
-        //{
-        //    wof_1_1.WaterOneFlowClient client = new WaterOneFlowClient("WaterOneFlow");
-
-        //    var respnse = client.GetSiteInfoMultpleObject(sitees,null);
-        //    return respnse.site;
-        //}
+        
+        /// <summary>
+        /// Site Detailed Site Information
+        /// </summary>
+        /// <param name="station">site identifier, {network:identifier}</param>
+        /// <param name="servUrl">WOF1.1 Service Enpoint</param>
+        /// <returns></returns>
+        /// <response code="400">Invaild or site not found</response>
+        /// <response code="500">Service Error</response>
         [HttpGet()]
         [ActionName("FeatureOfInterest")]
         [Route("siteinfo")]
-
+        [SwaggerDefaultValue("station", "LBR:USU-LBR-Mendon")]
+        [SwaggerDefaultValue("servUrl", "http://water.sdsc.edu/lbrsdsc/cuahsi_1_1.asmx")]
+        
         public IEnumerable<SiteInfoResponseTypeSite> GetSiteInfo([FromUri] string[] station, [FromUri] String servUrl = null)
         {
             return CallGetSiteInfo(station);
@@ -70,11 +74,18 @@ namespace Wb.Controllers
             var respnse = client.GetSiteInfoMultpleObject(sites, null);
             return respnse.site;
         }
+
+        /// <summary>
+        /// Get Variables
+        /// </summary>
+        /// <param name="servUrl">WOF1.1 Service Enpoint</param>
+        /// <returns></returns>
+        /// <response code="500">Service Error</response>
         [HttpGet()]
         [ActionName("GetVariables")]
         [Route("observedProperty")]
-
-        public IEnumerable<VariableInfoType> GetVariables([FromUri] String servUrl = null)
+        [SwaggerDefaultValue("servUrl", "http://water.sdsc.edu/lbrsdsc/cuahsi_1_1.asmx")]
+        public IEnumerable<VariableInfoType> GetAllVariables([FromUri] String servUrl = null)
         {
             return CallGetVariables();
         }
@@ -86,10 +97,19 @@ namespace Wb.Controllers
             return respnse.variables;
         }
 
+        /// <summary>
+        /// Describe a variable
+        /// </summary>
+        /// <param name="variable">variable  {network:identifier}</param>
+        /// <param name="servUrl">WOF1.1 Service Enpoint</param>
+        /// <returns></returns>
+        /// <response code="400">Invaild or site not found</response>
+        /// <response code="500">Service Error</response>
         [HttpGet()]
         [ActionName("GetVariables")]
-        [Route("observedProperty/")]
-
+        [Route("observedProperty/info")]
+        [SwaggerDefaultValue("variable", "LBR:USU10")]
+        [SwaggerDefaultValue("servUrl", "http://water.sdsc.edu/lbrsdsc/cuahsi_1_1.asmx")]
         public VariableInfoType GetVariables([FromUri]string variable, [FromUri] String servUrl = null)
         {
             return CallGetVariableInfo(variable);
@@ -102,11 +122,26 @@ namespace Wb.Controllers
             return respnse.variables.First();
         }
 
-
+/// <summary>
+/// Get Timeseries data 
+/// </summary>
+        /// <param name="station">site  {network:identifier}</param>
+        /// <param name="variable">variable  {network:identifier}</param>
+        /// <param name="startTime">start date time</param>
+        /// <param name="endTime">end date time</param>
+/// <param name="servUrl"></param>
+        /// <param name="servUrl">WOF1.1 Service Enpoint</param>
+        /// <returns></returns>
+        /// <response code="400">Invaild or site not found</response>
+        /// <response code="500">Service Error</response>
         [HttpGet()]
         [ActionName("GetValues")]
         [Route("values")]
-
+        [SwaggerDefaultValue("station", "LBR:USU-LBR-Mendon")]
+        [SwaggerDefaultValue("variable", "LBR:USU10")]
+        [SwaggerDefaultValue("startTime", "2010-01-01")]
+        [SwaggerDefaultValue("endTime", "2010-02-01")]
+        [SwaggerDefaultValue("servUrl", "http://water.sdsc.edu/lbrsdsc/cuahsi_1_1.asmx")]
         public TimeSeriesType GetValues([FromUri]string station, [FromUri]string variable,
             DateTime? startTime = null, DateTime? endTime = null, 
             [FromUri] String servUrl = null)

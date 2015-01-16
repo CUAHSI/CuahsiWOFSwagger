@@ -40,6 +40,7 @@ namespace Wb.Controllers
         [HttpGet()]
         [Route("Ontology/{conceptKeyword}")]
         [ActionName("GetSearchableConcepts")]
+        [SwaggerDefaultValue("conceptKeyword", "Streamflow")]
         public OntologyNode GetOntologyTree(string conceptKeyword)
         {
             return CallGetOntologyTree(conceptKeyword);
@@ -73,6 +74,10 @@ namespace Wb.Controllers
         [HttpGet()]
         [Route("Services/box")]
         [ActionName("GetServicesInBox2")]
+        [SwaggerDefaultValue("east", "-119")]
+        [SwaggerDefaultValue("west", "-114")]
+        [SwaggerDefaultValue("north", "42")]
+        [SwaggerDefaultValue("south", "40")]
         public IEnumerable<ServiceInfo> GetServicesInBox2(float north, float south, float west, float east)
         {
             return CallGetServicesInBox2(north, south, west, east);
@@ -89,6 +94,15 @@ namespace Wb.Controllers
 [HttpGet()]
         [Route("Series")]
         [ActionName("GetSeriesCatalogForBox2")]
+        [SwaggerDefaultValue("east", "-119")]
+        [SwaggerDefaultValue("west", "-114")]
+        [SwaggerDefaultValue("north", "42")]
+        [SwaggerDefaultValue("south", "40")]
+        [SwaggerDefaultValue("conceptKeyword", "Temperature")]
+        [SwaggerDefaultValue("networkIds", "52")]
+        [SwaggerDefaultValue("beginDate", "2012-01-01")]
+        [SwaggerDefaultValue("endDate", "2014-01-01")]
+
         public IEnumerable<SeriesRecord> GetWaterOneFlowServiceInfo(
     float north, float south, float west, float east, 
  	string conceptKeyword, string networkIds,

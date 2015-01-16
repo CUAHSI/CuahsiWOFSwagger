@@ -1,0 +1,3680 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Wb</name>
+    </assembly>
+    <members>
+        <member name="F:Wb.Account.AddPhoneNumber.ErrorMessage">
+            <summary>
+            ErrorMessage control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Wb.Account.AddPhoneNumber.PhoneNumber">
+            <summary>
+            PhoneNumber control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Wb.Account.Confirm.successPanel">
+            <summary>
+            successPanel control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Wb.Account.Confirm.login">
+            <summary>
+            login control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Wb.Account.Confirm.errorPanel">
+            <summary>
+            errorPanel control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Wb.Account.ForgotPassword.loginForm">
+            <summary>
+            loginForm control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Wb.Account.ForgotPassword.ErrorMessage">
+            <summary>
+            ErrorMessage control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Wb.Account.ForgotPassword.FailureText">
+            <summary>
+            FailureText control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Wb.Account.ForgotPassword.Email">
+            <summary>
+            Email control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Wb.Account.ForgotPassword.DisplayEmail">
+            <summary>
+            DisplayEmail control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Wb.Account.Login.ErrorMessage">
+            <summary>
+            ErrorMessage control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Wb.Account.Login.FailureText">
+            <summary>
+            FailureText control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Wb.Account.Login.Email">
+            <summary>
+            Email control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Wb.Account.Login.Password">
+            <summary>
+            Password control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Wb.Account.Login.RememberMe">
+            <summary>
+            RememberMe control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Wb.Account.Login.RegisterHyperLink">
+            <summary>
+            RegisterHyperLink control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Wb.Account.Login.OpenAuthLogin">
+            <summary>
+            OpenAuthLogin control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Wb.Account.Manage.successMessage">
+            <summary>
+            successMessage control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Wb.Account.Manage.ChangePassword">
+            <summary>
+            ChangePassword control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Wb.Account.Manage.CreatePassword">
+            <summary>
+            CreatePassword control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Wb.Account.Manage.PhoneNumber">
+            <summary>
+            PhoneNumber control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Wb.Account.ManageLogins.successMessage">
+            <summary>
+            successMessage control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Wb.Account.ManagePassword.setPassword">
+            <summary>
+            setPassword control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Wb.Account.ManagePassword.password">
+            <summary>
+            password control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Wb.Account.ManagePassword.confirmPassword">
+            <summary>
+            confirmPassword control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Wb.Account.ManagePassword.changePasswordHolder">
+            <summary>
+            changePasswordHolder control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Wb.Account.ManagePassword.CurrentPasswordLabel">
+            <summary>
+            CurrentPasswordLabel control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Wb.Account.ManagePassword.CurrentPassword">
+            <summary>
+            CurrentPassword control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Wb.Account.ManagePassword.NewPasswordLabel">
+            <summary>
+            NewPasswordLabel control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Wb.Account.ManagePassword.NewPassword">
+            <summary>
+            NewPassword control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Wb.Account.ManagePassword.ConfirmNewPasswordLabel">
+            <summary>
+            ConfirmNewPasswordLabel control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Wb.Account.ManagePassword.ConfirmNewPassword">
+            <summary>
+            ConfirmNewPassword control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Wb.Account.OpenAuthProviders.providerDetails">
+            <summary>
+            providerDetails control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Wb.Account.Register.ErrorMessage">
+            <summary>
+            ErrorMessage control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Wb.Account.Register.Email">
+            <summary>
+            Email control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Wb.Account.Register.Password">
+            <summary>
+            Password control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Wb.Account.Register.ConfirmPassword">
+            <summary>
+            ConfirmPassword control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Wb.Account.RegisterExternalLogin.email">
+            <summary>
+            email control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Wb.Account.ResetPassword.ErrorMessage">
+            <summary>
+            ErrorMessage control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Wb.Account.ResetPassword.Email">
+            <summary>
+            Email control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Wb.Account.ResetPassword.Password">
+            <summary>
+            Password control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Wb.Account.ResetPassword.ConfirmPassword">
+            <summary>
+            ConfirmPassword control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Wb.Account.ResetPasswordConfirmation.login">
+            <summary>
+            login control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Wb.Account.TwoFactorAuthenticationSignIn.sendcode">
+            <summary>
+            sendcode control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Wb.Account.TwoFactorAuthenticationSignIn.Providers">
+            <summary>
+            Providers control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Wb.Account.TwoFactorAuthenticationSignIn.ProviderSubmit">
+            <summary>
+            ProviderSubmit control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Wb.Account.TwoFactorAuthenticationSignIn.verifycode">
+            <summary>
+            verifycode control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Wb.Account.TwoFactorAuthenticationSignIn.SelectedProvider">
+            <summary>
+            SelectedProvider control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Wb.Account.TwoFactorAuthenticationSignIn.ErrorMessage">
+            <summary>
+            ErrorMessage control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Wb.Account.TwoFactorAuthenticationSignIn.FailureText">
+            <summary>
+            FailureText control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Wb.Account.TwoFactorAuthenticationSignIn.Code">
+            <summary>
+            Code control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Wb.Account.TwoFactorAuthenticationSignIn.RememberBrowser">
+            <summary>
+            RememberBrowser control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Wb.Account.TwoFactorAuthenticationSignIn.CodeSubmit">
+            <summary>
+            CodeSubmit control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Wb.Account.VerifyPhoneNumber.ErrorMessage">
+            <summary>
+            ErrorMessage control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Wb.Account.VerifyPhoneNumber.PhoneNumber">
+            <summary>
+            PhoneNumber control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Wb.Account.VerifyPhoneNumber.Code">
+            <summary>
+            Code control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="M:Wb.Areas.HelpPage.ApiDescriptionExtensions.GetFriendlyId(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Generates an URI-friendly ID for the <see cref="T:System.Web.Http.Description.ApiDescription"/>. E.g. "Get-Values-id_name" instead of "GetValues/{id}?name={name}"
+            </summary>
+            <param name="description">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The ID as a string.</returns>
+        </member>
+        <member name="T:Wb.Areas.HelpPage.HelpPageConfig">
+            <summary>
+            Use this class to customize the Help Page.
+            For example you can set a custom <see cref="T:System.Web.Http.Description.IDocumentationProvider"/> to supply the documentation
+            or you can provide the samples for the requests/responses.
+            </summary>
+        </member>
+        <member name="T:Wb.Areas.HelpPage.Controllers.HelpController">
+            <summary>
+            The controller that will handle requests for the help page.
+            </summary>
+        </member>
+        <member name="M:Wb.Areas.HelpPage.HelpPageConfigurationExtensions.SetDocumentationProvider(System.Web.Http.HttpConfiguration,System.Web.Http.Description.IDocumentationProvider)">
+            <summary>
+            Sets the documentation provider for help page.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="documentationProvider">The documentation provider.</param>
+        </member>
+        <member name="M:Wb.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleObjects(System.Web.Http.HttpConfiguration,System.Collections.Generic.IDictionary{System.Type,System.Object})">
+            <summary>
+            Sets the objects that will be used by the formatters to produce sample requests/responses.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sampleObjects">The sample objects.</param>
+        </member>
+        <member name="M:Wb.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleRequest(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String)">
+            <summary>
+            Sets the sample request directly for the specified media type and action.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample request.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:Wb.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleRequest(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String,System.String[])">
+            <summary>
+            Sets the sample request directly for the specified media type and action with parameters.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample request.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:Wb.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleResponse(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String)">
+            <summary>
+            Sets the sample request directly for the specified media type of the action.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample response.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:Wb.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleResponse(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String,System.String[])">
+            <summary>
+            Sets the sample response directly for the specified media type of the action with specific parameters.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample response.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:Wb.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleForMediaType(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue)">
+            <summary>
+            Sets the sample directly for all actions with the specified media type.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample.</param>
+            <param name="mediaType">The media type.</param>
+        </member>
+        <member name="M:Wb.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleForType(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.Type)">
+            <summary>
+            Sets the sample directly for all actions with the specified type and media type.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="type">The parameter type or return type of an action.</param>
+        </member>
+        <member name="M:Wb.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualRequestType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String)">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> passed to the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate request samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:Wb.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualRequestType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String,System.String[])">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> passed to the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate request samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:Wb.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualResponseType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String)">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> returned as part of the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate response samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:Wb.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualResponseType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String,System.String[])">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> returned as part of the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate response samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:Wb.Areas.HelpPage.HelpPageConfigurationExtensions.GetHelpPageSampleGenerator(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Gets the help page sample generator.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <returns>The help page sample generator.</returns>
+        </member>
+        <member name="M:Wb.Areas.HelpPage.HelpPageConfigurationExtensions.SetHelpPageSampleGenerator(System.Web.Http.HttpConfiguration,Wb.Areas.HelpPage.HelpPageSampleGenerator)">
+            <summary>
+            Sets the help page sample generator.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sampleGenerator">The help page sample generator.</param>
+        </member>
+        <member name="M:Wb.Areas.HelpPage.HelpPageConfigurationExtensions.GetModelDescriptionGenerator(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Gets the model description generator.
+            </summary>
+            <param name="config">The configuration.</param>
+            <returns>The <see cref="T:Wb.Areas.HelpPage.ModelDescriptions.ModelDescriptionGenerator"/></returns>
+        </member>
+        <member name="M:Wb.Areas.HelpPage.HelpPageConfigurationExtensions.GetHelpPageApiModel(System.Web.Http.HttpConfiguration,System.String)">
+            <summary>
+            Gets the model that represents an API displayed on the help page. The model is initialized on the first call and cached for subsequent calls.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="apiDescriptionId">The <see cref="T:System.Web.Http.Description.ApiDescription"/> ID.</param>
+            <returns>
+            An <see cref="T:Wb.Areas.HelpPage.Models.HelpPageApiModel"/>
+            </returns>
+        </member>
+        <member name="T:Wb.Areas.HelpPage.ModelDescriptions.ModelDescription">
+            <summary>
+            Describes a type model.
+            </summary>
+        </member>
+        <member name="T:Wb.Areas.HelpPage.ModelDescriptions.ModelDescriptionGenerator">
+            <summary>
+            Generates model descriptions for given types.
+            </summary>
+        </member>
+        <member name="T:Wb.Areas.HelpPage.ModelDescriptions.ModelNameAttribute">
+            <summary>
+            Use this attribute to change the name of the <see cref="T:Wb.Areas.HelpPage.ModelDescriptions.ModelDescription"/> generated for a type.
+            </summary>
+        </member>
+        <member name="T:Wb.Areas.HelpPage.Models.HelpPageApiModel">
+            <summary>
+            The model that represents an API displayed on the help page.
+            </summary>
+        </member>
+        <member name="M:Wb.Areas.HelpPage.Models.HelpPageApiModel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Wb.Areas.HelpPage.Models.HelpPageApiModel"/> class.
+            </summary>
+        </member>
+        <member name="P:Wb.Areas.HelpPage.Models.HelpPageApiModel.ApiDescription">
+            <summary>
+            Gets or sets the <see cref="P:Wb.Areas.HelpPage.Models.HelpPageApiModel.ApiDescription"/> that describes the API.
+            </summary>
+        </member>
+        <member name="P:Wb.Areas.HelpPage.Models.HelpPageApiModel.UriParameters">
+            <summary>
+            Gets or sets the <see cref="T:Wb.Areas.HelpPage.ModelDescriptions.ParameterDescription"/> collection that describes the URI parameters for the API.
+            </summary>
+        </member>
+        <member name="P:Wb.Areas.HelpPage.Models.HelpPageApiModel.RequestDocumentation">
+            <summary>
+            Gets or sets the documentation for the request.
+            </summary>
+        </member>
+        <member name="P:Wb.Areas.HelpPage.Models.HelpPageApiModel.RequestModelDescription">
+            <summary>
+            Gets or sets the <see cref="T:Wb.Areas.HelpPage.ModelDescriptions.ModelDescription"/> that describes the request body.
+            </summary>
+        </member>
+        <member name="P:Wb.Areas.HelpPage.Models.HelpPageApiModel.RequestBodyParameters">
+            <summary>
+            Gets the request body parameter descriptions.
+            </summary>
+        </member>
+        <member name="P:Wb.Areas.HelpPage.Models.HelpPageApiModel.ResourceDescription">
+            <summary>
+            Gets or sets the <see cref="T:Wb.Areas.HelpPage.ModelDescriptions.ModelDescription"/> that describes the resource.
+            </summary>
+        </member>
+        <member name="P:Wb.Areas.HelpPage.Models.HelpPageApiModel.ResourceProperties">
+            <summary>
+            Gets the resource property descriptions.
+            </summary>
+        </member>
+        <member name="P:Wb.Areas.HelpPage.Models.HelpPageApiModel.SampleRequests">
+            <summary>
+            Gets the sample requests associated with the API.
+            </summary>
+        </member>
+        <member name="P:Wb.Areas.HelpPage.Models.HelpPageApiModel.SampleResponses">
+            <summary>
+            Gets the sample responses associated with the API.
+            </summary>
+        </member>
+        <member name="P:Wb.Areas.HelpPage.Models.HelpPageApiModel.ErrorMessages">
+            <summary>
+            Gets the error messages associated with this model.
+            </summary>
+        </member>
+        <member name="T:Wb.Areas.HelpPage.HelpPageSampleGenerator">
+            <summary>
+            This class will generate the samples for the help page.
+            </summary>
+        </member>
+        <member name="M:Wb.Areas.HelpPage.HelpPageSampleGenerator.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Wb.Areas.HelpPage.HelpPageSampleGenerator"/> class.
+            </summary>
+        </member>
+        <member name="M:Wb.Areas.HelpPage.HelpPageSampleGenerator.GetSampleRequests(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Gets the request body samples for a given <see cref="T:System.Web.Http.Description.ApiDescription"/>.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The samples keyed by media type.</returns>
+        </member>
+        <member name="M:Wb.Areas.HelpPage.HelpPageSampleGenerator.GetSampleResponses(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Gets the response body samples for a given <see cref="T:System.Web.Http.Description.ApiDescription"/>.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The samples keyed by media type.</returns>
+        </member>
+        <member name="M:Wb.Areas.HelpPage.HelpPageSampleGenerator.GetSample(System.Web.Http.Description.ApiDescription,Wb.Areas.HelpPage.SampleDirection)">
+            <summary>
+            Gets the request or response body samples.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <param name="sampleDirection">The value indicating whether the sample is for a request or for a response.</param>
+            <returns>The samples keyed by media type.</returns>
+        </member>
+        <member name="M:Wb.Areas.HelpPage.HelpPageSampleGenerator.GetActionSample(System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.Type,System.Net.Http.Formatting.MediaTypeFormatter,System.Net.Http.Headers.MediaTypeHeaderValue,Wb.Areas.HelpPage.SampleDirection)">
+            <summary>
+            Search for samples that are provided directly through <see cref="P:Wb.Areas.HelpPage.HelpPageSampleGenerator.ActionSamples"/>.
+            </summary>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+            <param name="type">The CLR type.</param>
+            <param name="formatter">The formatter.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="sampleDirection">The value indicating whether the sample is for a request or for a response.</param>
+            <returns>The sample that matches the parameters.</returns>
+        </member>
+        <member name="M:Wb.Areas.HelpPage.HelpPageSampleGenerator.GetSampleObject(System.Type)">
+            <summary>
+            Gets the sample object that will be serialized by the formatters. 
+            First, it will look at the <see cref="P:Wb.Areas.HelpPage.HelpPageSampleGenerator.SampleObjects"/>. If no sample object is found, it will try to create
+            one using <see cref="M:Wb.Areas.HelpPage.HelpPageSampleGenerator.DefaultSampleObjectFactory(Wb.Areas.HelpPage.HelpPageSampleGenerator,System.Type)"/> (which wraps an <see cref="T:Wb.Areas.HelpPage.ObjectGenerator"/>) and other
+            factories in <see cref="P:Wb.Areas.HelpPage.HelpPageSampleGenerator.SampleObjectFactories"/>.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>The sample object.</returns>
+        </member>
+        <member name="M:Wb.Areas.HelpPage.HelpPageSampleGenerator.ResolveHttpRequestMessageType(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Resolves the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> passed to the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The type.</returns>
+        </member>
+        <member name="M:Wb.Areas.HelpPage.HelpPageSampleGenerator.ResolveType(System.Web.Http.Description.ApiDescription,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},Wb.Areas.HelpPage.SampleDirection,System.Collections.ObjectModel.Collection{System.Net.Http.Formatting.MediaTypeFormatter}@)">
+            <summary>
+            Resolves the type of the action parameter or return value when <see cref="T:System.Net.Http.HttpRequestMessage"/> or <see cref="T:System.Net.Http.HttpResponseMessage"/> is used.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+            <param name="sampleDirection">The value indicating whether the sample is for a request or a response.</param>
+            <param name="formatters">The formatters.</param>
+        </member>
+        <member name="M:Wb.Areas.HelpPage.HelpPageSampleGenerator.WriteSampleObjectUsingFormatter(System.Net.Http.Formatting.MediaTypeFormatter,System.Object,System.Type,System.Net.Http.Headers.MediaTypeHeaderValue)">
+            <summary>
+            Writes the sample object using formatter.
+            </summary>
+            <param name="formatter">The formatter.</param>
+            <param name="value">The value.</param>
+            <param name="type">The type.</param>
+            <param name="mediaType">Type of the media.</param>
+            <returns></returns>
+        </member>
+        <member name="P:Wb.Areas.HelpPage.HelpPageSampleGenerator.ActualHttpMessageTypes">
+            <summary>
+            Gets CLR types that are used as the content of <see cref="T:System.Net.Http.HttpRequestMessage"/> or <see cref="T:System.Net.Http.HttpResponseMessage"/>.
+            </summary>
+        </member>
+        <member name="P:Wb.Areas.HelpPage.HelpPageSampleGenerator.ActionSamples">
+            <summary>
+            Gets the objects that are used directly as samples for certain actions.
+            </summary>
+        </member>
+        <member name="P:Wb.Areas.HelpPage.HelpPageSampleGenerator.SampleObjects">
+            <summary>
+            Gets the objects that are serialized as samples by the supported formatters.
+            </summary>
+        </member>
+        <member name="P:Wb.Areas.HelpPage.HelpPageSampleGenerator.SampleObjectFactories">
+            <summary>
+            Gets factories for the objects that the supported formatters will serialize as samples. Processed in order,
+            stopping when the factory successfully returns a non-<see langref="null"/> object.
+            </summary>
+            <remarks>
+            Collection includes just <see cref="M:Wb.Areas.HelpPage.ObjectGenerator.GenerateObject(System.Type)"/> initially. Use
+            <code>SampleObjectFactories.Insert(0, func)</code> to provide an override and
+            <code>SampleObjectFactories.Add(func)</code> to provide a fallback.</remarks>
+        </member>
+        <member name="T:Wb.Areas.HelpPage.HelpPageSampleKey">
+            <summary>
+            This is used to identify the place where the sample should be applied.
+            </summary>
+        </member>
+        <member name="M:Wb.Areas.HelpPage.HelpPageSampleKey.#ctor(System.Net.Http.Headers.MediaTypeHeaderValue)">
+            <summary>
+            Creates a new <see cref="T:Wb.Areas.HelpPage.HelpPageSampleKey"/> based on media type.
+            </summary>
+            <param name="mediaType">The media type.</param>
+        </member>
+        <member name="M:Wb.Areas.HelpPage.HelpPageSampleKey.#ctor(System.Net.Http.Headers.MediaTypeHeaderValue,System.Type)">
+            <summary>
+            Creates a new <see cref="T:Wb.Areas.HelpPage.HelpPageSampleKey"/> based on media type and CLR type.
+            </summary>
+            <param name="mediaType">The media type.</param>
+            <param name="type">The CLR type.</param>
+        </member>
+        <member name="M:Wb.Areas.HelpPage.HelpPageSampleKey.#ctor(Wb.Areas.HelpPage.SampleDirection,System.String,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Creates a new <see cref="T:Wb.Areas.HelpPage.HelpPageSampleKey"/> based on <see cref="P:Wb.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>, controller name, action name and parameter names.
+            </summary>
+            <param name="sampleDirection">The <see cref="P:Wb.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:Wb.Areas.HelpPage.HelpPageSampleKey.#ctor(System.Net.Http.Headers.MediaTypeHeaderValue,Wb.Areas.HelpPage.SampleDirection,System.String,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Creates a new <see cref="T:Wb.Areas.HelpPage.HelpPageSampleKey"/> based on media type, <see cref="P:Wb.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>, controller name, action name and parameter names.
+            </summary>
+            <param name="mediaType">The media type.</param>
+            <param name="sampleDirection">The <see cref="P:Wb.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="P:Wb.Areas.HelpPage.HelpPageSampleKey.ControllerName">
+            <summary>
+            Gets the name of the controller.
+            </summary>
+            <value>
+            The name of the controller.
+            </value>
+        </member>
+        <member name="P:Wb.Areas.HelpPage.HelpPageSampleKey.ActionName">
+            <summary>
+            Gets the name of the action.
+            </summary>
+            <value>
+            The name of the action.
+            </value>
+        </member>
+        <member name="P:Wb.Areas.HelpPage.HelpPageSampleKey.MediaType">
+            <summary>
+            Gets the media type.
+            </summary>
+            <value>
+            The media type.
+            </value>
+        </member>
+        <member name="P:Wb.Areas.HelpPage.HelpPageSampleKey.ParameterNames">
+            <summary>
+            Gets the parameter names.
+            </summary>
+        </member>
+        <member name="P:Wb.Areas.HelpPage.HelpPageSampleKey.SampleDirection">
+            <summary>
+            Gets the <see cref="P:Wb.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>.
+            </summary>
+        </member>
+        <member name="T:Wb.Areas.HelpPage.ImageSample">
+            <summary>
+            This represents an image sample on the help page. There's a display template named ImageSample associated with this class.
+            </summary>
+        </member>
+        <member name="M:Wb.Areas.HelpPage.ImageSample.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Wb.Areas.HelpPage.ImageSample"/> class.
+            </summary>
+            <param name="src">The URL of an image.</param>
+        </member>
+        <member name="T:Wb.Areas.HelpPage.InvalidSample">
+            <summary>
+            This represents an invalid sample on the help page. There's a display template named InvalidSample associated with this class.
+            </summary>
+        </member>
+        <member name="T:Wb.Areas.HelpPage.ObjectGenerator">
+            <summary>
+            This class will create an object of a given type and populate it with sample data.
+            </summary>
+        </member>
+        <member name="M:Wb.Areas.HelpPage.ObjectGenerator.GenerateObject(System.Type)">
+            <summary>
+            Generates an object for a given type. The type needs to be public, have a public default constructor and settable public properties/fields. Currently it supports the following types:
+            Simple types: <see cref="T:System.Int32"/>, <see cref="T:System.String"/>, <see cref="T:System.Enum"/>, <see cref="T:System.DateTime"/>, <see cref="T:System.Uri"/>, etc.
+            Complex types: POCO types.
+            Nullables: <see cref="T:System.Nullable`1"/>.
+            Arrays: arrays of simple types or complex types.
+            Key value pairs: <see cref="T:System.Collections.Generic.KeyValuePair`2"/>
+            Tuples: <see cref="T:System.Tuple`1"/>, <see cref="T:System.Tuple`2"/>, etc
+            Dictionaries: <see cref="T:System.Collections.Generic.IDictionary`2"/> or anything deriving from <see cref="T:System.Collections.Generic.IDictionary`2"/>.
+            Collections: <see cref="T:System.Collections.Generic.IList`1"/>, <see cref="T:System.Collections.Generic.IEnumerable`1"/>, <see cref="T:System.Collections.Generic.ICollection`1"/>, <see cref="T:System.Collections.IList"/>, <see cref="T:System.Collections.IEnumerable"/>, <see cref="T:System.Collections.ICollection"/> or anything deriving from <see cref="T:System.Collections.Generic.ICollection`1"/> or <see cref="T:System.Collections.IList"/>.
+            Queryables: <see cref="T:System.Linq.IQueryable"/>, <see cref="T:System.Linq.IQueryable`1"/>.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>An object of the given type.</returns>
+        </member>
+        <member name="T:Wb.Areas.HelpPage.SampleDirection">
+            <summary>
+            Indicates whether the sample is used for request or response
+            </summary>
+        </member>
+        <member name="T:Wb.Areas.HelpPage.TextSample">
+            <summary>
+            This represents a preformatted text sample on the help page. There's a display template named TextSample associated with this class.
+            </summary>
+        </member>
+        <member name="T:Wb.Areas.HelpPage.XmlDocumentationProvider">
+            <summary>
+            A custom <see cref="T:System.Web.Http.Description.IDocumentationProvider"/> that reads the API documentation from an XML documentation file.
+            </summary>
+        </member>
+        <member name="M:Wb.Areas.HelpPage.XmlDocumentationProvider.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Wb.Areas.HelpPage.XmlDocumentationProvider"/> class.
+            </summary>
+            <param name="documentPath">The physical path to XML document.</param>
+        </member>
+        <member name="M:Wb.Controllers.WaterOneFlowController.GetSites(System.String[],System.String)">
+            <summary>
+            Get Site Listing
+            </summary>
+            <param name="station">site identifier, {network:identifier}</param>
+            <param name="servUrl">WOF1.1 Service Enpoint</param>
+            <returns></returns>
+            <response code="500">Service Error</response>
+        </member>
+        <member name="M:Wb.Controllers.WaterOneFlowController.GetSiteInfo(System.String[],System.String)">
+            <summary>
+            Site Detailed Site Information
+            </summary>
+            <param name="station">site identifier, {network:identifier}</param>
+            <param name="servUrl">WOF1.1 Service Enpoint</param>
+            <returns></returns>
+            <response code="400">Invaild or site not found</response>
+            <response code="500">Service Error</response>
+        </member>
+        <member name="M:Wb.Controllers.WaterOneFlowController.GetAllVariables(System.String)">
+            <summary>
+            Get Variables
+            </summary>
+            <param name="servUrl">WOF1.1 Service Enpoint</param>
+            <returns></returns>
+            <response code="500">Service Error</response>
+        </member>
+        <member name="M:Wb.Controllers.WaterOneFlowController.GetVariables(System.String,System.String)">
+            <summary>
+            Describe a variable
+            </summary>
+            <param name="variable">variable  {network:identifier}</param>
+            <param name="servUrl">WOF1.1 Service Enpoint</param>
+            <returns></returns>
+            <response code="400">Invaild or site not found</response>
+            <response code="500">Service Error</response>
+        </member>
+        <member name="M:Wb.Controllers.WaterOneFlowController.GetValues(System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.String)">
+            <summary>
+            Get Timeseries data 
+            </summary>
+            <param name="station">site  {network:identifier}</param>
+            <param name="variable">variable  {network:identifier}</param>
+            <param name="startTime">start date time</param>
+            <param name="endTime">end date time</param>
+            <param name="servUrl"></param>
+            <param name="servUrl">WOF1.1 Service Enpoint</param>
+            <returns></returns>
+            <response code="400">Invaild or site not found</response>
+            <response code="500">Service Error</response>
+        </member>
+        <member name="T:Wb.hiscentral.Site">
+            <remarks/>
+        </member>
+        <member name="P:Wb.hiscentral.Site.SiteName">
+            <remarks/>
+        </member>
+        <member name="P:Wb.hiscentral.Site.SiteCode">
+            <remarks/>
+        </member>
+        <member name="P:Wb.hiscentral.Site.Latitude">
+            <remarks/>
+        </member>
+        <member name="P:Wb.hiscentral.Site.Longitude">
+            <remarks/>
+        </member>
+        <member name="P:Wb.hiscentral.Site.HUC">
+            <remarks/>
+        </member>
+        <member name="P:Wb.hiscentral.Site.HUCnumeric">
+            <remarks/>
+        </member>
+        <member name="P:Wb.hiscentral.Site.servCode">
+            <remarks/>
+        </member>
+        <member name="P:Wb.hiscentral.Site.servURL">
+            <remarks/>
+        </member>
+        <member name="T:Wb.hiscentral.OntologyNode">
+            <remarks/>
+        </member>
+        <member name="P:Wb.hiscentral.OntologyNode.keyword">
+            <remarks/>
+        </member>
+        <member name="P:Wb.hiscentral.OntologyNode.conceptid">
+            <remarks/>
+        </member>
+        <member name="P:Wb.hiscentral.OntologyNode.childNodes">
+            <remarks/>
+        </member>
+        <member name="T:Wb.hiscentral.OntologyPath">
+            <remarks/>
+        </member>
+        <member name="P:Wb.hiscentral.OntologyPath.conceptID">
+            <remarks/>
+        </member>
+        <member name="P:Wb.hiscentral.OntologyPath.SearchableKeyword">
+            <remarks/>
+        </member>
+        <member name="P:Wb.hiscentral.OntologyPath.ConceptName">
+            <remarks/>
+        </member>
+        <member name="P:Wb.hiscentral.OntologyPath.ConceptPath">
+            <remarks/>
+        </member>
+        <member name="T:Wb.hiscentral.SeriesRecord">
+            <remarks/>
+        </member>
+        <member name="P:Wb.hiscentral.SeriesRecord.ServCode">
+            <remarks/>
+        </member>
+        <member name="P:Wb.hiscentral.SeriesRecord.ServURL">
+            <remarks/>
+        </member>
+        <member name="P:Wb.hiscentral.SeriesRecord.location">
+            <remarks/>
+        </member>
+        <member name="P:Wb.hiscentral.SeriesRecord.VarCode">
+            <remarks/>
+        </member>
+        <member name="P:Wb.hiscentral.SeriesRecord.VarName">
+            <remarks/>
+        </member>
+        <member name="P:Wb.hiscentral.SeriesRecord.beginDate">
+            <remarks/>
+        </member>
+        <member name="P:Wb.hiscentral.SeriesRecord.endDate">
+            <remarks/>
+        </member>
+        <member name="P:Wb.hiscentral.SeriesRecord.authtoken">
+            <remarks/>
+        </member>
+        <member name="P:Wb.hiscentral.SeriesRecord.ValueCount">
+            <remarks/>
+        </member>
+        <member name="P:Wb.hiscentral.SeriesRecord.Sitename">
+            <remarks/>
+        </member>
+        <member name="P:Wb.hiscentral.SeriesRecord.latitude">
+            <remarks/>
+        </member>
+        <member name="P:Wb.hiscentral.SeriesRecord.longitude">
+            <remarks/>
+        </member>
+        <member name="P:Wb.hiscentral.SeriesRecord.datatype">
+            <remarks/>
+        </member>
+        <member name="P:Wb.hiscentral.SeriesRecord.valuetype">
+            <remarks/>
+        </member>
+        <member name="P:Wb.hiscentral.SeriesRecord.samplemedium">
+            <remarks/>
+        </member>
+        <member name="P:Wb.hiscentral.SeriesRecord.timeunits">
+            <remarks/>
+        </member>
+        <member name="P:Wb.hiscentral.SeriesRecord.conceptKeyword">
+            <remarks/>
+        </member>
+        <member name="P:Wb.hiscentral.SeriesRecord.genCategory">
+            <remarks/>
+        </member>
+        <member name="P:Wb.hiscentral.SeriesRecord.TimeSupport">
+            <remarks/>
+        </member>
+        <member name="T:Wb.hiscentral.ServiceInfo">
+            <remarks/>
+        </member>
+        <member name="P:Wb.hiscentral.ServiceInfo.servURL">
+            <remarks/>
+        </member>
+        <member name="P:Wb.hiscentral.ServiceInfo.Title">
+            <remarks/>
+        </member>
+        <member name="P:Wb.hiscentral.ServiceInfo.ServiceDescriptionURL">
+            <remarks/>
+        </member>
+        <member name="P:Wb.hiscentral.ServiceInfo.name">
+            <remarks/>
+        </member>
+        <member name="P:Wb.hiscentral.ServiceInfo.Email">
+            <remarks/>
+        </member>
+        <member name="P:Wb.hiscentral.ServiceInfo.phone">
+            <remarks/>
+        </member>
+        <member name="P:Wb.hiscentral.ServiceInfo.organization">
+            <remarks/>
+        </member>
+        <member name="P:Wb.hiscentral.ServiceInfo.orgwebsite">
+            <remarks/>
+        </member>
+        <member name="P:Wb.hiscentral.ServiceInfo.citation">
+            <remarks/>
+        </member>
+        <member name="P:Wb.hiscentral.ServiceInfo.aabstract">
+            <remarks/>
+        </member>
+        <member name="P:Wb.hiscentral.ServiceInfo.valuecount">
+            <remarks/>
+        </member>
+        <member name="P:Wb.hiscentral.ServiceInfo.variablecount">
+            <remarks/>
+        </member>
+        <member name="P:Wb.hiscentral.ServiceInfo.sitecount">
+            <remarks/>
+        </member>
+        <member name="P:Wb.hiscentral.ServiceInfo.ServiceID">
+            <remarks/>
+        </member>
+        <member name="P:Wb.hiscentral.ServiceInfo.NetworkName">
+            <remarks/>
+        </member>
+        <member name="P:Wb.hiscentral.ServiceInfo.minx">
+            <remarks/>
+        </member>
+        <member name="P:Wb.hiscentral.ServiceInfo.miny">
+            <remarks/>
+        </member>
+        <member name="P:Wb.hiscentral.ServiceInfo.maxx">
+            <remarks/>
+        </member>
+        <member name="P:Wb.hiscentral.ServiceInfo.maxy">
+            <remarks/>
+        </member>
+        <member name="P:Wb.hiscentral.ServiceInfo.serviceStatus">
+            <remarks/>
+        </member>
+        <member name="T:Wb.hiscentral.MappedVariable">
+            <remarks/>
+        </member>
+        <member name="P:Wb.hiscentral.MappedVariable.variableName">
+            <remarks/>
+        </member>
+        <member name="P:Wb.hiscentral.MappedVariable.variableCode">
+            <remarks/>
+        </member>
+        <member name="P:Wb.hiscentral.MappedVariable.servCode">
+            <remarks/>
+        </member>
+        <member name="P:Wb.hiscentral.MappedVariable.WSDL">
+            <remarks/>
+        </member>
+        <member name="P:Wb.hiscentral.MappedVariable.conceptKeyword">
+            <remarks/>
+        </member>
+        <member name="P:Wb.hiscentral.MappedVariable.conceptCode">
+            <remarks/>
+        </member>
+        <member name="T:Wb.hiscentral.Box">
+            <remarks/>
+        </member>
+        <member name="P:Wb.hiscentral.Box.xmin">
+            <remarks/>
+        </member>
+        <member name="P:Wb.hiscentral.Box.xmax">
+            <remarks/>
+        </member>
+        <member name="P:Wb.hiscentral.Box.ymin">
+            <remarks/>
+        </member>
+        <member name="P:Wb.hiscentral.Box.ymax">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_0.SiteInfoResponseType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.SiteInfoResponseType.queryInfo">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.SiteInfoResponseType.site">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_0.QueryInfoType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.QueryInfoType.creationTime">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.QueryInfoType.creationTimeSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.QueryInfoType.queryURL">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.QueryInfoType.querySQL">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.QueryInfoType.criteria">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.QueryInfoType.note">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.QueryInfoType.extension">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_0.QueryInfoTypeCriteria">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.QueryInfoTypeCriteria.locationParam">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.QueryInfoTypeCriteria.variableParam">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.QueryInfoTypeCriteria.timeParam">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_0.QueryInfoTypeCriteriaTimeParam">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.QueryInfoTypeCriteriaTimeParam.beginDateTime">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.QueryInfoTypeCriteriaTimeParam.endDateTime">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_0.LabMethodType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.LabMethodType.labName">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.LabMethodType.labOrganization">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.LabMethodType.LabMethodName">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.LabMethodType.labMethodDescription">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.LabMethodType.labMethodLink">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.LabMethodType.labMethodID">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.LabMethodType.labMethodIDSpecified">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_0.SampleType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.SampleType.labSampleCode">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.SampleType.SampleType1">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.SampleType.LabMethod">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.SampleType.sampleID">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.SampleType.sampleIDSpecified">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_0.sampleTypeEnum">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.sampleTypeEnum.FD">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.sampleTypeEnum.FF">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.sampleTypeEnum.FL">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.sampleTypeEnum.LF">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.sampleTypeEnum.GW">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.sampleTypeEnum.PB">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.sampleTypeEnum.PD">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.sampleTypeEnum.PE">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.sampleTypeEnum.PI">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.sampleTypeEnum.PW">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.sampleTypeEnum.RE">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.sampleTypeEnum.SE">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.sampleTypeEnum.SR">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.sampleTypeEnum.SS">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.sampleTypeEnum.SW">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.sampleTypeEnum.TE">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.sampleTypeEnum.TI">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.sampleTypeEnum.TW">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.sampleTypeEnum.VE">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.sampleTypeEnum.VI">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.sampleTypeEnum.VW">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.sampleTypeEnum.Grab">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.sampleTypeEnum.Unknown">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.sampleTypeEnum.NoSample">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_0.OffsetType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.OffsetType.offsetValue">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.OffsetType.offsetDescription">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.OffsetType.units">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.OffsetType.offsetIsVertical">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.OffsetType.offsetHorizDirectionDegrees">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.OffsetType.offsetHorizDirectionDegreesSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.OffsetType.offsetTypeID">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.OffsetType.offsetTypeIDSpecified">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_0.OffsetTypeUnits">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.OffsetTypeUnits.unitsAbbreviation">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.OffsetTypeUnits.unitsCode">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.OffsetTypeUnits.unitsType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.OffsetTypeUnits.unitsTypeSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.OffsetTypeUnits.Value">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_0.UnitsTypeEnum">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.UnitsTypeEnum.Angle">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.UnitsTypeEnum.Area">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.UnitsTypeEnum.Dimensionless">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.UnitsTypeEnum.Energy">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.UnitsTypeEnum.EnergyFlux">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.UnitsTypeEnum.Flow">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.UnitsTypeEnum.Force">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.UnitsTypeEnum.Frequency">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.UnitsTypeEnum.Length">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.UnitsTypeEnum.Light">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.UnitsTypeEnum.Mass">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.UnitsTypeEnum.Permeability">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.UnitsTypeEnum.Power">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.UnitsTypeEnum.PressureStress">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.UnitsTypeEnum.Resolution">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.UnitsTypeEnum.Scale">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.UnitsTypeEnum.Temperature">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.UnitsTypeEnum.Time">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.UnitsTypeEnum.Velocity">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.UnitsTypeEnum.Volume">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_0.ValueSingleVariable">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.ValueSingleVariable.qualifiers">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.ValueSingleVariable.censorCode">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.ValueSingleVariable.censorCodeSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.ValueSingleVariable.dateTime">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.ValueSingleVariable.qualityControlLevel">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.ValueSingleVariable.qualityControlLevelSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.ValueSingleVariable.methodID">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.ValueSingleVariable.methodIDSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.ValueSingleVariable.sourceID">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.ValueSingleVariable.sourceIDSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.ValueSingleVariable.accuracyStdDev">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.ValueSingleVariable.accuracyStdDevSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.ValueSingleVariable.codedVocabulary">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.ValueSingleVariable.codedVocabularySpecified">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.ValueSingleVariable.codedVocabularyTerm">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.ValueSingleVariable.sampleID">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.ValueSingleVariable.sampleIDSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.ValueSingleVariable.offsetValue">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.ValueSingleVariable.offsetValueSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.ValueSingleVariable.offsetTypeID">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.ValueSingleVariable.offsetTypeIDSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.ValueSingleVariable.offsetDescription">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.ValueSingleVariable.offsetUnitsAbbreviation">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.ValueSingleVariable.offsetUnitsCode">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.ValueSingleVariable.oid">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.ValueSingleVariable.metadataDateTime">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.ValueSingleVariable.metadataDateTimeSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.ValueSingleVariable.Value">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_0.CensorCodeEnum">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.CensorCodeEnum.lt">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.CensorCodeEnum.gt">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.CensorCodeEnum.nc">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.CensorCodeEnum.nd">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.CensorCodeEnum.pnq">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_0.QualityControlLevelEnum">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.QualityControlLevelEnum.Rawdata">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.QualityControlLevelEnum.Qualitycontrolleddata">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.QualityControlLevelEnum.Derivedproducts">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.QualityControlLevelEnum.Interpretedproducts">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.QualityControlLevelEnum.Knowledgeproducts">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.QualityControlLevelEnum.Unknown">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_0.TsValuesSingleVariableType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.TsValuesSingleVariableType.value">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.TsValuesSingleVariableType.qualifier">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.TsValuesSingleVariableType.qualityControlLevel">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.TsValuesSingleVariableType.method">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.TsValuesSingleVariableType.source">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.TsValuesSingleVariableType.offset">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.TsValuesSingleVariableType.sample">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.TsValuesSingleVariableType.timeZoneShiftApplied">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.TsValuesSingleVariableType.timeZoneShiftAppliedSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.TsValuesSingleVariableType.unitsAbbreviation">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.TsValuesSingleVariableType.unitsCode">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.TsValuesSingleVariableType.unitsType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.TsValuesSingleVariableType.unitsTypeSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.TsValuesSingleVariableType.count">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.TsValuesSingleVariableType.unitsAreConverted">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_0.TsValuesSingleVariableTypeQualifier">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.TsValuesSingleVariableTypeQualifier.qualifierCode">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.TsValuesSingleVariableTypeQualifier.qualifierID">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.TsValuesSingleVariableTypeQualifier.oid">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.TsValuesSingleVariableTypeQualifier.metadataDateTime">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.TsValuesSingleVariableTypeQualifier.metadataDateTimeSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.TsValuesSingleVariableTypeQualifier.network">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.TsValuesSingleVariableTypeQualifier.vocabulary">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.TsValuesSingleVariableTypeQualifier.default">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.TsValuesSingleVariableTypeQualifier.defaultSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.TsValuesSingleVariableTypeQualifier.Value">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_0.TsValuesSingleVariableTypeQualityControlLevel">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.TsValuesSingleVariableTypeQualityControlLevel.qualityControlLevelID">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.TsValuesSingleVariableTypeQualityControlLevel.qualityControlLevelCode">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.TsValuesSingleVariableTypeQualityControlLevel.oid">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.TsValuesSingleVariableTypeQualityControlLevel.metadataDateTime">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.TsValuesSingleVariableTypeQualityControlLevel.metadataDateTimeSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.TsValuesSingleVariableTypeQualityControlLevel.network">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.TsValuesSingleVariableTypeQualityControlLevel.vocabulary">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.TsValuesSingleVariableTypeQualityControlLevel.default">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.TsValuesSingleVariableTypeQualityControlLevel.defaultSpecified">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_0.MethodType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.MethodType.MethodDescription">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.MethodType.MethodLink">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.MethodType.methodID">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.MethodType.methodIDSpecified">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_0.SourceType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.SourceType.Organization">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.SourceType.SourceDescription">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.SourceType.Metadata">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.SourceType.ContactInformation">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.SourceType.SourceLink">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.SourceType.sourceID">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.SourceType.sourceIDSpecified">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_0.MetaDataType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.MetaDataType.TopicCategory">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.MetaDataType.Title">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.MetaDataType.Abstract">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.MetaDataType.ProfileVersion">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.MetaDataType.MetadataLink">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_0.ContactInformationType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.ContactInformationType.ContactName">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.ContactInformationType.TypeOfContact">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.ContactInformationType.Phone">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.ContactInformationType.Email">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.ContactInformationType.Address">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_0.TimeSeriesType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.TimeSeriesType.sourceInfo">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.TimeSeriesType.variable">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.TimeSeriesType.values">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.TimeSeriesType.name">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_0.SourceInfoType">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_0.DataSetInfoType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.DataSetInfoType.dataSetIdentifier">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.DataSetInfoType.timeZoneInfo">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.DataSetInfoType.dataSetDescription">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.DataSetInfoType.note">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.DataSetInfoType.dataSetLocation">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.DataSetInfoType.extension">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_0.DataSetInfoTypeTimeZoneInfo">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.DataSetInfoTypeTimeZoneInfo.defaultTimeZone">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.DataSetInfoTypeTimeZoneInfo.daylightSavingsTimeZone">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.DataSetInfoTypeTimeZoneInfo.siteUsesDaylightSavingsTime">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_0.DataSetInfoTypeTimeZoneInfoDefaultTimeZone">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.DataSetInfoTypeTimeZoneInfoDefaultTimeZone.ZoneAbbreviation">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.DataSetInfoTypeTimeZoneInfoDefaultTimeZone.ZoneOffset">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_0.DataSetInfoTypeTimeZoneInfoDaylightSavingsTimeZone">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.DataSetInfoTypeTimeZoneInfoDaylightSavingsTimeZone.ZoneAbbreviation">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.DataSetInfoTypeTimeZoneInfoDaylightSavingsTimeZone.ZoneOffset">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_0.NoteType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.NoteType.type">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.NoteType.href">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.NoteType.title">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.NoteType.show">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.NoteType.Value">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_0.GeogLocationType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.GeogLocationType.srs">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_0.LatLonPointType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.LatLonPointType.latitude">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.LatLonPointType.longitude">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_0.LatLonBoxType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.LatLonBoxType.south">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.LatLonBoxType.west">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.LatLonBoxType.north">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.LatLonBoxType.east">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_0.SiteInfoType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.SiteInfoType.siteName">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.SiteInfoType.siteCode">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.SiteInfoType.timeZoneInfo">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.SiteInfoType.geoLocation">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.SiteInfoType.elevation_m">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.SiteInfoType.elevation_mSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.SiteInfoType.verticalDatum">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.SiteInfoType.note">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.SiteInfoType.extension">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.SiteInfoType.altname">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.SiteInfoType.oid">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.SiteInfoType.metadataDateTime">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.SiteInfoType.metadataDateTimeSpecified">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_0.SiteInfoTypeSiteCode">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.SiteInfoTypeSiteCode.defaultId">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.SiteInfoTypeSiteCode.defaultIdSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.SiteInfoTypeSiteCode.network">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.SiteInfoTypeSiteCode.siteID">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.SiteInfoTypeSiteCode.agencyCode">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.SiteInfoTypeSiteCode.agencyName">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.SiteInfoTypeSiteCode.Value">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_0.SiteInfoTypeTimeZoneInfo">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.SiteInfoTypeTimeZoneInfo.defaultTimeZone">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.SiteInfoTypeTimeZoneInfo.daylightSavingsTimeZone">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.SiteInfoTypeTimeZoneInfo.siteUsesDaylightSavingsTime">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_0.SiteInfoTypeTimeZoneInfoDefaultTimeZone">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.SiteInfoTypeTimeZoneInfoDefaultTimeZone.ZoneAbbreviation">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.SiteInfoTypeTimeZoneInfoDefaultTimeZone.ZoneOffset">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_0.SiteInfoTypeTimeZoneInfoDaylightSavingsTimeZone">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.SiteInfoTypeTimeZoneInfoDaylightSavingsTimeZone.ZoneAbbreviation">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.SiteInfoTypeTimeZoneInfoDaylightSavingsTimeZone.ZoneOffset">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_0.SiteInfoTypeGeoLocation">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.SiteInfoTypeGeoLocation.geogLocation">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.SiteInfoTypeGeoLocation.localSiteXY">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_0.SiteInfoTypeGeoLocationLocalSiteXY">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.SiteInfoTypeGeoLocationLocalSiteXY.X">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.SiteInfoTypeGeoLocationLocalSiteXY.Y">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.SiteInfoTypeGeoLocationLocalSiteXY.Z">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.SiteInfoTypeGeoLocationLocalSiteXY.ZSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.SiteInfoTypeGeoLocationLocalSiteXY.note">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.SiteInfoTypeGeoLocationLocalSiteXY.projectionInformation">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_0.VariableInfoType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.VariableInfoType.variableCode">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.VariableInfoType.variableName">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.VariableInfoType.variableDescription">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.VariableInfoType.valueType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.VariableInfoType.valueTypeSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.VariableInfoType.dataType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.VariableInfoType.dataTypeSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.VariableInfoType.generalCategory">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.VariableInfoType.generalCategorySpecified">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.VariableInfoType.sampleMedium">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.VariableInfoType.sampleMediumSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.VariableInfoType.units">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.VariableInfoType.options">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.VariableInfoType.note">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.VariableInfoType.related">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.VariableInfoType.extension">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.VariableInfoType.NoDataValue">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.VariableInfoType.timeSupport">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.VariableInfoType.oid">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.VariableInfoType.metadataDateTime">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.VariableInfoType.metadataDateTimeSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.VariableInfoType.network">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.VariableInfoType.vocabulary">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.VariableInfoType.default">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.VariableInfoType.defaultSpecified">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_0.VariableInfoTypeVariableCode">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.VariableInfoTypeVariableCode.network">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.VariableInfoTypeVariableCode.vocabulary">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.VariableInfoTypeVariableCode.default">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.VariableInfoTypeVariableCode.defaultSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.VariableInfoTypeVariableCode.variableID">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.VariableInfoTypeVariableCode.Value">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_0.valueTypeEnum">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.valueTypeEnum.FieldObservation">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.valueTypeEnum.Sample">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.valueTypeEnum.ModelSimulationResult">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.valueTypeEnum.DerivedValue">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.valueTypeEnum.Unknown">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_0.dataTypeEnum">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.dataTypeEnum.Continuous">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.dataTypeEnum.Instantaneous">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.dataTypeEnum.Cumulative">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.dataTypeEnum.Incremental">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.dataTypeEnum.Average">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.dataTypeEnum.Maximum">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.dataTypeEnum.Minimum">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.dataTypeEnum.ConstantOverInterval">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.dataTypeEnum.Categorical">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.dataTypeEnum.BestEasySystematicEstimator">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.dataTypeEnum.Unknown">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.dataTypeEnum.Variance">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.dataTypeEnum.Median">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.dataTypeEnum.Mode">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.dataTypeEnum.BestEasySystematicEstimator1">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.dataTypeEnum.StandardDeviation">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.dataTypeEnum.Skewness">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.dataTypeEnum.EquivalentMean">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.dataTypeEnum.Sporadic">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.dataTypeEnum.Unknown1">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_0.generalCategoryEnum">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.generalCategoryEnum.WaterQuality">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.generalCategoryEnum.Climate">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.generalCategoryEnum.Hydrology">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.generalCategoryEnum.Geology">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.generalCategoryEnum.Biota">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.generalCategoryEnum.Unknown">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.generalCategoryEnum.Instrumentation">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_0.SampleMediumEnum">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.SampleMediumEnum.SurfaceWater">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.SampleMediumEnum.GroundWater">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.SampleMediumEnum.Sediment">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.SampleMediumEnum.Soil">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.SampleMediumEnum.Air">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.SampleMediumEnum.Tissue">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.SampleMediumEnum.Precipitation">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.SampleMediumEnum.Unknown">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.SampleMediumEnum.Other">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.SampleMediumEnum.Snow">
+            <remarks/>
+        </member>
+        <member name="F:Wb.wof_1_0.SampleMediumEnum.NotRelevant">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_0.VariableInfoTypeUnits">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.VariableInfoTypeUnits.unitsAbbreviation">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.VariableInfoTypeUnits.unitsCode">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.VariableInfoTypeUnits.unitsType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.VariableInfoTypeUnits.unitsTypeSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.VariableInfoTypeUnits.Value">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_0.ArrayOfOptionOption">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.ArrayOfOptionOption.name">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.ArrayOfOptionOption.optionID">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.ArrayOfOptionOption.optionCode">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.ArrayOfOptionOption.Value">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_0.VariableInfoTypeRelated">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.VariableInfoTypeRelated.parentID">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.VariableInfoTypeRelated.relatedID">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_0.VariableInfoTypeRelatedParentID">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.VariableInfoTypeRelatedParentID.network">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.VariableInfoTypeRelatedParentID.vocabulary">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.VariableInfoTypeRelatedParentID.default">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.VariableInfoTypeRelatedParentID.defaultSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.VariableInfoTypeRelatedParentID.Value">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_0.VariableInfoTypeRelatedRelatedID">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.VariableInfoTypeRelatedRelatedID.network">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.VariableInfoTypeRelatedRelatedID.vocabulary">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.VariableInfoTypeRelatedRelatedID.default">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.VariableInfoTypeRelatedRelatedID.defaultSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.VariableInfoTypeRelatedRelatedID.Value">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_0.VariableInfoTypeTimeSupport">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.VariableInfoTypeTimeSupport.unit">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.VariableInfoTypeTimeSupport.timeInterval">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.VariableInfoTypeTimeSupport.timeIntervalSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.VariableInfoTypeTimeSupport.isRegular">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.VariableInfoTypeTimeSupport.isRegularSpecified">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_0.UnitsType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.UnitsType.UnitName">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.UnitsType.UnitDescription">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.UnitsType.UnitType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.UnitsType.UnitTypeSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.UnitsType.UnitAbbreviation">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.UnitsType.UnitID">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.UnitsType.UnitIDSpecified">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_0.TimeSeriesResponseType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.TimeSeriesResponseType.queryInfo">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.TimeSeriesResponseType.timeSeries">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_0.VariablesResponseType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.VariablesResponseType.queryInfo">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.VariablesResponseType.variables">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_0.QualityControlLevelType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.QualityControlLevelType.qualityControlLevelID">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.QualityControlLevelType.qualityControlLevelIDSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.QualityControlLevelType.Value">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_0.TimePeriodType">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_0.TimePeriodRealTimeType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.TimePeriodRealTimeType.realTimeDataPeriod">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.TimePeriodRealTimeType.beginDateTime">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.TimePeriodRealTimeType.endDateTime">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_0.TimeSingleType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.TimeSingleType.timeSingle">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.TimeSingleType.beginDateTime">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.TimeSingleType.endDateTime">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_0.TimeIntervalType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.TimeIntervalType.beginDateTime">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.TimeIntervalType.endDateTime">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_0.seriesCatalogType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.seriesCatalogType.note">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.seriesCatalogType.series">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.seriesCatalogType.extension">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.seriesCatalogType.menuGroupName">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.seriesCatalogType.serviceWsdl">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_0.seriesCatalogTypeSeries">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.seriesCatalogTypeSeries.dataType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.seriesCatalogTypeSeries.dataTypeSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.seriesCatalogTypeSeries.variable">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.seriesCatalogTypeSeries.valueCount">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.seriesCatalogTypeSeries.variableTimeInterval">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.seriesCatalogTypeSeries.valueType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.seriesCatalogTypeSeries.valueTypeSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.seriesCatalogTypeSeries.generalCategory">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.seriesCatalogTypeSeries.generalCategorySpecified">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.seriesCatalogTypeSeries.sampleMedium">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.seriesCatalogTypeSeries.sampleMediumSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.seriesCatalogTypeSeries.Method">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.seriesCatalogTypeSeries.Source">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.seriesCatalogTypeSeries.QualityControlLevel">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.seriesCatalogTypeSeries.extension">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_0.seriesCatalogTypeSeriesValueCount">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.seriesCatalogTypeSeriesValueCount.countIsEstimated">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.seriesCatalogTypeSeriesValueCount.countIsEstimatedSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.seriesCatalogTypeSeriesValueCount.Value">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_0.SiteInfoResponseTypeSite">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.SiteInfoResponseTypeSite.siteInfo">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.SiteInfoResponseTypeSite.seriesCatalog">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_0.SiteInfoResponseTypeSite.extension">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_1.SiteInfoResponseType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.SiteInfoResponseType.queryInfo">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.SiteInfoResponseType.site">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_1.QueryInfoType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.QueryInfoType.creationTime">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.QueryInfoType.creationTimeSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.QueryInfoType.queryURL">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.QueryInfoType.criteria">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.QueryInfoType.note">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.QueryInfoType.extension">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_1.QueryInfoTypeCriteria">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.QueryInfoTypeCriteria.locationParam">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.QueryInfoTypeCriteria.variableParam">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.QueryInfoTypeCriteria.timeParam">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.QueryInfoTypeCriteria.parameter">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.QueryInfoTypeCriteria.MethodCalled">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_1.QueryInfoTypeCriteriaTimeParam">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.QueryInfoTypeCriteriaTimeParam.beginDateTime">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.QueryInfoTypeCriteriaTimeParam.endDateTime">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_1.CensorCodeType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.CensorCodeType.censorCode">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.CensorCodeType.censorCodeDescription">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.CensorCodeType.censorCodeID">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.CensorCodeType.censorCodeIDSpecified">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_1.LabMethodType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.LabMethodType.labCode">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.LabMethodType.labName">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.LabMethodType.labOrganization">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.LabMethodType.labMethodName">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.LabMethodType.labMethodDescription">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.LabMethodType.labMethodLink">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.LabMethodType.labSourceDetails">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.LabMethodType.labMethodID">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.LabMethodType.labMethodIDSpecified">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_1.SourceType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.SourceType.sourceCode">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.SourceType.organization">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.SourceType.sourceDescription">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.SourceType.metadata">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.SourceType.contactInformation">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.SourceType.sourceLink">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.SourceType.citation">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.SourceType.sourceID">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.SourceType.sourceIDSpecified">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_1.MetaDataType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.MetaDataType.topicCategory">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.MetaDataType.title">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.MetaDataType.abstract">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.MetaDataType.profileVersion">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.MetaDataType.metadataLink">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_1.ContactInformationType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.ContactInformationType.contactName">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.ContactInformationType.typeOfContact">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.ContactInformationType.email">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.ContactInformationType.phone">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.ContactInformationType.address">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_1.SampleType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.SampleType.labSampleCode">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.SampleType.sampleType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.SampleType.labMethod">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.SampleType.sampleID">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.SampleType.sampleIDSpecified">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_1.OffsetType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.OffsetType.offsetTypeCode">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.OffsetType.offsetValue">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.OffsetType.offsetValueSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.OffsetType.offsetDescription">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.OffsetType.unit">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.OffsetType.offsetIsVertical">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.OffsetType.offsetAzimuthDegrees">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.OffsetType.offsetAzimuthDegreesSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.OffsetType.offsetTypeID">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.OffsetType.offsetTypeIDSpecified">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_1.UnitsType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.UnitsType.unitName">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.UnitsType.unitDescription">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.UnitsType.unitType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.UnitsType.unitAbbreviation">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.UnitsType.unitCode">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.UnitsType.unitID">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.UnitsType.unitIDSpecified">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_1.QualifierType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.QualifierType.qualifierCode">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.QualifierType.qualifierDescription">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.QualifierType.qualifierID">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.QualifierType.qualifierIDSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.QualifierType.network">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.QualifierType.vocabulary">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.QualifierType.default">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.QualifierType.defaultSpecified">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_1.ValueSingleVariable">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.ValueSingleVariable.qualifiers">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.ValueSingleVariable.censorCode">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.ValueSingleVariable.dateTime">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.ValueSingleVariable.timeOffset">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.ValueSingleVariable.dateTimeUTC">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.ValueSingleVariable.dateTimeUTCSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.ValueSingleVariable.methodID">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.ValueSingleVariable.sourceID">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.ValueSingleVariable.accuracyStdDev">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.ValueSingleVariable.accuracyStdDevSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.ValueSingleVariable.sampleID">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.ValueSingleVariable.methodCode">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.ValueSingleVariable.sourceCode">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.ValueSingleVariable.labSampleCode">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.ValueSingleVariable.offsetValue">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.ValueSingleVariable.offsetValueSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.ValueSingleVariable.offsetTypeID">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.ValueSingleVariable.offsetTypeCode">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.ValueSingleVariable.codedVocabulary">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.ValueSingleVariable.codedVocabularySpecified">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.ValueSingleVariable.codedVocabularyTerm">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.ValueSingleVariable.qualityControlLevelCode">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.ValueSingleVariable.metadataTime">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.ValueSingleVariable.metadataTimeSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.ValueSingleVariable.oid">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.ValueSingleVariable.Value">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_1.TsValuesSingleVariableType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.TsValuesSingleVariableType.value">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.TsValuesSingleVariableType.units">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.TsValuesSingleVariableType.qualifier">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.TsValuesSingleVariableType.qualityControlLevel">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.TsValuesSingleVariableType.method">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.TsValuesSingleVariableType.source">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.TsValuesSingleVariableType.offset">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.TsValuesSingleVariableType.sample">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.TsValuesSingleVariableType.censorCode">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_1.QualityControlLevelType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.QualityControlLevelType.qualityControlLevelCode">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.QualityControlLevelType.definition">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.QualityControlLevelType.explanation">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.QualityControlLevelType.qualityControlLevelID">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.QualityControlLevelType.qualityControlLevelIDSpecified">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_1.MethodType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.MethodType.methodCode">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.MethodType.methodDescription">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.MethodType.methodLink">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.MethodType.methodID">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.MethodType.methodIDSpecified">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_1.TimeSeriesType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.TimeSeriesType.sourceInfo">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.TimeSeriesType.variable">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.TimeSeriesType.values">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.TimeSeriesType.name">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_1.SourceInfoType">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_1.DataSetInfoType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.DataSetInfoType.dataSetIdentifier">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.DataSetInfoType.timeZoneInfo">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.DataSetInfoType.dataSetDescription">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.DataSetInfoType.note">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.DataSetInfoType.dataSetLocation">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.DataSetInfoType.extension">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.DataSetInfoType.dataSetProperty">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_1.DataSetInfoTypeTimeZoneInfo">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.DataSetInfoTypeTimeZoneInfo.defaultTimeZone">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.DataSetInfoTypeTimeZoneInfo.daylightSavingsTimeZone">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.DataSetInfoTypeTimeZoneInfo.siteUsesDaylightSavingsTime">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.DataSetInfoTypeTimeZoneInfo.siteUsesDaylightSavingsTimeSpecified">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_1.DataSetInfoTypeTimeZoneInfoDefaultTimeZone">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_1.TimeZoneType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.TimeZoneType.zoneOffset">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.TimeZoneType.zoneAbbreviation">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_1.DataSetInfoTypeTimeZoneInfoDaylightSavingsTimeZone">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_1.NoteType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.NoteType.type">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.NoteType.href">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.NoteType.title">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.NoteType.show">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.NoteType.Value">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_1.GeogLocationType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.GeogLocationType.srs">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_1.latLonLineString">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.latLonLineString.coordLatLong">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.latLonLineString.zDirection">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_1.CoordType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.CoordType.latitude">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.CoordType.longitude">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.CoordType.Z">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.CoordType.ZSpecified">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_1.LatLonBoxType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.LatLonBoxType.south">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.LatLonBoxType.west">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.LatLonBoxType.north">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.LatLonBoxType.east">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_1.LatLonPointType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.LatLonPointType.latitude">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.LatLonPointType.longitude">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_1.PropertyType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.PropertyType.type">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.PropertyType.name">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.PropertyType.uri">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.PropertyType.Value">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_1.SiteInfoType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.SiteInfoType.siteName">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.SiteInfoType.siteCode">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.SiteInfoType.timeZoneInfo">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.SiteInfoType.geoLocation">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.SiteInfoType.elevation_m">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.SiteInfoType.elevation_mSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.SiteInfoType.verticalDatum">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.SiteInfoType.note">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.SiteInfoType.extension">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.SiteInfoType.altname">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.SiteInfoType.siteType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.SiteInfoType.siteProperty">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.SiteInfoType.oid">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.SiteInfoType.metadataTime">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.SiteInfoType.metadataTimeSpecified">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_1.SiteInfoTypeSiteCode">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.SiteInfoTypeSiteCode.default">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.SiteInfoTypeSiteCode.defaultSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.SiteInfoTypeSiteCode.network">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.SiteInfoTypeSiteCode.siteID">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.SiteInfoTypeSiteCode.siteIDSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.SiteInfoTypeSiteCode.agencyCode">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.SiteInfoTypeSiteCode.agencyName">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.SiteInfoTypeSiteCode.Value">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_1.SiteInfoTypeTimeZoneInfo">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.SiteInfoTypeTimeZoneInfo.defaultTimeZone">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.SiteInfoTypeTimeZoneInfo.daylightSavingsTimeZone">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.SiteInfoTypeTimeZoneInfo.siteUsesDaylightSavingsTime">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.SiteInfoTypeTimeZoneInfo.siteUsesDaylightSavingsTimeSpecified">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_1.SiteInfoTypeTimeZoneInfoDefaultTimeZone">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_1.SiteInfoTypeTimeZoneInfoDaylightSavingsTimeZone">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_1.SiteInfoTypeGeoLocation">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.SiteInfoTypeGeoLocation.geogLocation">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.SiteInfoTypeGeoLocation.localSiteXY">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_1.SiteInfoTypeGeoLocationLocalSiteXY">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.SiteInfoTypeGeoLocationLocalSiteXY.X">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.SiteInfoTypeGeoLocationLocalSiteXY.Y">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.SiteInfoTypeGeoLocationLocalSiteXY.Z">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.SiteInfoTypeGeoLocationLocalSiteXY.ZSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.SiteInfoTypeGeoLocationLocalSiteXY.note">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.SiteInfoTypeGeoLocationLocalSiteXY.projectionInformation">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_1.VariableInfoType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.VariableInfoType.variableCode">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.VariableInfoType.variableName">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.VariableInfoType.variableDescription">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.VariableInfoType.valueType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.VariableInfoType.dataType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.VariableInfoType.generalCategory">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.VariableInfoType.sampleMedium">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.VariableInfoType.unit">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.VariableInfoType.options">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.VariableInfoType.note">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.VariableInfoType.related">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.VariableInfoType.extension">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.VariableInfoType.noDataValue">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.VariableInfoType.noDataValueSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.VariableInfoType.timeScale">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.VariableInfoType.speciation">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.VariableInfoType.categories">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.VariableInfoType.variableProperty">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.VariableInfoType.oid">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.VariableInfoType.metadataTime">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.VariableInfoType.metadataTimeSpecified">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_1.VariableInfoTypeVariableCode">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.VariableInfoTypeVariableCode.network">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.VariableInfoTypeVariableCode.vocabulary">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.VariableInfoTypeVariableCode.default">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.VariableInfoTypeVariableCode.defaultSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.VariableInfoTypeVariableCode.variableID">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.VariableInfoTypeVariableCode.variableIDSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.VariableInfoTypeVariableCode.Value">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_1.ArrayOfOptionOption">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.ArrayOfOptionOption.name">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.ArrayOfOptionOption.optionID">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.ArrayOfOptionOption.optionCode">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.ArrayOfOptionOption.Value">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_1.VariableInfoTypeRelated">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.VariableInfoTypeRelated.parentCode">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.VariableInfoTypeRelated.relatedCode">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_1.VariableInfoTypeRelatedParentCode">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.VariableInfoTypeRelatedParentCode.network">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.VariableInfoTypeRelatedParentCode.vocabulary">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.VariableInfoTypeRelatedParentCode.default">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.VariableInfoTypeRelatedParentCode.defaultSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.VariableInfoTypeRelatedParentCode.Value">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_1.VariableInfoTypeRelatedRelatedCode">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.VariableInfoTypeRelatedRelatedCode.network">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.VariableInfoTypeRelatedRelatedCode.vocabulary">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.VariableInfoTypeRelatedRelatedCode.default">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.VariableInfoTypeRelatedRelatedCode.defaultSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.VariableInfoTypeRelatedRelatedCode.Value">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_1.VariableInfoTypeTimeScale">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.VariableInfoTypeTimeScale.unit">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.VariableInfoTypeTimeScale.timeSpacing">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.VariableInfoTypeTimeScale.timeSpacingSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.VariableInfoTypeTimeScale.timeSupport">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.VariableInfoTypeTimeScale.timeSupportSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.VariableInfoTypeTimeScale.isRegular">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_1.ArrayOfVariableInfoTypeCategoryCategory">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.ArrayOfVariableInfoTypeCategoryCategory.dataValue">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.ArrayOfVariableInfoTypeCategoryCategory.description">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.ArrayOfVariableInfoTypeCategoryCategory.categoryID">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.ArrayOfVariableInfoTypeCategoryCategory.categoryIDSpecified">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_1.TimeSeriesResponseType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.TimeSeriesResponseType.queryInfo">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.TimeSeriesResponseType.timeSeries">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_1.VariablesResponseType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.VariablesResponseType.queryInfo">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.VariablesResponseType.variables">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_1.TimePeriodType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.TimePeriodType.beginDateTime">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.TimePeriodType.endDateTime">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.TimePeriodType.beginDateTimeUTC">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.TimePeriodType.beginDateTimeUTCSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.TimePeriodType.endDateTimeUTC">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.TimePeriodType.endDateTimeUTCSpecified">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_1.TimePeriodRealTimeType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.TimePeriodRealTimeType.realTimeDataPeriod">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_1.TimeSingleType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.TimeSingleType.timeSingle">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_1.TimeIntervalType">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_1.seriesCatalogType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.seriesCatalogType.note">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.seriesCatalogType.series">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.seriesCatalogType.seriesCatalogProperty">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.seriesCatalogType.extension">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.seriesCatalogType.menuGroupName">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.seriesCatalogType.serviceWsdl">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_1.seriesCatalogTypeSeries">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.seriesCatalogTypeSeries.dataType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.seriesCatalogTypeSeries.variable">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.seriesCatalogTypeSeries.valueCount">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.seriesCatalogTypeSeries.variableTimeInterval">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.seriesCatalogTypeSeries.valueType">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.seriesCatalogTypeSeries.generalCategory">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.seriesCatalogTypeSeries.sampleMedium">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.seriesCatalogTypeSeries.method">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.seriesCatalogTypeSeries.source">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.seriesCatalogTypeSeries.qualityControlLevel">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.seriesCatalogTypeSeries.seriesProperty">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_1.seriesCatalogTypeSeriesValueCount">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.seriesCatalogTypeSeriesValueCount.countIsEstimated">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.seriesCatalogTypeSeriesValueCount.countIsEstimatedSpecified">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.seriesCatalogTypeSeriesValueCount.Value">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_1.QueryInfoTypeCriteriaParameter">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.QueryInfoTypeCriteriaParameter.name">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.QueryInfoTypeCriteriaParameter.value">
+            <remarks/>
+        </member>
+        <member name="T:Wb.wof_1_1.SiteInfoResponseTypeSite">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.SiteInfoResponseTypeSite.siteInfo">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.SiteInfoResponseTypeSite.seriesCatalog">
+            <remarks/>
+        </member>
+        <member name="P:Wb.wof_1_1.SiteInfoResponseTypeSite.extension">
+            <remarks/>
+        </member>
+        <member name="F:Wb.SiteMaster.MainContent">
+            <summary>
+            MainContent control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Wb.Site_Mobile.HeadContent">
+            <summary>
+            HeadContent control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Wb.Site_Mobile.form1">
+            <summary>
+            form1 control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Wb.Site_Mobile.FeaturedContent">
+            <summary>
+            FeaturedContent control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Wb.Site_Mobile.MainContent">
+            <summary>
+            MainContent control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+    </members>
+</doc>
