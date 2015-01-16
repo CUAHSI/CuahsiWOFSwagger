@@ -36,7 +36,7 @@
         <div class="col-md-2">
            
             <p>
-                <a runat="server" class="btn btn-default" href="~/SwaggerUI/EcRest.html">REST UI for the WaterOneFlow services</a>
+                <a runat="server" class="btn btn-default" href="~/swagger/">REST UI for the WaterOneFlow services</a>
             </p>
         </div>
     </div>

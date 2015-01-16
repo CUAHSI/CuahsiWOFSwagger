@@ -1,0 +1,371 @@
+{
+    "apiVersion": "1.0.0",
+    "swaggerVersion": "1.2",
+
+    "basePath": "http://ecrest.azurewebsites.net",
+    "resourcePath": "/",
+
+    "authorizations": { },
+    "apis": [
+        {
+            "path": "/hiscentral/Ontology",
+
+            "operations": [
+                {
+                    "httpMethod": "GET",
+                    "method": "GET",
+                    "summary": "Get Listing of Searchable Concepts",
+
+                    "produces": [
+                        "application/json",
+                        "application/xml"
+
+                    ],
+                    "nickname": "Get Searchable Concepts",
+                    "authorizations": { },
+
+                    "responseMessages": [
+
+
+                    ]
+                }
+            ]
+        },
+
+        {
+            "path": "/hiscentral/Ontology/{conceptKeyword}",
+
+            "operations": [
+                {
+                    "httpMethod": "GET",
+                    "method": "GET",
+                    "summary": "Get the Ontology Tree of Concepts",
+                    "produces": [
+                        "application/json",
+                        "application/xml"
+
+                    ],
+                    "nickname": "Get Searchable Concepts",
+                    "authorizations": { },
+                    "parameters": [
+                        {
+                            "name": "conceptKeyword",
+                            "description": "concept Keyword. Try Streamflow",
+                            "required": true,
+                            "type": "string",
+                            "paramType": "path",
+                            "defaultValue": "Streamflow"
+                        }
+                    ],
+                    "responseMessages": [
+
+
+                    ]
+                }
+            ]
+        },
+        {
+            "path": "/hiscentral/Services",
+
+            "operations": [
+                {
+                    "httpMethod": "GET",
+                    "method": "GET",
+                    "summary": "Get Listing of Water One Flow Services in catalog",
+                    "produces": [
+                        "application/json",
+                        "application/xml"
+
+                    ],
+                    "nickname": "Service Info",
+                    "authorizations": { },
+
+                    "responseMessages": [
+
+                        {
+                            "code": 500,
+                            "message": "Service Error"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "path": "/hiscentral/Series",
+
+            "operations": [
+                {
+                    "httpMethod": "GET",
+                    "method": "GET",
+                    "summary": "Series Catalog in Box",
+                    "produces": [
+                        "application/json",
+                        "application/xml"
+
+                    ],
+                    "nickname": "Series Catalog",
+                    "authorizations": { },
+
+                    "parameters": [
+                        {
+                            "name": "south",
+                            "description": "south, try -114",
+                            "required": "required",
+                            "type": "string",
+                            "paramType": "query",
+                            "defaultValue": "-114"
+                        },
+                        {
+                            "name": "north",
+                            "description": "north, try -110",
+                            "required": "required",
+                            "type": "string",
+                            "paramType": "query",
+                            "defaultValue": "-110"
+                        },
+                        {
+                            "name": "west",
+                            "description": "west, try 40",
+                            "required": "required",
+                            "type": "string",
+                            "paramType": "query",
+                            "defaultValue": "40"
+                        },
+                        {
+                            "name": "east",
+                            "description": "east, try 42",
+                            "required": "required",
+                            "type": "string",
+                            "paramType": "query",
+                            "defaultValue": "42"
+                        },
+                        {
+                            "name": "conceptKeyword",
+                            "description": "conceptKeyword, try streamflow",
+                            "required": "required",
+                            "type": "string",
+                            "paramType": "query",
+                            "defaultValue": "Temperature"
+                        },
+                        {
+                            "name": "networkIDs",
+                            "description": "networkIDs,(try '52' or '1,2,4') comma separated network identifiers from GetWaterOneFlowServiceInfo or GetServicesInBox",
+                            "required": "required",
+                            "type": "string",
+                            "paramType": "query",
+                            "defaultValue": "52"
+                        },
+                        {
+                            "name": "beginDate",
+                            "description": "starttime  as ISO, try 2012-01-01",
+                            "required": "required",
+                            "type": "string",
+                            "paramType": "query",
+                            "defaultValue": "2012-01-01"
+                        },
+                        {
+                            "name": "endDate",
+                            "description": "endtime as ISO, try 2014-01-01",
+                            "required": "required",
+                            "type": "string",
+                            "paramType": "query",
+                            "defaultValue": "2014-01-01"
+                        }
+                    ],
+                    "responseMessages": [
+
+                    ]
+                }
+            ]
+        },
+        {
+            "path": "/hiscentral/Services/box",
+
+            "operations": [
+                {
+                    "httpMethod": "GET",
+                    "method": "GET",
+                    "summary": "Get list of services in a bounding box",
+                    "produces": [
+                        "application/json",
+                        "application/xml"
+
+                    ],
+                    "nickname": "Services In Box",
+                    "authorizations": { },
+                    "parameters": [
+                        {
+                            "name": "south",
+                            "description": "south, try -114",
+                            "required": "required",
+                            "type": "string",
+                            "paramType": "query",
+                            "defaultValue": "-114"
+                        },
+                        {
+                            "name": "north",
+                            "description": "north, try -110",
+                            "required": "required",
+                            "type": "string",
+                            "paramType": "query",
+                            "defaultValue": "-110"
+                        },
+                        {
+                            "name": "west",
+                            "description": "west, try 40",
+                            "required": "required",
+                            "type": "string",
+                            "paramType": "query",
+                            "defaultValue": "40"
+                        },
+                        {
+                            "name": "east",
+                            "description": "east, try 42",
+                            "required": "required",
+                            "type": "string",
+                            "paramType": "query",
+                            "defaultValue": "42"
+                        }
+                    ],
+                    "responseMessages": [
+
+                        {
+                            "code": 404,
+                            "message": "Invalid location specified"
+                        }
+                    ]
+                }
+            ]
+        },
+
+        {
+            "path": "/wateroneflow/siteinfo",
+
+            "operations": [
+                {
+                    "httpMethod": "GET",
+                    "method": "GET",
+                    "summary": "Get siteListing",
+                    "produces": [
+                        "application/json",
+                        "application/xml"
+
+                    ],
+                    "nickname": "Sites",
+                    "authorizations": { },
+                    "parameters": [
+                        {
+                            "name": "station",
+                            "description": "site identifier",
+                            "required": false,
+                            "type": "string",
+                            "paramType": "query",
+                            "defaultValue": "lbr:USU-LBR-Mendon"
+                        }
+                    ],
+                    "responseMessages": [
+
+                        {
+                            "code": 404,
+                            "message": "Invalid location specified"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "path": "/wateroneflow/observedProperty",
+
+            "operations": [
+                {
+                    "httpMethod": "GET",
+                    "method": "GET",
+                    "summary": "Get Variables",
+                    "produces": [
+                        "application/json",
+                        "application/xml"
+
+                    ],
+                    "nickname": "Variables",
+                    "authorizations": { },
+                    "parameters": [
+                        {
+                            "name": "variable",
+                            "description": "variable",
+                            "required": false,
+                            "type": "string",
+                            "paramType": "query",
+                            "defaultValue": "lbr:USU10"
+                        }
+                    ],
+                    "responseMessages": [
+
+                        {
+                            "code": 404,
+                            "message": "Invalid location specified"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "path": "/wateroneflow/values",
+
+            "operations": [
+                {
+                    "httpMethod": "GET",
+                    "method": "GET",
+                    "summary": "Get WaterML2 timeseries",
+                    "produces": [
+                        "application/json",
+                        "application/xml"
+
+                    ],
+                    "nickname": "Values",
+                    "authorizations": { },
+                    "parameters": [
+                        {
+                            "name": "station",
+                            "description": "site identifier",
+                            "required": true,
+                            "type": "string",
+                            "paramType": "query",
+                            "defaultValue": "lbr:USU-LBR-Mendon"
+                        },
+                        {
+                            "name": "variable",
+                            "description": "paramter code",
+                            "required": true,
+                            "type": "string",
+                            "paramType": "query",
+                            "defaultValue": "lbr:USU10"
+                        },
+                        {
+                            "name": "startTime",
+                            "description": "The southernmost latitude",
+                            "required": true,
+                            "type": "dateTime",
+                            "paramType": "query",
+                            "defaultValue": "2010-01-01"
+                        },
+                        {
+                            "name": "endTime",
+                            "description": "The southernmost latitude",
+                            "required": true,
+                            "type": "dateTime",
+                            "paramType": "query",
+                            "defaultValue": "2010-02-01"
+                        }
+                    ],
+                    "responseMessages": [
+
+                        {
+                            "code": 404,
+                            "message": "Invalid location specified"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
