@@ -237,6 +237,8 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
     <Content Include="Areas\HelpPage\Views\_ViewStart.cshtml" />
+    <Content Include="EcRest\swagger_original.json" />
+    <None Include="Properties\PublishProfiles\EcRest.pubxml" />
     <None Include="Properties\PublishProfiles\water_ecwsproxy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -362,6 +364,8 @@
     <Content Include="SwaggerUI\lib\shred.bundle.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="SwaggerUI\lib\shred\content.js" />
+    <Content Include="SwaggerUI\lib\swagger-client.js" />
     <Content Include="SwaggerUI\lib\swagger-oauth.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -371,9 +375,11 @@
     <Content Include="SwaggerUI\lib\underscore-min.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="SwaggerUI\o2c.html" />
     <Content Include="SwaggerUI\swagger-ui.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="SwaggerUI\swagger-ui.min.js" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -382,7 +388,7 @@
     <Content Include="Site.Mobile.Master" />
     <Content Include="SwaggerUI\lib\.DS_Store" />
     <Content Include="EcRest\swagger.json" />
-    <Content Include="EcRest\swagger_wml2.json" />
+    <Content Include="EcRest\swagger_webapi.json" />
     <Content Include="EcRest\swagger_hiscentral.json" />
     <None Include="Service References\hiscentral\hiscentral.wsdl" />
     <Content Include="Service References\hiscentral\Wb.hiscentral.GetMappedVariables2Response.datasource">

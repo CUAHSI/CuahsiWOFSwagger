@@ -9,7 +9,7 @@
     </div>
 
     <div class="row">
-       <div class="col-md-4">
+       <div class="col-md-8">
             <h2>REST Services URL Builders for the CUAHSI Services</h2>
 
             <p>
@@ -33,16 +33,8 @@
 
        </div>
          
-        <div class="col-md-4">
-            <h2>HIS Central services</h2>
-            <p></p>
-            <p>
-                <a runat="server" class="btn btn-default" href="~/SwaggerUI/hiscentralrest.html">REST UI for the HIS Central Catalog services</a>
-            </p>
-        </div>
-        <div class="col-md-4">
-            <h2>Water One Flow Services</h2>
-            <p></p>
+        <div class="col-md-2">
+           
             <p>
                 <a runat="server" class="btn btn-default" href="~/SwaggerUI/EcRest.html">REST UI for the WaterOneFlow services</a>
             </p>
