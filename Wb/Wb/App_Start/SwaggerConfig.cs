@@ -35,8 +35,8 @@ namespace Wb
                         // hold additional metadata for an API. Version and title are required but you can also provide
                         // additional fields by chaining methods off SingleApiVersion.
                         //
-                        c.SingleApiVersion("1.0", "Earthcube REST interfaces for CUAHSI HIS WaterOneFlow Web Services")
-                            .Description("WaterOneFlow: using the series and service information, retrieve data from distributed data services. More information at <a href='http://his.cuahsi.org/wofws.html'>HIS Website</a>")
+                        c.SingleApiVersion("1.0", "EarthCube Geo-WS REST interfaces for CUAHSI Hydrologic Data Services")
+                           // .Description("WaterOneFlow: using the series and service information, retrieve data from distributed data services. More information at <a href='http://his.cuahsi.org/wofws.html'>HIS Website</a>")
                             .Contact(cc => cc
                     .Name("David Valentine")
                     .Url("http://his.cuahsi.org/")
