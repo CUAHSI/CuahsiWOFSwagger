@@ -11,16 +11,21 @@ Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+		Water|Any CPU = Water|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{96A1AC10-CE86-489B-8F06-2471E4B38302}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{96A1AC10-CE86-489B-8F06-2471E4B38302}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96A1AC10-CE86-489B-8F06-2471E4B38302}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96A1AC10-CE86-489B-8F06-2471E4B38302}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96A1AC10-CE86-489B-8F06-2471E4B38302}.Water|Any CPU.ActiveCfg = Water|Any CPU
+		{96A1AC10-CE86-489B-8F06-2471E4B38302}.Water|Any CPU.Build.0 = Water|Any CPU
 		{498F31C6-CC77-4377-A411-660504F0689D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{498F31C6-CC77-4377-A411-660504F0689D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{498F31C6-CC77-4377-A411-660504F0689D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{498F31C6-CC77-4377-A411-660504F0689D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{498F31C6-CC77-4377-A411-660504F0689D}.Water|Any CPU.ActiveCfg = Water|Any CPU
+		{498F31C6-CC77-4377-A411-660504F0689D}.Water|Any CPU.Build.0 = Water|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

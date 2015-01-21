@@ -16,12 +16,14 @@ namespace Wb.Controllers
     [System.Web.Http.RoutePrefix("wateroneflow")]
     public class WaterOneFlowController : ApiController
     {
+        private const string BaseWOfURL = "http://icewater.usu.edu/littlebearriver/cuahsi_1_1.asmx";
+
         private WaterOneFlowClient getClientForURL(
             string url)
         {
 
             wof_1_1.WaterOneFlowClient client = new WaterOneFlowClient("WaterOneFlow",
-                "http://hydro10.sdsc.edu/lbrsdsc/cuahsi_1_1.asmx");
+               BaseWOfURL);
             return client;
         }
 
@@ -33,9 +35,9 @@ namespace Wb.Controllers
         /// <returns></returns>
         /// <response code="500">Service Error</response>
         [HttpGet()]
-        [ActionName("GetSites")]
+        [ActionName("sites")]
         [Route("sites")]
-        [SwaggerDefaultValue("servUrl", "http://water.sdsc.edu/lbrsdsc/cuahsi_1_1.asmx")]
+        [SwaggerDefaultValue("servUrl", BaseWOfURL)]
         public IEnumerable<SiteInfoResponseTypeSite> GetSites([FromUri] string[] station =null, [FromUri] String servUrl = null)
         {
             return CallGetSites(station);
@@ -60,10 +62,10 @@ namespace Wb.Controllers
         /// <response code="400">Invaild or site not found</response>
         /// <response code="500">Service Error</response>
         [HttpGet()]
-        [ActionName("FeatureOfInterest")]
+        [ActionName("siteinfo")]
         [Route("siteinfo")]
         [SwaggerDefaultValue("station", "LBR:USU-LBR-Mendon")]
-        [SwaggerDefaultValue("servUrl", "http://water.sdsc.edu/lbrsdsc/cuahsi_1_1.asmx")]
+        [SwaggerDefaultValue("servUrl", BaseWOfURL)]
         [ResponseType(typeof(IEnumerable<SiteInfoResponseTypeSite>))]
         public IHttpActionResult GetSiteInfo([FromUri] string[] station, [FromUri] String servUrl = null)
         {
@@ -124,9 +126,9 @@ namespace Wb.Controllers
         /// <returns></returns>
         /// <response code="500">Service Error</response>
         [HttpGet()]
-        [ActionName("GetVariables")]
+        [ActionName("observedProperty")]
         [Route("observedProperty")]
-        [SwaggerDefaultValue("servUrl", "http://water.sdsc.edu/lbrsdsc/cuahsi_1_1.asmx")]
+        [SwaggerDefaultValue("servUrl", BaseWOfURL)]
         public IEnumerable<VariableInfoType> GetAllVariables([FromUri] String servUrl = null)
         {
             return CallGetVariables();
@@ -148,10 +150,11 @@ namespace Wb.Controllers
         /// <response code="400">Invaild or site not found</response>
         /// <response code="500">Service Error</response>
         [HttpGet()]
-        [ActionName("GetVariables")]
+        [ActionName("info")]
+    
         [Route("observedProperty/info")]
         [SwaggerDefaultValue("variable", "LBR:USU10")]
-        [SwaggerDefaultValue("servUrl", "http://water.sdsc.edu/lbrsdsc/cuahsi_1_1.asmx")]
+        [SwaggerDefaultValue("servUrl", BaseWOfURL)]
         public VariableInfoType GetVariables([FromUri]string variable, [FromUri] String servUrl = null)
         {
             return CallGetVariableInfo(variable);
@@ -183,7 +186,7 @@ namespace Wb.Controllers
         [SwaggerDefaultValue("variable", "LBR:USU10")]
         [SwaggerDefaultValue("startTime", "2010-01-01")]
         [SwaggerDefaultValue("endTime", "2010-02-01")]
-        [SwaggerDefaultValue("servUrl", "http://water.sdsc.edu/lbrsdsc/cuahsi_1_1.asmx")]
+        [SwaggerDefaultValue("servUrl", BaseWOfURL)]
         public TimeSeriesType GetValues([FromUri]string station, [FromUri]string variable,
             DateTime? startTime = null, DateTime? endTime = null, 
             [FromUri] String servUrl = null)

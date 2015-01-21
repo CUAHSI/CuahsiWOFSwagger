@@ -75,26 +75,30 @@ namespace Wb.Models
                 var sitenetwork = siteInfo.siteInfo.siteCode.First().network;
                 var siteName = siteInfo.siteInfo.siteName;
                 var siteType = siteInfo.siteInfo.siteType;
-                
-                foreach (var catalog in siteInfo.seriesCatalog)
-                {
-                    if (catalog.series != null)
+                if (siteInfo != null ){
+                  if(  siteInfo.seriesCatalog != null)
                     {
-                        var servUrl = catalog.serviceWsdl;
-                        foreach (var s in catalog.series)
+                        foreach (var catalog in siteInfo.seriesCatalog)
                         {
-                            var startTime = s.variableTimeInterval.beginDateTimeUTC;
-                            var endtime = s.variableTimeInterval.endDateTimeUTC;
-                            var variableCode = s.variable.variableCode.First().Value;
-                            var variableVocab = s.variable.variableCode.First().vocabulary;
+                            if (catalog.series != null)
+                            {
+                                var servUrl = catalog.serviceWsdl;
+                                foreach (var s in catalog.series)
+                                {
+                                    var startTime = s.variableTimeInterval.beginDateTimeUTC;
+                                    var endtime = s.variableTimeInterval.endDateTimeUTC;
+                                    var variableCode = s.variable.variableCode.First().Value;
+                                    var variableVocab = s.variable.variableCode.First().vocabulary;
 
-                            writer.WriteLine("{0},{1},{2},{3},{4},{5}", Escape(siteCode), Escape(siteName),
-                                Escape(variableCode),Escape(variableVocab), Escape(startTime), Escape(endtime));
+                                    writer.WriteLine("{0},{1},{2},{3},{4},{5}", Escape(siteCode), Escape(siteName),
+                                        Escape(variableCode), Escape(variableVocab), Escape(startTime), Escape(endtime));
+                                }
+                            }
+                            else
+                            {
+                                writer.WriteLine("# no series for site {0} {1}", Escape(siteCode), Escape(siteName));
+                            }
                         }
-                    }
-                    else
-                    {
-                        writer.WriteLine("# no series for site {0} {1}", Escape(siteCode), Escape(siteName));
                     }
                 }
             }

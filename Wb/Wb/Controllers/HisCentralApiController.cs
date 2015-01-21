@@ -14,6 +14,7 @@ using Wb.hiscentral;
 namespace Wb.Controllers
 {
     [RoutePrefix("hiscentral")]
+
     public class HisCentralApiController : ApiController
     {
         // GET: api/HisCentral
@@ -157,7 +158,7 @@ namespace Wb.Controllers
         /// <response code="500">Service Error</response> 
         [HttpGet()]
         [Route("Series")]
-        [ActionName("GetSeriesCatalogForBox2")]
+        [ActionName("Series")]
         [SwaggerDefaultValue("east", "-110")]
         [SwaggerDefaultValue("west", "-114")]
         [SwaggerDefaultValue("north", "42")]
