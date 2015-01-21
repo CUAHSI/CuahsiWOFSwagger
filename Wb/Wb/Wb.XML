@@ -999,7 +999,9 @@
             </summary>
             <param name="conceptKeyword">concept Keyword. Try Streamflow</param>
             <returns></returns>
-            <response code="500">Service Error</response> 
+            <response code="200">OK</response> 
+            <response code="404">keywod not found</response> 
+             <response code="500">Service Error</response> 
             
         </member>
         <member name="M:Wb.Controllers.HisCentralApiController.GetWaterOneFlowServiceInfo">

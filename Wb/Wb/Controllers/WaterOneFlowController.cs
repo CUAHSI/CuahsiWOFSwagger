@@ -6,7 +6,9 @@ using System.Net.Http;
 using System.Runtime.InteropServices;
 using System.Web.Http;
 //using System.Web.Mvc;
+using System.Web.Http.Description;
 using Microsoft.Owin.Security.Provider;
+using Swashbuckle.Swagger;
 using Wb.wof_1_1;
 
 namespace Wb.Controllers
@@ -62,10 +64,50 @@ namespace Wb.Controllers
         [Route("siteinfo")]
         [SwaggerDefaultValue("station", "LBR:USU-LBR-Mendon")]
         [SwaggerDefaultValue("servUrl", "http://water.sdsc.edu/lbrsdsc/cuahsi_1_1.asmx")]
-        
-        public IEnumerable<SiteInfoResponseTypeSite> GetSiteInfo([FromUri] string[] station, [FromUri] String servUrl = null)
+        [ResponseType(typeof(IEnumerable<SiteInfoResponseTypeSite>))]
+        public IHttpActionResult GetSiteInfo([FromUri] string[] station, [FromUri] String servUrl = null)
         {
-            return CallGetSiteInfo(station);
+            if (station.Length == 0)
+            {
+                return BadRequest("Must submit a site code");
+
+            }
+            foreach  (var s in station)
+            {
+                if (String.IsNullOrWhiteSpace(s))
+                
+                {
+                    station = station.Where(val => val != s).ToArray();
+                }
+            }
+            if (station.Length == 0)
+            {
+                return BadRequest("No valid station codes. All empty.");
+
+            }
+            try
+            {
+                var res = CallGetSiteInfo(station);
+                if (res.Any())
+                {
+                    return Ok(res);
+                }
+                else
+                {
+                    return BadRequest("No Sites returned");
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                if (ex.Message.Equals("Object reference not set to an instance of an object."))
+                {
+                    return BadRequest("No Sites Found");  
+                }
+                return InternalServerError();
+
+            }
+            
         }
         private IEnumerable<SiteInfoResponseTypeSite> CallGetSiteInfo(string[] sites)
         {

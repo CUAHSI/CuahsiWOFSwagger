@@ -8,7 +8,7 @@ using System.Net.Http;
 using System.Web.Http;
 //using System.Web.Mvc;
 //using System.Web.Mvc.Html;
-
+using System.Web.Http.Description;
 using Wb.hiscentral;
 
 namespace Wb.Controllers
@@ -48,15 +48,39 @@ namespace Wb.Controllers
         /// </summary>
         /// <param name="conceptKeyword">concept Keyword. Try Streamflow</param>
         /// <returns></returns>
-        /// <response code="500">Service Error</response> 
+        /// <response code="200">OK</response> 
+        /// <response code="404">keywod not found</response> 
+        ///  <response code="500">Service Error</response> 
         /// 
         [HttpGet()]
         [Route("Ontology/{conceptKeyword}")]
         [ActionName("GetSearchableConcepts")]
         [SwaggerDefaultValue("conceptKeyword", "Streamflow")]
-        public OntologyNode GetOntologyTree(string conceptKeyword)
+        [ResponseType(typeof(OntologyNode))]       
+        public IHttpActionResult GetOntologyTree(string conceptKeyword)
         {
-            return CallGetOntologyTree(conceptKeyword);
+            if (String.IsNullOrWhiteSpace(conceptKeyword))
+            {
+                return BadRequest("conceptKeyword cannot be null or empty");
+            }
+            else
+            {
+              
+                try
+                {
+                    var  response = CallGetOntologyTree(conceptKeyword);
+                    if (String.IsNullOrWhiteSpace(response.keyword))
+                    {
+                        return NotFound();
+                    }
+                    return Ok(response);
+                }
+                catch (Exception exception)
+                {
+                    return InternalServerError();
+                } 
+            }
+            
         }
 
         private OntologyNode CallGetOntologyTree(string conceptKeyword)
@@ -101,7 +125,7 @@ namespace Wb.Controllers
         [HttpGet()]
         [Route("Services/box")]
         [ActionName("GetServicesInBox2")]
-        [SwaggerDefaultValue("east", "-119")]
+        [SwaggerDefaultValue("east", "-110")]
         [SwaggerDefaultValue("west", "-114")]
         [SwaggerDefaultValue("north", "42")]
         [SwaggerDefaultValue("south", "40")]
@@ -134,7 +158,7 @@ namespace Wb.Controllers
         [HttpGet()]
         [Route("Series")]
         [ActionName("GetSeriesCatalogForBox2")]
-        [SwaggerDefaultValue("east", "-119")]
+        [SwaggerDefaultValue("east", "-110")]
         [SwaggerDefaultValue("west", "-114")]
         [SwaggerDefaultValue("north", "42")]
         [SwaggerDefaultValue("south", "40")]

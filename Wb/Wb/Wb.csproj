@@ -358,6 +358,24 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="Service References\hiscentral\Wb.hiscentral.MappedVariable.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\hiscentral\Wb.hiscentral.OntologyNode.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\hiscentral\Wb.hiscentral.OntologyPath.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\hiscentral\Wb.hiscentral.SeriesRecord.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\hiscentral\Wb.hiscentral.ServiceInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\hiscentral\Wb.hiscentral.Site.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Service References\wof_1_0\cuahsi_1_0.wsdl" />
     <Content Include="Service References\wof_1_0\Wb.wof_1_0.GetSiteInfoObjectResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -499,24 +517,6 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Service References\hiscentral\Wb.hiscentral.GetWaterOneFlowServiceInfoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\hiscentral\Wb.hiscentral.MappedVariable.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\hiscentral\Wb.hiscentral.OntologyNode.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\hiscentral\Wb.hiscentral.OntologyPath.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\hiscentral\Wb.hiscentral.SeriesRecord.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\hiscentral\Wb.hiscentral.ServiceInfo.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\hiscentral\Wb.hiscentral.Site.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="Service References\wof_1_1\cuahsi_1_1.wsdl" />
@@ -733,7 +733,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\WOFSiteInfoCSV.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\HISCentralSeriesCSV.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\hiscentral\Reference.cs">
       <AutoGen>True</AutoGen>
