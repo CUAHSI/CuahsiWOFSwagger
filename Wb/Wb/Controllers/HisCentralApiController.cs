@@ -21,6 +21,7 @@ namespace Wb.Controllers
         /// <summary>
         /// Get Listing of Searchable Concepts
         /// </summary>
+        /// <remarks>Returns concept keywords that can be subitted in HIS Central serivce calls.. Performance is reliant on the hiscentral.cuahsi.org. </remarks>
         /// <returns></returns>
         /// <response code="400">Invaild or site not found</response>
         /// <response code="500">Service Error</response> 
@@ -96,6 +97,7 @@ namespace Wb.Controllers
         /// <summary>
         /// Get Listing of Water One Flow Services in catalog
         /// </summary>
+        /// <remarks>Lists all  WaterOneFlow services. Performance is reliant on the hiscentral.cuahsi.org. </remarks>
         /// <returns></returns>
         /// <response code="500">Service Error</response> 
         [HttpGet()]
@@ -117,6 +119,7 @@ namespace Wb.Controllers
         /// <summary>
         /// Get list of services in a bounding box
         /// </summary>
+        ///  <remarks>Returns WaterOneFlow services for a region. This allows users to harvest information from appropriate data servvices. Performance is reliant on the hiscentral.cuahsi.org. </remarks>
         /// <param name="north">north, try 42</param>
         /// <param name="south">south, try 40</param>
         /// <param name="west">west, try -114</param>
@@ -146,6 +149,7 @@ namespace Wb.Controllers
         /// <summary>
         /// Series Catalog in Box
         /// </summary>
+        /// <remarks>This call is slow. It performance is reliant on the hiscentral.cuahsi.org services it consumes.</remarks>
         /// <param name="north">north, try 42</param>
         /// <param name="south">south, try 40</param>
         /// <param name="west">west, try -114</param>

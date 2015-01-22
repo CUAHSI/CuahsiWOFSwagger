@@ -68,8 +68,9 @@ namespace Wb.Models
             // Helper methods for serializing Products to CSV format. 
             private void WriteItem(SeriesRecord series, StreamWriter writer)
             {
-                writer.WriteLine("{0},{1},{2},{3},{4}", Escape(series.location), Escape(series.VarCode),
-                    Escape(series.VarName), Escape(series.beginDate), Escape(series.endDate));
+                writer.WriteLine("{0},{1},{2},{3},{4},{5},{6},{7}", Escape(series.location), Escape(series.VarCode),
+                     Escape(series.latitude), Escape(series.longitude),
+                    Escape(series.VarName), Escape(series.beginDate), Escape(series.endDate), Escape(series.ServURL));
             }
 
             static char[] _specialChars = new char[] { ',', '\n', '\r', '"' };

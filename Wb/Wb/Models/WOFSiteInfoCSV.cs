@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Formatting;
 using System.Net.Http.Headers;
 using System.Web;
+using System.Web.Profile;
 using Wb.hiscentral;
 using Wb.wof_1_1;
 using WebGrease;
@@ -75,8 +77,35 @@ namespace Wb.Models
                 var sitenetwork = siteInfo.siteInfo.siteCode.First().network;
                 var siteName = siteInfo.siteInfo.siteName;
                 var siteType = siteInfo.siteInfo.siteType;
+                double lat;
+                double lon ;
+
+                try
+                {
+                    var loc = siteInfo.siteInfo.geoLocation.geogLocation;
+                    if (loc.GetType().IsAssignableFrom(typeof (LatLonPointType)))
+                    {
+                        var pt = loc as LatLonPointType;
+                        lat = pt.latitude;
+                        lon = pt.longitude;
+                    }
+                    else
+                    {
+                        lat = -9999;
+                        lon = -9999;
+                    }
+                }
+                catch
+                {
+                    // bad site
+                    writer.WriteLine(
+                        FormattedSeriesRow(network : sitenetwork, siteCode : siteCode, siteName:siteName)
+                        );
+                    return;
+                }
+
                 if (siteInfo != null ){
-                  if(  siteInfo.seriesCatalog != null)
+                    if (siteInfo.seriesCatalog != null)
                     {
                         foreach (var catalog in siteInfo.seriesCatalog)
                         {
@@ -90,8 +119,16 @@ namespace Wb.Models
                                     var variableCode = s.variable.variableCode.First().Value;
                                     var variableVocab = s.variable.variableCode.First().vocabulary;
 
-                                    writer.WriteLine("{0},{1},{2},{3},{4},{5}", Escape(siteCode), Escape(siteName),
-                                        Escape(variableCode), Escape(variableVocab), Escape(startTime), Escape(endtime));
+                                    writer.WriteLine(
+                                        FormattedSeriesRow(network: sitenetwork, siteCode: siteCode, siteName: siteName,
+                                        lat:lat.ToString(), lon:lon.ToString(),
+                                        variableCode:variableCode, variableVocab:variableVocab,
+                                        startTime: startTime.ToString("yyyy-MM-dd"), endtime: endtime.ToString("yyyy-MM-dd")
+                                        )
+                                        ); 
+                                    
+                                    //writer.WriteLine("{0},{1},{2},{3},{4},{5}", Escape(siteCode), Escape(siteName),
+                                    //    Escape(variableCode), Escape(variableVocab), Escape(startTime), Escape(endtime));
                                 }
                             }
                             else
@@ -100,9 +137,27 @@ namespace Wb.Models
                             }
                         }
                     }
+                    else
+                    {
+                        // only a site
+                        writer.WriteLine(
+                            FormattedSeriesRow(network: sitenetwork, siteCode: siteCode, siteName: siteName,
+                            lat:lat.ToString(), lon:lon.ToString())
+                            );
+                    }
                 }
             }
 
+            private string FormattedSeriesRow(string siteName = "",
+                string siteCode = "",
+                String variableCode = "", string network = "",
+                string startTime = "", string endtime = "", string variableName = "",
+                string variableVocab="", string lat="", string lon="" )
+            {
+
+                return String.Format("{0}:{1},{2},{3},{4},{5},{6},{7},{8}", Escape(network), Escape(siteCode), Escape(siteName), lat, lon,
+                    variableVocab, Escape(variableCode), Escape(startTime), Escape(endtime));
+            }
             static char[] _specialChars = new char[] { ',', '\n', '\r', '"' };
 
             private string Escape(object o)

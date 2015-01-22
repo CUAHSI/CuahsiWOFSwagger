@@ -989,6 +989,7 @@
             <summary>
             Get Listing of Searchable Concepts
             </summary>
+            <remarks>Returns concept keywords that can be subitted in HIS Central serivce calls.. Performance is reliant on the hiscentral.cuahsi.org. </remarks>
             <returns></returns>
             <response code="400">Invaild or site not found</response>
             <response code="500">Service Error</response> 
@@ -1008,6 +1009,7 @@
             <summary>
             Get Listing of Water One Flow Services in catalog
             </summary>
+            <remarks>Lists all  WaterOneFlow services. Performance is reliant on the hiscentral.cuahsi.org. </remarks>
             <returns></returns>
             <response code="500">Service Error</response> 
         </member>
@@ -1015,6 +1017,7 @@
             <summary>
             Get list of services in a bounding box
             </summary>
+             <remarks>Returns WaterOneFlow services for a region. This allows users to harvest information from appropriate data servvices. Performance is reliant on the hiscentral.cuahsi.org. </remarks>
             <param name="north">north, try 42</param>
             <param name="south">south, try 40</param>
             <param name="west">west, try -114</param>
@@ -1026,6 +1029,7 @@
             <summary>
             Series Catalog in Box
             </summary>
+            <remarks>This call is slow. It performance is reliant on the hiscentral.cuahsi.org services it consumes.</remarks>
             <param name="north">north, try 42</param>
             <param name="south">south, try 40</param>
             <param name="west">west, try -114</param>
@@ -1041,6 +1045,8 @@
             <summary>
             Get Site Listing
             </summary>
+            <remarks>Returns site listing for a WaterOneFlow service. Performance is reliant on the WaterOneFlow hydrolocic data service. 
+            The CSV format is a summary of the site detailed information in the XML format</remarks>
             <param name="station">site identifier, {network:identifier}</param>
             <param name="servUrl">WOF1.1 Service Enpoint</param>
             <returns></returns>
@@ -1050,6 +1056,8 @@
             <summary>
             Site Detailed Site Information
             </summary>
+            <remarks>Returns site listing for a WaterOneFlow service. Performance is reliant on the WaterOneFlow hydrolocic data service.
+             The CSV format is a summary of the detailed information in the XML format</remarks>
             <param name="station">site identifier, {network:identifier}</param>
             <param name="servUrl">WOF1.1 Service Enpoint</param>
             <returns></returns>
@@ -1060,6 +1068,8 @@
             <summary>
             Get Variables
             </summary>
+            <remarks>Returns a listing of all varaibles for  WaterOneFlow service. Performance is reliant on the WaterOneFlow hydrolocic data service. 
+            </remarks>
             <param name="servUrl">WOF1.1 Service Enpoint</param>
             <returns></returns>
             <response code="500">Service Error</response>
@@ -1068,6 +1078,8 @@
             <summary>
             Describe a variable
             </summary>
+            <remarks>Returns a single variable in a WaterOneFlow service. Performance is reliant on the WaterOneFlow hydrolocic data service.
+             </remarks>
             <param name="variable">variable  {network:identifier}</param>
             <param name="servUrl">WOF1.1 Service Enpoint</param>
             <returns></returns>
@@ -1075,9 +1087,6 @@
             <response code="500">Service Error</response>
         </member>
         <member name="M:Wb.Controllers.WaterOneFlowController.GetValues(System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.String)">
-            <summary>
-            Get Timeseries data 
-            </summary>
             <param name="station">site  {network:identifier}</param>
             <param name="variable">variable  {network:identifier}</param>
             <param name="startTime">start date time</param>

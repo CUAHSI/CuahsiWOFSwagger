@@ -30,6 +30,8 @@ namespace Wb.Controllers
         /// <summary>
         /// Get Site Listing
         /// </summary>
+        /// <remarks>Returns site listing for a WaterOneFlow service. Performance is reliant on the WaterOneFlow hydrolocic data service. 
+        /// The CSV format is a summary of the site detailed information in the XML format</remarks>
         /// <param name="station">site identifier, {network:identifier}</param>
         /// <param name="servUrl">WOF1.1 Service Enpoint</param>
         /// <returns></returns>
@@ -38,6 +40,8 @@ namespace Wb.Controllers
         [ActionName("sites")]
         [Route("sites")]
         [SwaggerDefaultValue("servUrl", BaseWOfURL)]
+        [SwaggerEnumValue("servUrl", BaseWOfURL)]
+        [SwaggerEnumValue("servUrl", "http://www.example.com/future")]
         public IEnumerable<SiteInfoResponseTypeSite> GetSites([FromUri] string[] station =null, [FromUri] String servUrl = null)
         {
             return CallGetSites(station);
@@ -56,6 +60,8 @@ namespace Wb.Controllers
         /// <summary>
         /// Site Detailed Site Information
         /// </summary>
+        /// <remarks>Returns site listing for a WaterOneFlow service. Performance is reliant on the WaterOneFlow hydrolocic data service.
+        ///  The CSV format is a summary of the detailed information in the XML format</remarks>
         /// <param name="station">site identifier, {network:identifier}</param>
         /// <param name="servUrl">WOF1.1 Service Enpoint</param>
         /// <returns></returns>
@@ -66,6 +72,8 @@ namespace Wb.Controllers
         [Route("siteinfo")]
         [SwaggerDefaultValue("station", "LBR:USU-LBR-Mendon")]
         [SwaggerDefaultValue("servUrl", BaseWOfURL)]
+        [SwaggerEnumValue("servUrl", BaseWOfURL)]
+        [SwaggerEnumValue("servUrl", "http://www.example.com/future")]
         [ResponseType(typeof(IEnumerable<SiteInfoResponseTypeSite>))]
         public IHttpActionResult GetSiteInfo([FromUri] string[] station, [FromUri] String servUrl = null)
         {
@@ -122,6 +130,8 @@ namespace Wb.Controllers
         /// <summary>
         /// Get Variables
         /// </summary>
+        /// <remarks>Returns a listing of all varaibles for  WaterOneFlow service. Performance is reliant on the WaterOneFlow hydrolocic data service. 
+        /// </remarks>
         /// <param name="servUrl">WOF1.1 Service Enpoint</param>
         /// <returns></returns>
         /// <response code="500">Service Error</response>
@@ -129,6 +139,8 @@ namespace Wb.Controllers
         [ActionName("observedProperty")]
         [Route("observedProperty")]
         [SwaggerDefaultValue("servUrl", BaseWOfURL)]
+        [SwaggerEnumValue("servUrl", BaseWOfURL)]
+        [SwaggerEnumValue("servUrl", "http://www.example.com/future")]
         public IEnumerable<VariableInfoType> GetAllVariables([FromUri] String servUrl = null)
         {
             return CallGetVariables();
@@ -144,6 +156,8 @@ namespace Wb.Controllers
         /// <summary>
         /// Describe a variable
         /// </summary>
+        /// <remarks>Returns a single variable in a WaterOneFlow service. Performance is reliant on the WaterOneFlow hydrolocic data service.
+        ///  </remarks>
         /// <param name="variable">variable  {network:identifier}</param>
         /// <param name="servUrl">WOF1.1 Service Enpoint</param>
         /// <returns></returns>
@@ -155,6 +169,8 @@ namespace Wb.Controllers
         [Route("observedProperty/info")]
         [SwaggerDefaultValue("variable", "LBR:USU10")]
         [SwaggerDefaultValue("servUrl", BaseWOfURL)]
+        [SwaggerEnumValue("servUrl", BaseWOfURL)]
+        [SwaggerEnumValue("servUrl", "http://www.example.com/future")]
         public VariableInfoType GetVariables([FromUri]string variable, [FromUri] String servUrl = null)
         {
             return CallGetVariableInfo(variable);
@@ -170,6 +186,9 @@ namespace Wb.Controllers
 /// <summary>
 /// Get Timeseries data 
 /// </summary>
+        /// <remarks>Returns time series data values from WaterOneFlow service for a specified series. Performance is reliant on the WaterOneFlow hydrolocic data service.
+        ///  The CSV format (TBD) is a summary of the detailed information in the XML format</remarks>
+        
         /// <param name="station">site  {network:identifier}</param>
         /// <param name="variable">variable  {network:identifier}</param>
         /// <param name="startTime">start date time</param>
@@ -187,6 +206,8 @@ namespace Wb.Controllers
         [SwaggerDefaultValue("startTime", "2010-01-01")]
         [SwaggerDefaultValue("endTime", "2010-02-01")]
         [SwaggerDefaultValue("servUrl", BaseWOfURL)]
+        [SwaggerEnumValue("servUrl", BaseWOfURL)]
+        [SwaggerEnumValue("servUrl", "http://www.example.com/future")]
         public TimeSeriesType GetValues([FromUri]string station, [FromUri]string variable,
             DateTime? startTime = null, DateTime? endTime = null, 
             [FromUri] String servUrl = null)

@@ -4,6 +4,7 @@ using System.Globalization;
 using System.Linq;
 using System.Net.Http.Formatting;
 using System.Web.Http;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using Wb.Models.formatters;
 
@@ -20,14 +21,15 @@ namespace Wb
            // config.Formatters.XmlFormatter.AddUriPathExtensionMapping("xml","text/xml");
            // config.Formatters.JsonFormatter.AddUriPathExtensionMapping("json","text/json");
             // http://www.asp.net/web-api/overview/formats-and-model-binding/json-and-xml-serialization
-            //var json = GlobalConfiguration.Configuration.Formatters.JsonFormatter;
-            //json.UseDataContractJsonSerializer = true;
-            //json.SerializerSettings.DateFormatHandling = Newtonsoft.Json.DateFormatHandling.IsoDateFormat;
-            //json.SerializerSettings.DateTimeZoneHandling = Newtonsoft.Json.DateTimeZoneHandling.Utc;
-            //json.SerializerSettings.NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore;
-            //json.SerializerSettings.Formatting = Newtonsoft.Json.Formatting.Indented;
-            //json.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
-          //  json.SerializerSettings.Culture = new CultureInfo("it-IT");
+            var json = GlobalConfiguration.Configuration.Formatters.JsonFormatter;
+           // json.UseDataContractJsonSerializer = true;
+            json.SerializerSettings.DateFormatHandling = Newtonsoft.Json.DateFormatHandling.IsoDateFormat;
+            json.SerializerSettings.DateTimeZoneHandling = Newtonsoft.Json.DateTimeZoneHandling.Utc;
+           json.SerializerSettings.NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore;
+            json.SerializerSettings.Formatting = Newtonsoft.Json.Formatting.Indented;
+            json.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+             
+            //json.SerializerSettings.Culture = new CultureInfo("it-IT");
             var seriesf = new SeriesRecordCsvFormatter();
             seriesf.MediaTypeMappings.Add(new QueryStringMapping("format", "csv", "text/csv"));
            // seriesf.MediaTypeMappings.Add(new UriPathExtensionMapping("csv", "text/csv"));
