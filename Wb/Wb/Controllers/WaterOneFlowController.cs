@@ -183,9 +183,9 @@ namespace Wb.Controllers
             return respnse.variables.First();
         }
 
-/// <summary>
-/// Get Timeseries data 
-/// </summary>
+        /// <summary>
+        /// Get Timeseries data 
+        /// </summary>
         /// <remarks>Returns time series data values from WaterOneFlow service for a specified series. Performance is reliant on the WaterOneFlow hydrolocic data service.
         ///  The CSV format (TBD) is a summary of the detailed information in the XML format</remarks>
         
@@ -193,7 +193,7 @@ namespace Wb.Controllers
         /// <param name="variable">variable  {network:identifier}</param>
         /// <param name="startTime">start date time</param>
         /// <param name="endTime">end date time</param>
-/// <param name="servUrl"></param>
+        /// <param name="servUrl"></param>
         /// <param name="servUrl">WOF1.1 Service Enpoint</param>
         /// <returns></returns>
         /// <response code="400">Invaild or site not found</response>

@@ -38,7 +38,12 @@ namespace Wb
             wof11Site.MediaTypeMappings.Add(new QueryStringMapping("format", "csv", "text/csv"));
             //wof11Site.MediaTypeMappings.Add(new UriPathExtensionMapping("csv", "text/csv"));
             config.Formatters.Add(wof11Site);
-            
+
+            var wof11Values = new Wof11_ValuesCsvFormatter();
+            wof11Values.MediaTypeMappings.Add(new QueryStringMapping("format", "csv", "text/csv"));
+            //wof11Site.MediaTypeMappings.Add(new UriPathExtensionMapping("csv", "text/csv"));
+            config.Formatters.Add(wof11Values);
+
             // Web API configuration and services
 
             // Web API routes
