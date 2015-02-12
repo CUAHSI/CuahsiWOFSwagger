@@ -188,7 +188,6 @@ namespace Wb.Controllers
         /// </summary>
         /// <remarks>Returns time series data values from WaterOneFlow service for a specified series. Performance is reliant on the WaterOneFlow hydrolocic data service.
         ///  The CSV format (TBD) is a summary of the detailed information in the XML format</remarks>
-        
         /// <param name="station">site  {network:identifier}</param>
         /// <param name="variable">variable  {network:identifier}</param>
         /// <param name="startTime">start date time</param>

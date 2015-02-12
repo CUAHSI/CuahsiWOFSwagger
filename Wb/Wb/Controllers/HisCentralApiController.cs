@@ -4,12 +4,17 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Runtime.Serialization;
 //using System.Web.Http;
 using System.Web.Http;
 //using System.Web.Mvc;
 //using System.Web.Mvc.Html;
 using System.Web.Http.Description;
-using Wb.hiscentral;
+using System.Xml.Serialization;
+using Microsoft.Owin;
+//using Wb.hiscentral;
+using Wb.org.cuahsi.hiscentral;
+using hisCentral = Wb.org.cuahsi.hiscentral ;
 
 namespace Wb.Controllers
 {
@@ -25,7 +30,7 @@ namespace Wb.Controllers
         /// <returns></returns>
         /// <response code="400">Invaild or site not found</response>
         /// <response code="500">Service Error</response> 
-       [HttpGet()]
+        [HttpGet()]
         [ActionName("GetSearchableConcepts")]
         [Route("Ontology")]
         public IEnumerable<string> GetSearchableConcepts()
@@ -35,13 +40,16 @@ namespace Wb.Controllers
 
         private IEnumerable<string> CallGetSearchableConcepts()
         {
-            hiscentral.hiscentralSoapClient client = new hiscentralSoapClient("hiscentralSoap");
-           
+            // WCF
+            //hiscentral.hiscentralSoapClient client = new hiscentralSoapClient("hiscentralSoap");
+            var client = new hisCentral.hiscentral();
             var respnse = client.GetSearchableConcepts();
+
+
             return respnse;
         }
 
-    
+
 
 
         // GET: api/HisCentral/5
@@ -58,7 +66,7 @@ namespace Wb.Controllers
         [Route("Ontology/{conceptKeyword}")]
         [ActionName("GetSearchableConcepts")]
         [SwaggerDefaultValue("conceptKeyword", "Streamflow")]
-        [ResponseType(typeof(OntologyNode))]       
+        [ResponseType(typeof (OntologyNode))]
         public IHttpActionResult GetOntologyTree(string conceptKeyword)
         {
             if (String.IsNullOrWhiteSpace(conceptKeyword))
@@ -67,10 +75,10 @@ namespace Wb.Controllers
             }
             else
             {
-              
+
                 try
                 {
-                    var  response = CallGetOntologyTree(conceptKeyword);
+                    var response = CallGetOntologyTree(conceptKeyword);
                     if (String.IsNullOrWhiteSpace(response.keyword))
                     {
                         return NotFound();
@@ -80,16 +88,19 @@ namespace Wb.Controllers
                 catch (Exception exception)
                 {
                     return InternalServerError();
-                } 
+                }
             }
-            
+
         }
 
         private OntologyNode CallGetOntologyTree(string conceptKeyword)
         {
-            hiscentral.hiscentralSoapClient client = new hiscentralSoapClient("hiscentralSoap");
+            // wfc
+            //hiscentral.hiscentralSoapClient client = new hiscentralSoapClient("hiscentralSoap");
+            var client = new hisCentral.hiscentral();
 
             var respnse = client.getOntologyTree(conceptKeyword);
+
             return respnse;
         }
 
@@ -110,8 +121,8 @@ namespace Wb.Controllers
 
         private IEnumerable<ServiceInfo> CallGetWaterOneFlowServiceInfo()
         {
-            hiscentral.hiscentralSoapClient client = new hiscentralSoapClient("hiscentralSoap");
-
+            // hiscentral.hiscentralSoapClient client = new hiscentralSoapClient("hiscentralSoap");
+            var client = new hisCentral.hiscentral();
             var respnse = client.GetWaterOneFlowServiceInfo();
             return respnse;
         }
@@ -138,11 +149,12 @@ namespace Wb.Controllers
             return CallGetServicesInBox2(north, south, west, east);
         }
 
-        private IEnumerable<ServiceInfo> CallGetServicesInBox2( float north, float south, float west, float east)
+        private IEnumerable<ServiceInfo> CallGetServicesInBox2(float north, float south, float west, float east)
         {
-            hiscentral.hiscentralSoapClient client = new hiscentralSoapClient("hiscentralSoap");
+            // hiscentral.hiscentralSoapClient client = new hiscentralSoapClient("hiscentralSoap");
+            var client = new hisCentral.hiscentral();
 
-            var respnse = client.GetServicesInBox2(west,south,east,north );
+            var respnse = client.GetServicesInBox2(west, south, east, north);
             return respnse;
         }
 
@@ -173,25 +185,77 @@ namespace Wb.Controllers
         [SwaggerDefaultValue("endTime", "2012-06-01")]
 
         public IEnumerable<SeriesRecord> GetWaterOneFlowServiceInfo(
-    float north, float south, float west, float east, 
- 	string conceptKeyword, string networkIds,
-    DateTime startTime, DateTime endTime
-)
+            float north, float south, float west, float east,
+            string conceptKeyword, string networkIds,
+            DateTime startTime, DateTime endTime
+            )
         {
-            return CallGetSeriesCatalogForBox2(north, south, west, east,conceptKeyword,  networkIds,
- startTime,  endTime);
+            return CallGetSeriesCatalogForBox2(north, south, west, east, conceptKeyword, networkIds,
+                startTime, endTime);
         }
 
-private IEnumerable<SeriesRecord> CallGetSeriesCatalogForBox2(
-    float north, float south, float west, float east,
-string conceptKeyword, string networkIds,
-DateTime beginDate, DateTime endDate)
-        {
-            hiscentral.hiscentralSoapClient client = new hiscentralSoapClient("hiscentralSoap");
+        //WCF ASMX call
+//private IEnumerable<SeriesRecord> CallGetSeriesCatalogForBox2(
+//    float north, float south, float west, float east,
+//string conceptKeyword, string networkIds,
+//DateTime beginDate, DateTime endDate)
+//        {
+//            //hiscentral.hiscentralSoapClient client = new hiscentralSoapClient("hiscentralSoap");
+//            var client = new hisCentral.hiscentral();
 
-            var respnse = client.GetSeriesCatalogForBox2(west,south,east,north,conceptKeyword,
-                networkIds, beginDate.ToString("yyyy-MM-dd"), endDate.ToString("yyyy-MM-dd"));
-            return respnse;
+//            var respnse = client.GetSeriesCatalogForBox2(west,south,east,north,conceptKeyword,
+//                networkIds, beginDate.ToString("yyyy-MM-dd"), endDate.ToString("yyyy-MM-dd"));
+//            return respnse;
+//        }
+
+        // rewite to use rest
+        private IEnumerable<SeriesRecord> CallGetSeriesCatalogForBox2(
+            float north, float south, float west, float east,
+            string conceptKeyword, string networkIds,
+            DateTime beginDate, DateTime endDate)
+        {
+            //hiscentral.hiscentralSoapClient client = new hiscentralSoapClient("hiscentralSoap");
+            // var client = new hisCentral.hiscentral();
+            //GET /webservices/hiscentral.asmx/GetSitesInBox2?xmin=string&xmax=string&ymin=string&ymax=string&conceptKeyword=string&networkIDs=string HTTP/1.1
+
+            UriBuilder u =
+                new UriBuilder("http://hiscentral.cuahsi.org/webservices/hiscentral.asmx/GetSeriesCatalogForBox2?");
+
+            string appendstring = "{0}={1}&";
+
+            u.Query = string.Format(appendstring, "xmin", west);
+            u.Query = u.Query.Substring(1) + string.Format(appendstring, "xmax", east);
+            u.Query = u.Query.Substring(1) + string.Format(appendstring, "ymin", south);
+            u.Query = u.Query.Substring(1) + string.Format(appendstring, "ymax", north);
+            u.Query = u.Query.Substring(1) + string.Format(appendstring, "conceptKeyword", conceptKeyword);
+            u.Query = u.Query.Substring(1) + string.Format(appendstring, "networkIds", networkIds);
+            u.Query = u.Query.Substring(1) + string.Format(appendstring, "beginDate", beginDate.ToString("yyyy-MM-dd"));
+            u.Query = u.Query.Substring(1) + string.Format(appendstring, "endDate", endDate.ToString("yyyy-MM-dd"));
+
+            WebRequest request = WebRequest.Create(u.Uri);
+            request.Method = "GET";
+
+            var xmlSerializer = new XmlSerializer(typeof(ArrayOfSeriesRecord));
+            var res = request.GetResponse();
+
+            var stream = res.GetResponseStream();
+
+            var respnse = (ArrayOfSeriesRecord)xmlSerializer.Deserialize(stream);
+            //var respnse = client.GetSeriesCatalogForBox2(west, south, east, north, conceptKeyword,
+            //    networkIds, beginDate.ToString("yyyy-MM-dd"), endDate.ToString("yyyy-MM-dd"));
+
+            return respnse.seriesResponse;
         }
+
+        [XmlRoot("ArrayOfSeriesRecord", Namespace = "http://hiscentral.cuahsi.org/20100205/")]
+       // [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://hiscentral.cuahsi.org/20100205/")]
+        public class ArrayOfSeriesRecord
+        {
+            [XmlElement("SeriesRecord")]
+            public SeriesRecord[] seriesResponse { get; set; }
+        }
+       
+      
+        
     }
 }

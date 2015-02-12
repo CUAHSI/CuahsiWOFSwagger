@@ -6,7 +6,9 @@ using System.Net.Http;
 using System.Net.Http.Formatting;
 using System.Net.Http.Headers;
 using System.Web;
-using Wb.hiscentral;
+//using Wb.hiscentral;
+using Wb.org.cuahsi.hiscentral;
+
 
 namespace Wb.Models
 {

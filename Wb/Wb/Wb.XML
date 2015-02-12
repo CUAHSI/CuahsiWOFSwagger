@@ -1087,6 +1087,11 @@
             <response code="500">Service Error</response>
         </member>
         <member name="M:Wb.Controllers.WaterOneFlowController.GetValues(System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.String)">
+            <summary>
+            Get Timeseries data 
+            </summary>
+            <remarks>Returns time series data values from WaterOneFlow service for a specified series. Performance is reliant on the WaterOneFlow hydrolocic data service.
+             The CSV format (TBD) is a summary of the detailed information in the XML format</remarks>
             <param name="station">site  {network:identifier}</param>
             <param name="variable">variable  {network:identifier}</param>
             <param name="startTime">start date time</param>
@@ -1096,219 +1101,6 @@
             <returns></returns>
             <response code="400">Invaild or site not found</response>
             <response code="500">Service Error</response>
-        </member>
-        <member name="T:Wb.hiscentral.Site">
-            <remarks/>
-        </member>
-        <member name="P:Wb.hiscentral.Site.SiteName">
-            <remarks/>
-        </member>
-        <member name="P:Wb.hiscentral.Site.SiteCode">
-            <remarks/>
-        </member>
-        <member name="P:Wb.hiscentral.Site.Latitude">
-            <remarks/>
-        </member>
-        <member name="P:Wb.hiscentral.Site.Longitude">
-            <remarks/>
-        </member>
-        <member name="P:Wb.hiscentral.Site.HUC">
-            <remarks/>
-        </member>
-        <member name="P:Wb.hiscentral.Site.HUCnumeric">
-            <remarks/>
-        </member>
-        <member name="P:Wb.hiscentral.Site.servCode">
-            <remarks/>
-        </member>
-        <member name="P:Wb.hiscentral.Site.servURL">
-            <remarks/>
-        </member>
-        <member name="T:Wb.hiscentral.OntologyNode">
-            <remarks/>
-        </member>
-        <member name="P:Wb.hiscentral.OntologyNode.keyword">
-            <remarks/>
-        </member>
-        <member name="P:Wb.hiscentral.OntologyNode.conceptid">
-            <remarks/>
-        </member>
-        <member name="P:Wb.hiscentral.OntologyNode.childNodes">
-            <remarks/>
-        </member>
-        <member name="T:Wb.hiscentral.OntologyPath">
-            <remarks/>
-        </member>
-        <member name="P:Wb.hiscentral.OntologyPath.conceptID">
-            <remarks/>
-        </member>
-        <member name="P:Wb.hiscentral.OntologyPath.SearchableKeyword">
-            <remarks/>
-        </member>
-        <member name="P:Wb.hiscentral.OntologyPath.ConceptName">
-            <remarks/>
-        </member>
-        <member name="P:Wb.hiscentral.OntologyPath.ConceptPath">
-            <remarks/>
-        </member>
-        <member name="T:Wb.hiscentral.SeriesRecord">
-            <remarks/>
-        </member>
-        <member name="P:Wb.hiscentral.SeriesRecord.ServCode">
-            <remarks/>
-        </member>
-        <member name="P:Wb.hiscentral.SeriesRecord.ServURL">
-            <remarks/>
-        </member>
-        <member name="P:Wb.hiscentral.SeriesRecord.location">
-            <remarks/>
-        </member>
-        <member name="P:Wb.hiscentral.SeriesRecord.VarCode">
-            <remarks/>
-        </member>
-        <member name="P:Wb.hiscentral.SeriesRecord.VarName">
-            <remarks/>
-        </member>
-        <member name="P:Wb.hiscentral.SeriesRecord.beginDate">
-            <remarks/>
-        </member>
-        <member name="P:Wb.hiscentral.SeriesRecord.endDate">
-            <remarks/>
-        </member>
-        <member name="P:Wb.hiscentral.SeriesRecord.authtoken">
-            <remarks/>
-        </member>
-        <member name="P:Wb.hiscentral.SeriesRecord.ValueCount">
-            <remarks/>
-        </member>
-        <member name="P:Wb.hiscentral.SeriesRecord.Sitename">
-            <remarks/>
-        </member>
-        <member name="P:Wb.hiscentral.SeriesRecord.latitude">
-            <remarks/>
-        </member>
-        <member name="P:Wb.hiscentral.SeriesRecord.longitude">
-            <remarks/>
-        </member>
-        <member name="P:Wb.hiscentral.SeriesRecord.datatype">
-            <remarks/>
-        </member>
-        <member name="P:Wb.hiscentral.SeriesRecord.valuetype">
-            <remarks/>
-        </member>
-        <member name="P:Wb.hiscentral.SeriesRecord.samplemedium">
-            <remarks/>
-        </member>
-        <member name="P:Wb.hiscentral.SeriesRecord.timeunits">
-            <remarks/>
-        </member>
-        <member name="P:Wb.hiscentral.SeriesRecord.conceptKeyword">
-            <remarks/>
-        </member>
-        <member name="P:Wb.hiscentral.SeriesRecord.genCategory">
-            <remarks/>
-        </member>
-        <member name="P:Wb.hiscentral.SeriesRecord.TimeSupport">
-            <remarks/>
-        </member>
-        <member name="T:Wb.hiscentral.ServiceInfo">
-            <remarks/>
-        </member>
-        <member name="P:Wb.hiscentral.ServiceInfo.servURL">
-            <remarks/>
-        </member>
-        <member name="P:Wb.hiscentral.ServiceInfo.Title">
-            <remarks/>
-        </member>
-        <member name="P:Wb.hiscentral.ServiceInfo.ServiceDescriptionURL">
-            <remarks/>
-        </member>
-        <member name="P:Wb.hiscentral.ServiceInfo.name">
-            <remarks/>
-        </member>
-        <member name="P:Wb.hiscentral.ServiceInfo.Email">
-            <remarks/>
-        </member>
-        <member name="P:Wb.hiscentral.ServiceInfo.phone">
-            <remarks/>
-        </member>
-        <member name="P:Wb.hiscentral.ServiceInfo.organization">
-            <remarks/>
-        </member>
-        <member name="P:Wb.hiscentral.ServiceInfo.orgwebsite">
-            <remarks/>
-        </member>
-        <member name="P:Wb.hiscentral.ServiceInfo.citation">
-            <remarks/>
-        </member>
-        <member name="P:Wb.hiscentral.ServiceInfo.aabstract">
-            <remarks/>
-        </member>
-        <member name="P:Wb.hiscentral.ServiceInfo.valuecount">
-            <remarks/>
-        </member>
-        <member name="P:Wb.hiscentral.ServiceInfo.variablecount">
-            <remarks/>
-        </member>
-        <member name="P:Wb.hiscentral.ServiceInfo.sitecount">
-            <remarks/>
-        </member>
-        <member name="P:Wb.hiscentral.ServiceInfo.ServiceID">
-            <remarks/>
-        </member>
-        <member name="P:Wb.hiscentral.ServiceInfo.NetworkName">
-            <remarks/>
-        </member>
-        <member name="P:Wb.hiscentral.ServiceInfo.minx">
-            <remarks/>
-        </member>
-        <member name="P:Wb.hiscentral.ServiceInfo.miny">
-            <remarks/>
-        </member>
-        <member name="P:Wb.hiscentral.ServiceInfo.maxx">
-            <remarks/>
-        </member>
-        <member name="P:Wb.hiscentral.ServiceInfo.maxy">
-            <remarks/>
-        </member>
-        <member name="P:Wb.hiscentral.ServiceInfo.serviceStatus">
-            <remarks/>
-        </member>
-        <member name="T:Wb.hiscentral.MappedVariable">
-            <remarks/>
-        </member>
-        <member name="P:Wb.hiscentral.MappedVariable.variableName">
-            <remarks/>
-        </member>
-        <member name="P:Wb.hiscentral.MappedVariable.variableCode">
-            <remarks/>
-        </member>
-        <member name="P:Wb.hiscentral.MappedVariable.servCode">
-            <remarks/>
-        </member>
-        <member name="P:Wb.hiscentral.MappedVariable.WSDL">
-            <remarks/>
-        </member>
-        <member name="P:Wb.hiscentral.MappedVariable.conceptKeyword">
-            <remarks/>
-        </member>
-        <member name="P:Wb.hiscentral.MappedVariable.conceptCode">
-            <remarks/>
-        </member>
-        <member name="T:Wb.hiscentral.Box">
-            <remarks/>
-        </member>
-        <member name="P:Wb.hiscentral.Box.xmin">
-            <remarks/>
-        </member>
-        <member name="P:Wb.hiscentral.Box.xmax">
-            <remarks/>
-        </member>
-        <member name="P:Wb.hiscentral.Box.ymin">
-            <remarks/>
-        </member>
-        <member name="P:Wb.hiscentral.Box.ymax">
-            <remarks/>
         </member>
         <member name="T:Wb.wof_1_0.SiteInfoResponseType">
             <remarks/>
@@ -3736,6 +3528,522 @@
             Auto-generated field.
             To modify move field declaration from designer file to code-behind file.
             </remarks>
+        </member>
+        <member name="T:Wb.org.cuahsi.hiscentral.hiscentral">
+            <remarks/>
+        </member>
+        <member name="M:Wb.org.cuahsi.hiscentral.hiscentral.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Wb.org.cuahsi.hiscentral.hiscentral.GetSitesInBox2(System.Double,System.Double,System.Double,System.Double,System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Wb.org.cuahsi.hiscentral.hiscentral.GetSitesInBox2Async(System.Double,System.Double,System.Double,System.Double,System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Wb.org.cuahsi.hiscentral.hiscentral.GetSitesInBox2Async(System.Double,System.Double,System.Double,System.Double,System.String,System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Wb.org.cuahsi.hiscentral.hiscentral.GetSitesInBox(Wb.org.cuahsi.hiscentral.Box,System.String,System.Int32[])">
+            <remarks/>
+        </member>
+        <member name="M:Wb.org.cuahsi.hiscentral.hiscentral.GetSitesInBoxAsync(Wb.org.cuahsi.hiscentral.Box,System.String,System.Int32[])">
+            <remarks/>
+        </member>
+        <member name="M:Wb.org.cuahsi.hiscentral.hiscentral.GetSitesInBoxAsync(Wb.org.cuahsi.hiscentral.Box,System.String,System.Int32[],System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Wb.org.cuahsi.hiscentral.hiscentral.GetMappedVariables2(System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Wb.org.cuahsi.hiscentral.hiscentral.GetMappedVariables2Async(System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Wb.org.cuahsi.hiscentral.hiscentral.GetMappedVariables2Async(System.String,System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Wb.org.cuahsi.hiscentral.hiscentral.GetMappedVariables(System.String[],System.String[])">
+            <remarks/>
+        </member>
+        <member name="M:Wb.org.cuahsi.hiscentral.hiscentral.GetMappedVariablesAsync(System.String[],System.String[])">
+            <remarks/>
+        </member>
+        <member name="M:Wb.org.cuahsi.hiscentral.hiscentral.GetMappedVariablesAsync(System.String[],System.String[],System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Wb.org.cuahsi.hiscentral.hiscentral.GetServicesInBox(Wb.org.cuahsi.hiscentral.Box)">
+            <remarks/>
+        </member>
+        <member name="M:Wb.org.cuahsi.hiscentral.hiscentral.GetServicesInBoxAsync(Wb.org.cuahsi.hiscentral.Box)">
+            <remarks/>
+        </member>
+        <member name="M:Wb.org.cuahsi.hiscentral.hiscentral.GetServicesInBoxAsync(Wb.org.cuahsi.hiscentral.Box,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Wb.org.cuahsi.hiscentral.hiscentral.GetServicesInBox2(System.Double,System.Double,System.Double,System.Double)">
+            <remarks/>
+        </member>
+        <member name="M:Wb.org.cuahsi.hiscentral.hiscentral.GetServicesInBox2Async(System.Double,System.Double,System.Double,System.Double)">
+            <remarks/>
+        </member>
+        <member name="M:Wb.org.cuahsi.hiscentral.hiscentral.GetServicesInBox2Async(System.Double,System.Double,System.Double,System.Double,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Wb.org.cuahsi.hiscentral.hiscentral.GetWaterOneFlowServiceInfo">
+            <remarks/>
+        </member>
+        <member name="M:Wb.org.cuahsi.hiscentral.hiscentral.GetWaterOneFlowServiceInfoAsync">
+            <remarks/>
+        </member>
+        <member name="M:Wb.org.cuahsi.hiscentral.hiscentral.GetWaterOneFlowServiceInfoAsync(System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Wb.org.cuahsi.hiscentral.hiscentral.GetSeriesCatalogForBox(Wb.org.cuahsi.hiscentral.Box,System.String,System.Int32[],System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Wb.org.cuahsi.hiscentral.hiscentral.GetSeriesCatalogForBoxAsync(Wb.org.cuahsi.hiscentral.Box,System.String,System.Int32[],System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Wb.org.cuahsi.hiscentral.hiscentral.GetSeriesCatalogForBoxAsync(Wb.org.cuahsi.hiscentral.Box,System.String,System.Int32[],System.String,System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Wb.org.cuahsi.hiscentral.hiscentral.GetSeriesCatalogForBox2(System.Double,System.Double,System.Double,System.Double,System.String,System.String,System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Wb.org.cuahsi.hiscentral.hiscentral.GetSeriesCatalogForBox2Async(System.Double,System.Double,System.Double,System.Double,System.String,System.String,System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Wb.org.cuahsi.hiscentral.hiscentral.GetSeriesCatalogForBox2Async(System.Double,System.Double,System.Double,System.Double,System.String,System.String,System.String,System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Wb.org.cuahsi.hiscentral.hiscentral.getSeriesCatalogInBoxPaged(System.Double,System.Double,System.Double,System.Double,System.String,System.String,System.String,System.String,System.Int32)">
+            <remarks/>
+        </member>
+        <member name="M:Wb.org.cuahsi.hiscentral.hiscentral.getSeriesCatalogInBoxPagedAsync(System.Double,System.Double,System.Double,System.Double,System.String,System.String,System.String,System.String,System.Int32)">
+            <remarks/>
+        </member>
+        <member name="M:Wb.org.cuahsi.hiscentral.hiscentral.getSeriesCatalogInBoxPagedAsync(System.Double,System.Double,System.Double,System.Double,System.String,System.String,System.String,System.String,System.Int32,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Wb.org.cuahsi.hiscentral.hiscentral.getSearchablePaths">
+            <remarks/>
+        </member>
+        <member name="M:Wb.org.cuahsi.hiscentral.hiscentral.getSearchablePathsAsync">
+            <remarks/>
+        </member>
+        <member name="M:Wb.org.cuahsi.hiscentral.hiscentral.getSearchablePathsAsync(System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Wb.org.cuahsi.hiscentral.hiscentral.GetSearchableConcepts">
+            <remarks/>
+        </member>
+        <member name="M:Wb.org.cuahsi.hiscentral.hiscentral.GetSearchableConceptsAsync">
+            <remarks/>
+        </member>
+        <member name="M:Wb.org.cuahsi.hiscentral.hiscentral.GetSearchableConceptsAsync(System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Wb.org.cuahsi.hiscentral.hiscentral.getOntologyTree(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Wb.org.cuahsi.hiscentral.hiscentral.getOntologyTreeAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Wb.org.cuahsi.hiscentral.hiscentral.getOntologyTreeAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Wb.org.cuahsi.hiscentral.hiscentral.GetWordList(System.String,System.Int32)">
+            <remarks/>
+        </member>
+        <member name="M:Wb.org.cuahsi.hiscentral.hiscentral.GetWordListAsync(System.String,System.Int32)">
+            <remarks/>
+        </member>
+        <member name="M:Wb.org.cuahsi.hiscentral.hiscentral.GetWordListAsync(System.String,System.Int32,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Wb.org.cuahsi.hiscentral.hiscentral.CancelAsync(System.Object)">
+            <remarks/>
+        </member>
+        <member name="E:Wb.org.cuahsi.hiscentral.hiscentral.GetSitesInBox2Completed">
+            <remarks/>
+        </member>
+        <member name="E:Wb.org.cuahsi.hiscentral.hiscentral.GetSitesInBoxCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Wb.org.cuahsi.hiscentral.hiscentral.GetMappedVariables2Completed">
+            <remarks/>
+        </member>
+        <member name="E:Wb.org.cuahsi.hiscentral.hiscentral.GetMappedVariablesCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Wb.org.cuahsi.hiscentral.hiscentral.GetServicesInBoxCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Wb.org.cuahsi.hiscentral.hiscentral.GetServicesInBox2Completed">
+            <remarks/>
+        </member>
+        <member name="E:Wb.org.cuahsi.hiscentral.hiscentral.GetWaterOneFlowServiceInfoCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Wb.org.cuahsi.hiscentral.hiscentral.GetSeriesCatalogForBoxCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Wb.org.cuahsi.hiscentral.hiscentral.GetSeriesCatalogForBox2Completed">
+            <remarks/>
+        </member>
+        <member name="E:Wb.org.cuahsi.hiscentral.hiscentral.getSeriesCatalogInBoxPagedCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Wb.org.cuahsi.hiscentral.hiscentral.getSearchablePathsCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Wb.org.cuahsi.hiscentral.hiscentral.GetSearchableConceptsCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Wb.org.cuahsi.hiscentral.hiscentral.getOntologyTreeCompleted">
+            <remarks/>
+        </member>
+        <member name="E:Wb.org.cuahsi.hiscentral.hiscentral.GetWordListCompleted">
+            <remarks/>
+        </member>
+        <member name="T:Wb.org.cuahsi.hiscentral.Site">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.Site.SiteName">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.Site.SiteCode">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.Site.Latitude">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.Site.Longitude">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.Site.HUC">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.Site.HUCnumeric">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.Site.servCode">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.Site.servURL">
+            <remarks/>
+        </member>
+        <member name="T:Wb.org.cuahsi.hiscentral.OntologyNode">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.OntologyNode.keyword">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.OntologyNode.conceptid">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.OntologyNode.childNodes">
+            <remarks/>
+        </member>
+        <member name="T:Wb.org.cuahsi.hiscentral.OntologyPath">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.OntologyPath.conceptID">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.OntologyPath.SearchableKeyword">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.OntologyPath.ConceptName">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.OntologyPath.ConceptPath">
+            <remarks/>
+        </member>
+        <member name="T:Wb.org.cuahsi.hiscentral.SeriesRecord">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.SeriesRecord.ServCode">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.SeriesRecord.ServURL">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.SeriesRecord.location">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.SeriesRecord.VarCode">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.SeriesRecord.VarName">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.SeriesRecord.beginDate">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.SeriesRecord.endDate">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.SeriesRecord.authtoken">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.SeriesRecord.ValueCount">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.SeriesRecord.Sitename">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.SeriesRecord.latitude">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.SeriesRecord.longitude">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.SeriesRecord.datatype">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.SeriesRecord.valuetype">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.SeriesRecord.samplemedium">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.SeriesRecord.timeunits">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.SeriesRecord.conceptKeyword">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.SeriesRecord.genCategory">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.SeriesRecord.TimeSupport">
+            <remarks/>
+        </member>
+        <member name="T:Wb.org.cuahsi.hiscentral.ServiceInfo">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.ServiceInfo.servURL">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.ServiceInfo.Title">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.ServiceInfo.ServiceDescriptionURL">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.ServiceInfo.name">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.ServiceInfo.Email">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.ServiceInfo.phone">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.ServiceInfo.organization">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.ServiceInfo.orgwebsite">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.ServiceInfo.citation">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.ServiceInfo.aabstract">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.ServiceInfo.valuecount">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.ServiceInfo.variablecount">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.ServiceInfo.sitecount">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.ServiceInfo.ServiceID">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.ServiceInfo.NetworkName">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.ServiceInfo.minx">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.ServiceInfo.miny">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.ServiceInfo.maxx">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.ServiceInfo.maxy">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.ServiceInfo.serviceStatus">
+            <remarks/>
+        </member>
+        <member name="T:Wb.org.cuahsi.hiscentral.MappedVariable">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.MappedVariable.variableName">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.MappedVariable.variableCode">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.MappedVariable.servCode">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.MappedVariable.WSDL">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.MappedVariable.conceptKeyword">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.MappedVariable.conceptCode">
+            <remarks/>
+        </member>
+        <member name="T:Wb.org.cuahsi.hiscentral.Box">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.Box.xmin">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.Box.xmax">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.Box.ymin">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.Box.ymax">
+            <remarks/>
+        </member>
+        <member name="T:Wb.org.cuahsi.hiscentral.GetSitesInBox2CompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Wb.org.cuahsi.hiscentral.GetSitesInBox2CompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.GetSitesInBox2CompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Wb.org.cuahsi.hiscentral.GetSitesInBoxCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Wb.org.cuahsi.hiscentral.GetSitesInBoxCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.GetSitesInBoxCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Wb.org.cuahsi.hiscentral.GetMappedVariables2CompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Wb.org.cuahsi.hiscentral.GetMappedVariables2CompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.GetMappedVariables2CompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Wb.org.cuahsi.hiscentral.GetMappedVariablesCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Wb.org.cuahsi.hiscentral.GetMappedVariablesCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.GetMappedVariablesCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Wb.org.cuahsi.hiscentral.GetServicesInBoxCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Wb.org.cuahsi.hiscentral.GetServicesInBoxCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.GetServicesInBoxCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Wb.org.cuahsi.hiscentral.GetServicesInBox2CompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Wb.org.cuahsi.hiscentral.GetServicesInBox2CompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.GetServicesInBox2CompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Wb.org.cuahsi.hiscentral.GetWaterOneFlowServiceInfoCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Wb.org.cuahsi.hiscentral.GetWaterOneFlowServiceInfoCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.GetWaterOneFlowServiceInfoCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Wb.org.cuahsi.hiscentral.GetSeriesCatalogForBoxCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Wb.org.cuahsi.hiscentral.GetSeriesCatalogForBoxCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.GetSeriesCatalogForBoxCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Wb.org.cuahsi.hiscentral.GetSeriesCatalogForBox2CompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Wb.org.cuahsi.hiscentral.GetSeriesCatalogForBox2CompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.GetSeriesCatalogForBox2CompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Wb.org.cuahsi.hiscentral.getSeriesCatalogInBoxPagedCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Wb.org.cuahsi.hiscentral.getSeriesCatalogInBoxPagedCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.getSeriesCatalogInBoxPagedCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Wb.org.cuahsi.hiscentral.getSearchablePathsCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Wb.org.cuahsi.hiscentral.getSearchablePathsCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.getSearchablePathsCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Wb.org.cuahsi.hiscentral.GetSearchableConceptsCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Wb.org.cuahsi.hiscentral.GetSearchableConceptsCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.GetSearchableConceptsCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Wb.org.cuahsi.hiscentral.getOntologyTreeCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Wb.org.cuahsi.hiscentral.getOntologyTreeCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.getOntologyTreeCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:Wb.org.cuahsi.hiscentral.GetWordListCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:Wb.org.cuahsi.hiscentral.GetWordListCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:Wb.org.cuahsi.hiscentral.GetWordListCompletedEventArgs.Result">
+            <remarks/>
         </member>
     </members>
 </doc>

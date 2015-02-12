@@ -8,5 +8,6 @@ namespace WOFClientProxy
 {
     public class Class1
     {
+
     }
 }
