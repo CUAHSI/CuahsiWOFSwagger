@@ -48,6 +48,7 @@ namespace Wb.Models
             {
                 using (var writer = new StreamWriter(writeStream))
                 {
+                    writer.WriteLine(cvs_header());
                     var products = value as IEnumerable<SeriesRecord>;
                     if (products != null)
                     {
@@ -67,11 +68,18 @@ namespace Wb.Models
                     }
                 }
             }
+
+            private string cvs_header()
+            {
+                return String.Format("#fields={0}[type='string'],{1}[type='string'],{2}[unit='degrees'],{3}[unit='degrees'],{4}[type='string'],{5}[type='date' format='MM/dd/yyyy h:mm:ss a],{6}[type='date' format='MM/dd/yyyy h:mm:ss a],{7}[type='string']",
+                    "location", "VarCode", "latitude", "longitude", "VarName", "beginDate", "endDate", "ServURL");
+            }
+
             // Helper methods for serializing Products to CSV format. 
             private void WriteItem(SeriesRecord series, StreamWriter writer)
             {
                 writer.WriteLine("{0},{1},{2},{3},{4},{5},{6},{7}", Escape(series.location), Escape(series.VarCode),
-                     Escape(series.latitude), Escape(series.longitude),
+                    Escape(series.latitude), Escape(series.longitude),
                     Escape(series.VarName), Escape(series.beginDate), Escape(series.endDate), Escape(series.ServURL));
             }
 
