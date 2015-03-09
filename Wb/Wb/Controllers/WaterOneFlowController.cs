@@ -16,14 +16,27 @@ namespace Wb.Controllers
     [System.Web.Http.RoutePrefix("wateroneflow")]
     public class WaterOneFlowController : ApiController
     {
+        // TODO.
+        // read the HIS censtral service, parse for 1_1 enpoints.
+        // then write a new SwaggerEnumValue (SwaggerHISServerValue) attribute to dynamically add at start
         private const string BaseWOfURL = "http://icewater.usu.edu/littlebearriver/cuahsi_1_1.asmx";
+        private const string BaseWOfURL_2 = "http://192.31.21.100/czo_udel/cuahsi_1_0.asmx";
 
         private WaterOneFlowClient getClientForURL(
             string url)
         {
+            wof_1_1.WaterOneFlowClient client;
+            if (String.IsNullOrEmpty(url))
+            {
+                 client = new WaterOneFlowClient("WaterOneFlow",
+                   BaseWOfURL);
+            }
+            else
+            {
+               client = new WaterOneFlowClient("WaterOneFlow",
+                    url);
+            }
 
-            wof_1_1.WaterOneFlowClient client = new WaterOneFlowClient("WaterOneFlow",
-               BaseWOfURL);
             return client;
         }
 
@@ -41,14 +54,14 @@ namespace Wb.Controllers
         [Route("sites")]
         [SwaggerDefaultValue("servUrl", BaseWOfURL)]
         [SwaggerEnumValue("servUrl", BaseWOfURL)]
-        [SwaggerEnumValue("servUrl", "http://www.example.com/future")]
+        [SwaggerEnumValue("servUrl", BaseWOfURL_2)]
         public IEnumerable<SiteInfoResponseTypeSite> GetSites([FromUri] string[] station =null, [FromUri] String servUrl = null)
         {
-            return CallGetSites(station);
+            return CallGetSites(station, servUrl);
         }
-        private IEnumerable<SiteInfoResponseTypeSite> CallGetSites(string[] sitees)
+        private IEnumerable<SiteInfoResponseTypeSite> CallGetSites(string[] sitees, string servUrl)
         {
-            wof_1_1.WaterOneFlowClient client = getClientForURL(null);
+            wof_1_1.WaterOneFlowClient client = getClientForURL(servUrl);
           
 
             var respnse = client.GetSitesObject(new string[] {}, null);
@@ -73,7 +86,7 @@ namespace Wb.Controllers
         [SwaggerDefaultValue("station", "LBR:USU-LBR-Mendon")]
         [SwaggerDefaultValue("servUrl", BaseWOfURL)]
         [SwaggerEnumValue("servUrl", BaseWOfURL)]
-        [SwaggerEnumValue("servUrl", "http://www.example.com/future")]
+        [SwaggerEnumValue("servUrl", BaseWOfURL_2)]
         [ResponseType(typeof(IEnumerable<SiteInfoResponseTypeSite>))]
         public IHttpActionResult GetSiteInfo([FromUri] string[] station, [FromUri] String servUrl = null)
         {
@@ -97,7 +110,7 @@ namespace Wb.Controllers
             }
             try
             {
-                var res = CallGetSiteInfo(station);
+                var res = CallGetSiteInfo(station, servUrl);
                 if (res.Any())
                 {
                     return Ok(res);
@@ -119,9 +132,9 @@ namespace Wb.Controllers
             }
             
         }
-        private IEnumerable<SiteInfoResponseTypeSite> CallGetSiteInfo(string[] sites)
+        private IEnumerable<SiteInfoResponseTypeSite> CallGetSiteInfo(string[] sites, string servUrl)
         {
-            wof_1_1.WaterOneFlowClient client = getClientForURL(null);
+            wof_1_1.WaterOneFlowClient client = getClientForURL(servUrl);
 
             var respnse = client.GetSiteInfoMultpleObject(sites, null);
             return respnse.site;
@@ -140,14 +153,14 @@ namespace Wb.Controllers
         [Route("observedProperty")]
         [SwaggerDefaultValue("servUrl", BaseWOfURL)]
         [SwaggerEnumValue("servUrl", BaseWOfURL)]
-        [SwaggerEnumValue("servUrl", "http://www.example.com/future")]
+        [SwaggerEnumValue("servUrl", BaseWOfURL_2)]
         public IEnumerable<VariableInfoType> GetAllVariables([FromUri] String servUrl = null)
         {
-            return CallGetVariables();
+            return CallGetVariables(servUrl);
         }
-        private IEnumerable<VariableInfoType> CallGetVariables()
+        private IEnumerable<VariableInfoType> CallGetVariables(string servUrl)
         {
-            wof_1_1.WaterOneFlowClient client = getClientForURL(null);
+            wof_1_1.WaterOneFlowClient client = getClientForURL(servUrl);
 
             var respnse = client.GetVariablesObject( null);
             return respnse.variables;
@@ -170,14 +183,14 @@ namespace Wb.Controllers
         [SwaggerDefaultValue("variable", "LBR:USU10")]
         [SwaggerDefaultValue("servUrl", BaseWOfURL)]
         [SwaggerEnumValue("servUrl", BaseWOfURL)]
-        [SwaggerEnumValue("servUrl", "http://www.example.com/future")]
+        [SwaggerEnumValue("servUrl",BaseWOfURL_2)]
         public VariableInfoType GetVariables([FromUri]string variable, [FromUri] String servUrl = null)
         {
-            return CallGetVariableInfo(variable);
+            return CallGetVariableInfo(variable, servUrl);
         }
-        private VariableInfoType CallGetVariableInfo(string variable)
+        private VariableInfoType CallGetVariableInfo(string variable, string servUrl)
         {
-            wof_1_1.WaterOneFlowClient client = getClientForURL(null);
+            wof_1_1.WaterOneFlowClient client = getClientForURL(servUrl);
 
             var respnse = client.GetVariableInfoObject(variable,null);
             return respnse.variables.First();
@@ -206,7 +219,7 @@ namespace Wb.Controllers
         [SwaggerDefaultValue("endTime", "2010-02-01")]
         [SwaggerDefaultValue("servUrl", BaseWOfURL)]
         [SwaggerEnumValue("servUrl", BaseWOfURL)]
-        [SwaggerEnumValue("servUrl", "http://www.example.com/future")]
+        [SwaggerEnumValue("servUrl", BaseWOfURL_2)]
         public TimeSeriesType GetValues([FromUri]string station, [FromUri]string variable,
             DateTime? startTime = null, DateTime? endTime = null, 
             [FromUri] String servUrl = null)
@@ -217,7 +230,7 @@ namespace Wb.Controllers
             DateTime? startTime = null, DateTime? endTime = null, 
             [FromUri] String servUrl = null)
         {
-            wof_1_1.WaterOneFlowClient client = getClientForURL(null);
+            wof_1_1.WaterOneFlowClient client = getClientForURL(servUrl);
 
             var begin = startTime.HasValue ? startTime.Value.ToString("yyyy-MM-dd") : null;
             var end = endTime.HasValue ? endTime.Value.ToString("yyyy-MM-dd") : null;
