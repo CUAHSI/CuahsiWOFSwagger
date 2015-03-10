@@ -55,6 +55,16 @@ namespace Wb.Models
                     var products = value as IEnumerable<SiteInfoResponseTypeSite>;
                     if (products != null)
                     {
+                        var header_delimiter = products.ElementAt(0);
+                        if (header_delimiter.seriesCatalog != null)
+                        {
+                            writer.WriteLine(siteinfo_cvs_header());
+                        }
+                        else
+                        {
+                            writer.WriteLine(site_cvs_header());
+                        }
+
                         foreach (var product in products)
                         {
                             WriteItem(product, writer);
@@ -67,6 +77,16 @@ namespace Wb.Models
                         {
                             throw new InvalidOperationException("Cannot serialize type");
                         }
+
+                        if (singleProduct.seriesCatalog != null)
+                        {
+                            writer.WriteLine(siteinfo_cvs_header());
+                        }
+                        else
+                        {
+                            writer.WriteLine(site_cvs_header());
+                        }
+
                         WriteItem(singleProduct, writer);
                     }
                 }
@@ -100,7 +120,7 @@ namespace Wb.Models
                 {
                     // bad site
                     writer.WriteLine(
-                        FormattedSeriesRow(network : sitenetwork, siteCode : siteCode, siteName:siteName)
+                        site_FormattedSeriesRow(network : sitenetwork, siteCode : siteCode, siteName:siteName)
                         );
                     return;
                 }
@@ -142,11 +162,23 @@ namespace Wb.Models
                     {
                         // only a site
                         writer.WriteLine(
-                            FormattedSeriesRow(network: sitenetwork, siteCode: siteCode, siteName: siteName,
+                            site_FormattedSeriesRow(network: sitenetwork, siteCode: siteCode, siteName: siteName,
                             lat:lat.ToString(), lon:lon.ToString())
                             );
                     }
                 }
+            }
+
+            private string siteinfo_cvs_header()
+            {
+                return String.Format("#fields={0}:{1}[type='string'],{2}[type='string'],{3}[unit='degrees'],{4}[unit='degrees'],{5}[type='string'],{6}[type='string'],{7}[type='date' format='yyyy-MM-dd],{8}[type='date' format='yyyy-MM-dd]", 
+                    "network", "siteCode", "siteName", "latitude", "longitude", "variableVocab", "variableCode", "startTime", "endTime");
+            }
+
+            private string site_cvs_header()
+            {
+                return String.Format("#fields={0}:{1}[type='string'],{2}[type='string'],{3}[unit='degrees'],{4}[unit='degrees']",
+                    "network", "siteCode", "siteName", "latitude", "longitude");
             }
 
             private string FormattedSeriesRow(string siteName = "",
@@ -159,6 +191,15 @@ namespace Wb.Models
                 return String.Format("{0}:{1},{2},{3},{4},{5},{6},{7},{8}", Escape(network), Escape(siteCode), Escape(siteName), lat, lon,
                     variableVocab, Escape(variableCode), Escape(startTime), Escape(endtime));
             }
+            private string site_FormattedSeriesRow(string siteName = "",
+                string siteCode = "",
+                string network = "",
+                string lat = "", string lon = "")
+            {
+
+                return String.Format("{0}:{1},{2},{3},{4}", Escape(network), Escape(siteCode), Escape(siteName), lat, lon);
+            }
+
             static char[] _specialChars = new char[] { ',', '\n', '\r', '"' };
 
             private string Escape(object o)

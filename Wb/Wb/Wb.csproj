@@ -467,7 +467,6 @@
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Site.Mobile.Master" />
-    <Content Include="SwaggerUI\lib\.DS_Store" />
     <Content Include="EcRest\swagger.json" />
     <Content Include="EcRest\swagger_webapi.json" />
     <Content Include="EcRest\swagger_hiscentral.json" />

@@ -51,6 +51,7 @@ namespace Wb.Models
 
                 using (var writer = new StreamWriter(writeStream))
                 {
+                    writer.WriteLine(cvs_header());
                     var products = value as IEnumerable<TimeSeriesType>;
                     if (products != null)
                     {
@@ -161,7 +162,8 @@ namespace Wb.Models
                                             lat: lat.ToString(), lon: lon.ToString(),
                                             variableCode: variableCode, variableVocab: variableVocab,
                                             dataValue: dataValue,
-                                            obsDateTime: obsDateTime.ToString("u")
+                                            //obsDateTime: obsDateTime.ToString("u")
+                                            obsDateTime: obsDateTime.ToString("yyyy-MM-dd HH:mm:ss")
                                             )
                                         );
 
@@ -185,6 +187,12 @@ namespace Wb.Models
                             );
                     }
                 
+            }
+
+            private string cvs_header()
+            {
+                return String.Format("#fields={0}:{1}[type='string'],{2}:{3}[type='string'],{4}[type='date' format='yyyy-MM-dd HH:mm:ss'],{5}",
+                    "network", "siteCode", "variableVocab", "variableCode", "DateTime", "dataValue");
             }
 
             private string FormattedSeriesRow(string siteName = "",
