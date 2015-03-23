@@ -20,7 +20,7 @@ namespace Wb.Controllers
         // read the HIS censtral service, parse for 1_1 enpoints.
         // then write a new SwaggerEnumValue (SwaggerHISServerValue) attribute to dynamically add at start
         private const string BaseWOfURL = "http://icewater.usu.edu/littlebearriver/cuahsi_1_1.asmx";
-        private const string BaseWOfURL_2 = "http://192.31.21.100/czo_udel/cuahsi_1_0.asmx";
+        private const string BaseWOfURL_2 = "http://192.31.21.100/czo_udel/cuahsi_1_1.asmx";
 
         private WaterOneFlowClient getClientForURL(
             string url)
