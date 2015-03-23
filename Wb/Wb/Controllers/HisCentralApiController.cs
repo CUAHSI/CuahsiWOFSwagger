@@ -170,6 +170,7 @@ namespace Wb.Controllers
         /// <param name="networkIds">networkIDs,(try '52' or '1,2,4') comma separated network identifiers from GetWaterOneFlowServiceInfo or GetServicesInBox</param>
         /// <param name="startTime">starttime  as ISO, try 2012-01-01</param>
         /// <param name="endTime">endtime as ISO, try 2014-01-01</param>
+        /// <param name="format">format, CSV format: 'csv', JSON format: 'json', XML format: 'xml' </param>
         /// <returns></returns>
         /// <response code="500">Service Error</response> 
         [HttpGet()]
@@ -187,7 +188,7 @@ namespace Wb.Controllers
         public IEnumerable<SeriesRecord> GetWaterOneFlowServiceInfo(
             float north, float south, float west, float east,
             string conceptKeyword, string networkIds,
-            DateTime startTime, DateTime endTime
+            DateTime startTime, DateTime endTime, string format = null
             )
         {
             return CallGetSeriesCatalogForBox2(north, south, west, east, conceptKeyword, networkIds,

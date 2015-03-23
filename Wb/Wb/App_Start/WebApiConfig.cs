@@ -32,7 +32,7 @@ namespace Wb
             //json.SerializerSettings.Culture = new CultureInfo("it-IT");
             var seriesf = new SeriesRecordCsvFormatter();
             seriesf.MediaTypeMappings.Add(new QueryStringMapping("format", "csv", "text/csv"));
-           // seriesf.MediaTypeMappings.Add(new UriPathExtensionMapping("csv", "text/csv"));
+            // seriesf.MediaTypeMappings.Add(new UriPathExtensionMapping("csv", "text/csv"));
             config.Formatters.Add(seriesf);
             var wof11Site = new Wof11_SiteInfoCsvFormatter();
             wof11Site.MediaTypeMappings.Add(new QueryStringMapping("format", "csv", "text/csv"));

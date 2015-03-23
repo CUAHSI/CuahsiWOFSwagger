@@ -47,6 +47,7 @@ namespace Wb.Controllers
         /// The CSV format is a summary of the site detailed information in the XML format</remarks>
         /// <param name="station">site identifier, {network:identifier}</param>
         /// <param name="servUrl">WOF1.1 Service Enpoint</param>
+        /// <param name="format">format, CSV format: 'csv', JSON format: 'json', XML format: 'xml' </param>
         /// <returns></returns>
         /// <response code="500">Service Error</response>
         [HttpGet()]
@@ -55,7 +56,7 @@ namespace Wb.Controllers
         [SwaggerDefaultValue("servUrl", BaseWOfURL)]
         [SwaggerEnumValue("servUrl", BaseWOfURL)]
         [SwaggerEnumValue("servUrl", BaseWOfURL_2)]
-        public IEnumerable<SiteInfoResponseTypeSite> GetSites([FromUri] string[] station =null, [FromUri] String servUrl = null)
+        public IEnumerable<SiteInfoResponseTypeSite> GetSites([FromUri] string[] station =null, [FromUri] String servUrl = null, String format = null)
         {
             return CallGetSites(station, servUrl);
         }
@@ -77,6 +78,7 @@ namespace Wb.Controllers
         ///  The CSV format is a summary of the detailed information in the XML format</remarks>
         /// <param name="station">site identifier, {network:identifier}</param>
         /// <param name="servUrl">WOF1.1 Service Enpoint</param>
+        /// <param name="format">format, CSV format: 'csv', JSON format: 'json', XML format: 'xml' </param>
         /// <returns></returns>
         /// <response code="400">Invaild or site not found</response>
         /// <response code="500">Service Error</response>
@@ -88,7 +90,7 @@ namespace Wb.Controllers
         [SwaggerEnumValue("servUrl", BaseWOfURL)]
         [SwaggerEnumValue("servUrl", BaseWOfURL_2)]
         [ResponseType(typeof(IEnumerable<SiteInfoResponseTypeSite>))]
-        public IHttpActionResult GetSiteInfo([FromUri] string[] station, [FromUri] String servUrl = null)
+        public IHttpActionResult GetSiteInfo([FromUri] string[] station, [FromUri] String servUrl = null, string format = null)
         {
             if (station.Length == 0)
             {
@@ -207,6 +209,7 @@ namespace Wb.Controllers
         /// <param name="endTime">end date time</param>
         /// <param name="servUrl"></param>
         /// <param name="servUrl">WOF1.1 Service Enpoint</param>
+        /// <param name="format">format, CSV format: 'csv', JSON format: 'json', XML format: 'xml' </param>
         /// <returns></returns>
         /// <response code="400">Invaild or site not found</response>
         /// <response code="500">Service Error</response>
@@ -222,7 +225,7 @@ namespace Wb.Controllers
         [SwaggerEnumValue("servUrl", BaseWOfURL_2)]
         public TimeSeriesType GetValues([FromUri]string station, [FromUri]string variable,
             DateTime? startTime = null, DateTime? endTime = null, 
-            [FromUri] String servUrl = null)
+            [FromUri] String servUrl = null, string format = null)
         {
             return CallGetValues(station,variable, startTime,endTime,null);
         }
