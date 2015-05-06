@@ -166,10 +166,10 @@ namespace Wb.Controllers
         /// <param name="south">south, try 40</param>
         /// <param name="west">west, try -114</param>
         /// <param name="east">east, try -110</param>
-        /// <param name="conceptKeyword">conceptKeyword, try streamflow</param>
-        /// <param name="networkIds">networkIDs,(try '52' or '1,2,4') comma separated network identifiers from GetWaterOneFlowServiceInfo or GetServicesInBox</param>
         /// <param name="startTime">starttime  as ISO, try 2012-01-01</param>
         /// <param name="endTime">endtime as ISO, try 2014-01-01</param>
+        /// <param name="networkIds">networkIDs,(Empty=all, try '52' or '2,4356') comma separated network identifiers from GetWaterOneFlowServiceInfo or GetServicesInBox</param>
+        /// <param name="conceptKeyword">conceptKeyword, try streamflow. Empty = All</param>
         /// <param name="format">format, CSV format: 'csv', JSON format: 'json', XML format: 'xml' </param>
         /// <returns></returns>
         /// <response code="500">Service Error</response> 
@@ -185,14 +185,10 @@ namespace Wb.Controllers
         [SwaggerDefaultValue("startTime", "2012-01-01")]
         [SwaggerDefaultValue("endTime", "2012-06-01")]
 
-        public IEnumerable<SeriesRecord> GetWaterOneFlowServiceInfo(
-            float north, float south, float west, float east,
-            string conceptKeyword, string networkIds,
-            DateTime startTime, DateTime endTime, string format = null
-            )
+        public IEnumerable<SeriesRecord> GetWaterOneFlowServiceInfo(float north, float south, float west, float east, DateTime startTime, DateTime endTime, string networkIds="", string conceptKeyword = "", string format = null)
         {
-            return CallGetSeriesCatalogForBox2(north, south, west, east, conceptKeyword, networkIds,
-                startTime, endTime);
+            return CallGetSeriesCatalogForBox2(north, south, west, east, networkIds,
+                startTime, endTime, conceptKeyword);
         }
 
         //WCF ASMX call
@@ -210,10 +206,7 @@ namespace Wb.Controllers
 //        }
 
         // rewite to use rest
-        private IEnumerable<SeriesRecord> CallGetSeriesCatalogForBox2(
-            float north, float south, float west, float east,
-            string conceptKeyword, string networkIds,
-            DateTime beginDate, DateTime endDate)
+        private IEnumerable<SeriesRecord> CallGetSeriesCatalogForBox2(float north, float south, float west, float east, string networkIds, DateTime beginDate, DateTime endDate, string conceptKeyword)
         {
             //hiscentral.hiscentralSoapClient client = new hiscentralSoapClient("hiscentralSoap");
             // var client = new hisCentral.hiscentral();
