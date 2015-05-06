@@ -64,9 +64,9 @@ namespace Wb.Controllers
         /// 
         [HttpGet()]
         [Route("Ontology/{conceptKeyword}")]
-        [ActionName("GetSearchableConcepts")]
+        [ActionName("GetOntologyTree")]
         [SwaggerDefaultValue("conceptKeyword", "Streamflow")]
-        [ResponseType(typeof (OntologyNode))]
+        //[ResponseType(typeof (OntologyNode))]
         public IHttpActionResult GetOntologyTree(string conceptKeyword)
         {
             if (String.IsNullOrWhiteSpace(conceptKeyword))
