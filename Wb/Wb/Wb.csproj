@@ -358,7 +358,65 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <None Include="Service References\org.cuahsi.hiscentral\hiscentral.wsdl" />
+    <Content Include="Service References\org.cuahsi.hiscentral\Wb.org.cuahsi.hiscentral.GetMappedVariables2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\org.cuahsi.hiscentral\Wb.org.cuahsi.hiscentral.GetMappedVariablesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\org.cuahsi.hiscentral\Wb.org.cuahsi.hiscentral.getSearchablePathsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\org.cuahsi.hiscentral\Wb.org.cuahsi.hiscentral.GetSeriesCatalogForBox2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\org.cuahsi.hiscentral\Wb.org.cuahsi.hiscentral.GetSeriesCatalogForBoxResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\org.cuahsi.hiscentral\Wb.org.cuahsi.hiscentral.getSeriesCatalogInBoxPagedResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\org.cuahsi.hiscentral\Wb.org.cuahsi.hiscentral.GetServicesInBox2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\org.cuahsi.hiscentral\Wb.org.cuahsi.hiscentral.GetServicesInBoxResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\org.cuahsi.hiscentral\Wb.org.cuahsi.hiscentral.GetSitesInBox2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\org.cuahsi.hiscentral\Wb.org.cuahsi.hiscentral.GetSitesInBoxResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\org.cuahsi.hiscentral\Wb.org.cuahsi.hiscentral.GetWaterOneFlowServiceInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\org.cuahsi.hiscentral\Wb.org.cuahsi.hiscentral.MappedVariable1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\org.cuahsi.hiscentral\Wb.org.cuahsi.hiscentral.OntologyNode1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\org.cuahsi.hiscentral\Wb.org.cuahsi.hiscentral.OntologyPath1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\org.cuahsi.hiscentral\Wb.org.cuahsi.hiscentral.SeriesRecord1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\org.cuahsi.hiscentral\Wb.org.cuahsi.hiscentral.ServiceInfo1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\org.cuahsi.hiscentral\Wb.org.cuahsi.hiscentral.Site1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Service References\wof_1_0\cuahsi_1_0.wsdl" />
+    <None Include="Service References\org.cuahsi.hiscentral\configuration91.svcinfo" />
+    <None Include="Service References\org.cuahsi.hiscentral\configuration.svcinfo" />
+    <None Include="Service References\org.cuahsi.hiscentral\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Service References\wof_1_0\Wb.wof_1_0.GetSiteInfoObjectResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -516,31 +574,6 @@
     <Content Include="SwaggerUI\fonts\droid-sans-v6-latin-regular.ttf" />
     <Content Include="SwaggerUI\fonts\droid-sans-v6-latin-regular.woff" />
     <Content Include="SwaggerUI\fonts\droid-sans-v6-latin-regular.woff2" />
-    <None Include="Web References\org.cuahsi.hiscentral\hiscentral.wsdl">
-      <SubType>Designer</SubType>
-    </None>
-    <Content Include="Web References\org.cuahsi.hiscentral\MappedVariable.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </Content>
-    <Content Include="Web References\org.cuahsi.hiscentral\OntologyNode.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </Content>
-    <Content Include="Web References\org.cuahsi.hiscentral\OntologyPath.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </Content>
-    <Content Include="Web References\org.cuahsi.hiscentral\Reference.map">
-      <Generator>MSDiscoCodeGenerator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </Content>
-    <Content Include="Web References\org.cuahsi.hiscentral\SeriesRecord.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </Content>
-    <Content Include="Web References\org.cuahsi.hiscentral\ServiceInfo.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </Content>
-    <Content Include="Web References\org.cuahsi.hiscentral\Site.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -708,7 +741,9 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\AsyncTasks.cs" />
     <Compile Include="Controllers\HisCentralApiController.cs" />
+    <Compile Include="Controllers\RequestList.cs" />
     <Compile Include="Controllers\WaterOneFlowController.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -729,6 +764,11 @@
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\org.cuahsi.hiscentral\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Service References\wof_1_0\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -763,11 +803,6 @@
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Web References\org.cuahsi.hiscentral\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.map</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -777,24 +812,12 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Service References\org.cuahsi.hiscentral\" />
     <WCFMetadataStorage Include="Service References\wof_1_0\" />
     <WCFMetadataStorage Include="Service References\wof_1_1\" />
   </ItemGroup>
   <ItemGroup>
     <WebReferences Include="Web References\" />
-  </ItemGroup>
-  <ItemGroup>
-    <WebReferenceUrl Include="http://hiscentral.cuahsi.org/webservices/hiscentral.asmx%3fWSDL">
-      <UrlBehavior>Dynamic</UrlBehavior>
-      <RelPath>Web References\org.cuahsi.hiscentral\</RelPath>
-      <UpdateFromURL>http://hiscentral.cuahsi.org/webservices/hiscentral.asmx%3fWSDL</UpdateFromURL>
-      <ServiceLocationURL>
-      </ServiceLocationURL>
-      <CachedDynamicPropName>
-      </CachedDynamicPropName>
-      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
-      <CachedSettingsPropName>Wb_org_cuahsi_hiscentral_hiscentral</CachedSettingsPropName>
-    </WebReferenceUrl>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

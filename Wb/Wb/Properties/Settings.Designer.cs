@@ -22,15 +22,5 @@ namespace Wb.Properties {
                 return defaultInstance;
             }
         }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://hiscentral.cuahsi.org/webservices/hiscentral.asmx")]
-        public string Wb_org_cuahsi_hiscentral_hiscentral {
-            get {
-                return ((string)(this["Wb_org_cuahsi_hiscentral_hiscentral"]));
-            }
-        }
     }
 }

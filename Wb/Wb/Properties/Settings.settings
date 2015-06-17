@@ -1,9 +1,5 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Wb.Properties" GeneratedClassName="Settings">
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)">
   <Profiles />
-  <Settings>
-    <Setting Name="Wb_org_cuahsi_hiscentral_hiscentral" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">http://hiscentral.cuahsi.org/webservices/hiscentral.asmx</Value>
-    </Setting>
-  </Settings>
+  <Settings />
 </SettingsFile>

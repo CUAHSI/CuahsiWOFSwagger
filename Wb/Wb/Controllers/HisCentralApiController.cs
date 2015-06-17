@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Concurrent;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -15,6 +16,8 @@ using Microsoft.Owin;
 //using Wb.hiscentral;
 using Wb.org.cuahsi.hiscentral;
 using hisCentral = Wb.org.cuahsi.hiscentral ;
+using System.Threading.Tasks;
+using System.Threading;
 
 namespace Wb.Controllers
 {
@@ -41,8 +44,8 @@ namespace Wb.Controllers
         private IEnumerable<string> CallGetSearchableConcepts()
         {
             // WCF
-            //hiscentral.hiscentralSoapClient client = new hiscentralSoapClient("hiscentralSoap");
-            var client = new hisCentral.hiscentral();
+            var client = new hiscentralSoapClient("hiscentralSoap");
+            //var client = new hisCentral.hiscentral();
             var respnse = client.GetSearchableConcepts();
 
 
@@ -66,7 +69,7 @@ namespace Wb.Controllers
         [Route("Ontology/{conceptKeyword}")]
         [ActionName("GetSearchableConcepts")]
         [SwaggerDefaultValue("conceptKeyword", "Streamflow")]
-        [ResponseType(typeof (OntologyNode))]
+        [ResponseType(typeof(OntologyNode))]
         public IHttpActionResult GetOntologyTree(string conceptKeyword)
         {
             if (String.IsNullOrWhiteSpace(conceptKeyword))
@@ -96,8 +99,8 @@ namespace Wb.Controllers
         private OntologyNode CallGetOntologyTree(string conceptKeyword)
         {
             // wfc
-            //hiscentral.hiscentralSoapClient client = new hiscentralSoapClient("hiscentralSoap");
-            var client = new hisCentral.hiscentral();
+            var client = new hiscentralSoapClient("hiscentralSoap");
+            //var client = new hisCentral.hiscentral();
 
             var respnse = client.getOntologyTree(conceptKeyword);
 
@@ -121,8 +124,8 @@ namespace Wb.Controllers
 
         private IEnumerable<ServiceInfo> CallGetWaterOneFlowServiceInfo()
         {
-            // hiscentral.hiscentralSoapClient client = new hiscentralSoapClient("hiscentralSoap");
-            var client = new hisCentral.hiscentral();
+            var client = new hiscentralSoapClient("hiscentralSoap");
+            // var client = new hisCentral.hiscentral();
             var respnse = client.GetWaterOneFlowServiceInfo();
             return respnse;
         }
@@ -151,8 +154,8 @@ namespace Wb.Controllers
 
         private IEnumerable<ServiceInfo> CallGetServicesInBox2(float north, float south, float west, float east)
         {
-            // hiscentral.hiscentralSoapClient client = new hiscentralSoapClient("hiscentralSoap");
-            var client = new hisCentral.hiscentral();
+            var client = new hiscentralSoapClient("hiscentralSoap");
+            // var client = new hisCentral.hiscentral();
 
             var respnse = client.GetServicesInBox2(west, south, east, north);
             return respnse;
@@ -184,33 +187,304 @@ namespace Wb.Controllers
         [SwaggerDefaultValue("networkIds", "52")]
         [SwaggerDefaultValue("startTime", "2012-01-01")]
         [SwaggerDefaultValue("endTime", "2012-06-01")]
-
-        public IEnumerable<SeriesRecord> GetWaterOneFlowServiceInfo(float north, float south, float west, float east, DateTime startTime, DateTime endTime, string networkIds="", string conceptKeyword = "", string format = null)
+        //original
+        //public IEnumerable<SeriesRecord> GetWaterOneFlowServiceInfo(float north, float south, float west, float east, DateTime startTime, DateTime endTime, string networkIds="", string conceptKeyword = "", string format = null)
+        //{
+        //    return CallGetSeriesCatalogForBox2(north, south, west, east, networkIds,
+        //        startTime, endTime, conceptKeyword);
+        //}
+        public IEnumerable<SeriesRecord> GetWaterOneFlowServiceInfo(float north, float south, float west, float east, DateTime? startTime, DateTime? endTime, string networkIds = "", string conceptKeyword = "", string format = null)
         {
-            return CallGetSeriesCatalogForBox2(north, south, west, east, networkIds,
-                startTime, endTime, conceptKeyword);
+            ConcurrentBag<SeriesRecord> seriesResponse = new ConcurrentBag<SeriesRecord>();
+
+            CallGetSeriesCatalogForBox3(north, south, west, east, networkIds,
+                 startTime, endTime, conceptKeyword, seriesResponse);
+             return seriesResponse;
         }
 
-        //WCF ASMX call
-//private IEnumerable<SeriesRecord> CallGetSeriesCatalogForBox2(
-//    float north, float south, float west, float east,
-//string conceptKeyword, string networkIds,
-//DateTime beginDate, DateTime endDate)
-//        {
-//            //hiscentral.hiscentralSoapClient client = new hiscentralSoapClient("hiscentralSoap");
-//            var client = new hisCentral.hiscentral();
+        private async void CallGetSeriesCatalogForBox2(float north, float south, float west, float east, string networkIds, DateTime? beginDate, DateTime? endDate, string conceptKeyword, ConcurrentBag<SeriesRecord> result)
+        {
+            ConcurrentBag<SeriesRecord> seriesResponse = new ConcurrentBag<SeriesRecord>();
+            var client = new hiscentralSoapClient("hiscentralSoap");
+            //var client = new hisCentral.hiscentral();
+            var begin = beginDate.HasValue ? beginDate.Value.ToString("yyyy-MM-dd") : "";
+            var end = endDate.HasValue ? endDate.Value.ToString("yyyy-MM-dd") : "";
 
-//            var respnse = client.GetSeriesCatalogForBox2(west,south,east,north,conceptKeyword,
-//                networkIds, beginDate.ToString("yyyy-MM-dd"), endDate.ToString("yyyy-MM-dd"));
-//            return respnse;
-//        }
+            var t = await client.GetSeriesCatalogForBox2Async(north, south, west, east, conceptKeyword,
+                networkIds, begin, end);
+            ProcessSeries(t,
+                 seriesResponse);
+
+
+        }
+
+        private async void CallGetSeriesCatalogForBox3(float north, float south, float west, float east, string networkIds, DateTime? beginDate, DateTime? endDate, string conceptKeyword, ConcurrentBag<SeriesRecord> result)
+         {
+            
+            //var client = new hiscentralSoapClient("hiscentralSoap");
+            //var client = new hisCentral.hiscentral();
+            var begin = beginDate.HasValue ? beginDate.Value.ToString("yyyy-MM-dd") : "";
+            var end = endDate.HasValue ? endDate.Value.ToString("yyyy-MM-dd") : "";
+
+            var requests = inputToRequests(north, south, west, east,
+ networkIds, beginDate, endDate, conceptKeyword);
+            await GetSeries3(requests, result);
+            //var t = await processSeriesRecords(north, south,  west,  east,
+            //    networkIds, begin, end, conceptKeyword);
+            //ProcessSeries3(t,
+            //     result);
+
+
+        }
+        //WCF ASMX call
+        //private IEnumerable<SeriesRecord> CallGetSeriesCatalogForBox2(
+        //    float north, float south, float west, float east,
+        //string conceptKeyword, string networkIds,
+        //DateTime beginDate, DateTime endDate)
+        //        {
+        //            //hiscentral.hiscentralSoapClient client = new hiscentralSoapClient("hiscentralSoap");
+        //            var client = new hisCentral.hiscentral();
+
+        //            var respnse = client.GetSeriesCatalogForBox2(west,south,east,north,conceptKeyword,
+        //                networkIds, beginDate.ToString("yyyy-MM-dd"), endDate.ToString("yyyy-MM-dd"));
+        //            return respnse;
+        //        }
 
         // rewite to use rest
-        private IEnumerable<SeriesRecord> CallGetSeriesCatalogForBox2(float north, float south, float west, float east, string networkIds, DateTime beginDate, DateTime endDate, string conceptKeyword)
+        //private IEnumerable<SeriesRecord> CallGetSeriesCatalogForBox2(float north, float south, float west, float east, string networkIds, DateTime beginDate, DateTime endDate, string conceptKeyword)
+        //{
+        //    //hiscentral.hiscentralSoapClient client = new hiscentralSoapClient("hiscentralSoap");
+        //    // var client = new hisCentral.hiscentral();
+        //    //GET /webservices/hiscentral.asmx/GetSitesInBox2?xmin=string&xmax=string&ymin=string&ymax=string&conceptKeyword=string&networkIDs=string HTTP/1.1
+
+        //    UriBuilder u =
+        //        new UriBuilder("http://hiscentral.cuahsi.org/webservices/hiscentral.asmx/GetSeriesCatalogForBox2?");
+
+        //    string appendstring = "{0}={1}&";
+
+        //    u.Query = string.Format(appendstring, "xmin", west);
+        //    u.Query = u.Query.Substring(1) + string.Format(appendstring, "xmax", east);
+        //    u.Query = u.Query.Substring(1) + string.Format(appendstring, "ymin", south);
+        //    u.Query = u.Query.Substring(1) + string.Format(appendstring, "ymax", north);
+        //    u.Query = u.Query.Substring(1) + string.Format(appendstring, "conceptKeyword", conceptKeyword);
+        //    u.Query = u.Query.Substring(1) + string.Format(appendstring, "networkIds", networkIds);
+        //    u.Query = u.Query.Substring(1) + string.Format(appendstring, "beginDate", beginDate.ToString("yyyy-MM-dd"));
+        //    u.Query = u.Query.Substring(1) + string.Format(appendstring, "endDate", endDate.ToString("yyyy-MM-dd"));
+
+        //    WebRequest request = WebRequest.Create(u.Uri);
+        //    request.Method = "GET";
+
+        //    var xmlSerializer = new XmlSerializer(typeof(ArrayOfSeriesRecord));
+        //    var res = request.GetResponse();
+
+        //    var stream = res.GetResponseStream();
+
+        //    var respnse = (ArrayOfSeriesRecord)xmlSerializer.Deserialize(stream);
+        //    //var respnse = client.GetSeriesCatalogForBox2(west, south, east, north, conceptKeyword,
+        //    //    networkIds, beginDate.ToString("yyyy-MM-dd"), endDate.ToString("yyyy-MM-dd"));
+
+
+
+        //    return respnse.seriesResponse;
+        //}
+
+        [XmlRoot("ArrayOfSeriesRecord", Namespace = "http://hiscentral.cuahsi.org/20100205/")]
+        // [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://hiscentral.cuahsi.org/20100205/")]
+        public class ArrayOfSeriesRecord
         {
-            //hiscentral.hiscentralSoapClient client = new hiscentralSoapClient("hiscentralSoap");
-            // var client = new hisCentral.hiscentral();
-            //GET /webservices/hiscentral.asmx/GetSitesInBox2?xmin=string&xmax=string&ymin=string&ymax=string&conceptKeyword=string&networkIDs=string HTTP/1.1
+            [XmlElement("SeriesRecord")]
+            public SeriesRecord[] seriesResponse { get; set; }
+        }
+        private List<HisCentralRequest> inputToRequests(float north, float south, float west, float east,
+            string networkIds, DateTime? beginDate, DateTime? endDate, string conceptKeyword)
+        {
+            List<HisCentralRequest> requests = new List<HisCentralRequest>();
+            List<int> networks = new List<int>() ;
+            List<string> concepts = new List<string>();
+            
+            DateTimeOffset begin;
+            DateTimeOffset end;
+            if (!string.IsNullOrEmpty(networkIds))
+            {
+                var networkStrings = networkIds.Split(',');
+                foreach (var n in networkStrings)
+                {
+                    int nn;
+                    if (int.TryParse(n, out nn)) { networks.Add(nn); }
+                }
+            }
+            //var beginValid = DateTimeOffset.TryParse(beginDate, out begin);
+            //var endValid = DateTimeOffset.TryParse(endDate, out end);
+            if (!string.IsNullOrEmpty(networkIds))
+            {
+                concepts = conceptKeyword.Split(',').ToList<string>();
+            }
+            var boundingBoxes = createBoxes(new Bbox { North = north, South = south, West = west, East = east });
+            foreach (var box in boundingBoxes)
+            {
+                var localList = new List<HisCentralRequest>();
+                var hisRequest = new HisCentralRequest { Box = box };
+                localList.Add(hisRequest);
+                localList = addConcepts(localList, concepts);
+                localList = addNetworks(localList, networks);
+                localList = addDateTime(localList, beginDate, endDate);
+
+                requests.AddRange(localList);
+    
+            }
+            return requests;
+        }
+        private List<HisCentralRequest> addDateTime(List<HisCentralRequest> hisRequests, DateTime? beginDate, DateTime? endDate)
+        {
+            hisRequests.ForEach(h => h.Begin = beginDate);
+            hisRequests.ForEach(h => h.End = endDate);
+            return hisRequests;
+        }
+        private List<HisCentralRequest> addConcepts(List<HisCentralRequest> hisRequests, List<string> concepts)
+        {
+            if (hisRequests == null) return null;
+
+            if (concepts == null || concepts.Count == 0)
+            {
+                return hisRequests;
+            }
+            
+            var newRequests = new List<HisCentralRequest>();
+
+            foreach (var hr in hisRequests)
+            {
+
+                foreach (var c in concepts)
+                {
+                    var x = hr.ShallowCopy();
+                    x.Concept = c;
+                    newRequests.Add(x);
+                }
+            }
+            return newRequests;
+
+        }
+
+        private List<HisCentralRequest> addNetworks(List<HisCentralRequest> hisRequests, List<int> networks)
+        {
+            if (hisRequests == null) return null;
+
+            if (networks == null || networks.Count == 0)
+            {
+                return hisRequests;
+            }
+
+            var newRequests = new List<HisCentralRequest>();
+
+            foreach (var hr in hisRequests)
+            {
+
+                foreach (var c in networks)
+                {
+                    var x = hr.ShallowCopy();
+                    x.Network = c;
+                    newRequests.Add(x);
+                }
+            }
+            return newRequests;
+
+        }
+        
+
+        private List<Bbox> createBoxes(Bbox fullExtent)
+        {
+            var tileWidth = 1.0;
+            var tileHeight = 1.0; 
+            var tiles = new List<Bbox>();
+            double fullWidth = Math.Abs(fullExtent.North - fullExtent.South);
+            double fullHeight = Math.Abs(fullExtent.East - fullExtent.West);
+
+            if (fullWidth < tileWidth || fullHeight < tileHeight)
+            {
+                tiles.Add(fullExtent);
+                return tiles;
+            }
+
+            double yll = fullExtent.South; //y-coordinate of the tile's lower left corner
+            var numColumns = (int)(Math.Ceiling(fullWidth / tileWidth));
+            var numRows = (int)(Math.Ceiling(fullHeight / tileHeight));
+            var lastTileWidth = fullWidth - ((numColumns - 1) * tileWidth);
+            var lastTileHeight = fullHeight - ((numRows - 1) * tileHeight);
+            int r;
+
+            for (r = 0; r < numRows; r++)
+            {
+                double xll = fullExtent.West; //x-coordinate of the tile's lower left corner
+
+                if (r == numRows - 1)
+                {
+                    tileHeight = lastTileHeight;
+                }
+
+                int c;
+                for (c = 0; c < numColumns; c++)
+                {
+                    var newTile = c == (numColumns - 1) ? new Bbox{West=xll,South=yll,East=xll + lastTileWidth, North=yll + tileHeight} :
+                                                          new Bbox{West=xll,South=yll,East= xll + tileWidth,North=yll + tileHeight };
+                    tiles.Add(newTile);
+                    xll = xll + tileWidth;
+                }
+                yll = yll + tileHeight;
+            }
+            return tiles;
+
+        }
+
+
+        private class Bbox
+        {
+            public double East;
+            public double West;
+            public double North;
+            public double South;
+
+            public Bbox()
+            { }
+
+            public Bbox (Bbox box)
+            {
+                this.East = box.East;
+                this.West = box.West;
+                this.North = box.North;
+                this.South = box.South;
+                
+            }
+
+        }
+        private class HisCentralRequest
+        {
+            public Bbox Box;
+            public string Concept;
+            public Int32? Network;
+            public DateTimeOffset? Begin;
+            public  DateTimeOffset? End;
+
+            public HisCentralRequest ShallowCopy()
+            {
+                return (HisCentralRequest)this.MemberwiseClone();
+            }
+
+            public HisCentralRequest DeepCopy()
+            {
+                HisCentralRequest other = (HisCentralRequest)this.MemberwiseClone();
+                other.Box = new Bbox(Box);
+
+                return other;
+            }
+        }
+
+
+
+
+
+        private async Task<IEnumerable<SeriesRecord>> processSeriesRecords(double north, double south, double west, double east,
+            string networkIds, string beginDate, string endDate, string conceptKeyword)
+        {
 
             UriBuilder u =
                 new UriBuilder("http://hiscentral.cuahsi.org/webservices/hiscentral.asmx/GetSeriesCatalogForBox2?");
@@ -223,8 +497,8 @@ namespace Wb.Controllers
             u.Query = u.Query.Substring(1) + string.Format(appendstring, "ymax", north);
             u.Query = u.Query.Substring(1) + string.Format(appendstring, "conceptKeyword", conceptKeyword);
             u.Query = u.Query.Substring(1) + string.Format(appendstring, "networkIds", networkIds);
-            u.Query = u.Query.Substring(1) + string.Format(appendstring, "beginDate", beginDate.ToString("yyyy-MM-dd"));
-            u.Query = u.Query.Substring(1) + string.Format(appendstring, "endDate", endDate.ToString("yyyy-MM-dd"));
+            u.Query = u.Query.Substring(1) + string.Format(appendstring, "beginDate", beginDate);
+            u.Query = u.Query.Substring(1) + string.Format(appendstring, "endDate", endDate);
 
             WebRequest request = WebRequest.Create(u.Uri);
             request.Method = "GET";
@@ -235,21 +509,106 @@ namespace Wb.Controllers
             var stream = res.GetResponseStream();
 
             var respnse = (ArrayOfSeriesRecord)xmlSerializer.Deserialize(stream);
-            //var respnse = client.GetSeriesCatalogForBox2(west, south, east, north, conceptKeyword,
-            //    networkIds, beginDate.ToString("yyyy-MM-dd"), endDate.ToString("yyyy-MM-dd"));
-
             return respnse.seriesResponse;
+
         }
 
-        [XmlRoot("ArrayOfSeriesRecord", Namespace = "http://hiscentral.cuahsi.org/20100205/")]
-       // [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://hiscentral.cuahsi.org/20100205/")]
-        public class ArrayOfSeriesRecord
+        private async Task GetSeries3(List<HisCentralRequest> urlList, ConcurrentBag<SeriesRecord> series)
         {
-            [XmlElement("SeriesRecord")]
-            public SeriesRecord[] seriesResponse { get; set; }
+            //ConcurrentBag<SeriesRecord> series = new ConcurrentBag<SeriesRecord>();
+
+            List<Task<IEnumerable<SeriesRecord>>> tasks = new List<Task<IEnumerable<SeriesRecord>>> ();
+           foreach ( var  hir in urlList) {
+               //tasks.Add( processSeriesRecords(u) );
+               tasks.Add(processSeriesRecords(hir.Box.North, hir.Box.South, hir.Box.West, hir.Box.East,
+             hir.Network.ToString(),
+             hir.Begin.HasValue ? hir.Begin.Value.ToString("yyyy-MM-dd") : "",
+             hir.End.HasValue ? hir.End.Value.ToString("yyyy-MM-dd") : "", 
+             hir.Concept));
+           }
+           
+            //foreach (var t in tasks){
+               
+            //   try { ProcessSeries3(await t, series); }
+            //   catch (OperationCanceledException) { }
+            //   //catch (Exception exc) { Handle(exc); }
+            //  };
+
+           foreach (var bucket in AsyncTask.Interleaved(tasks))
+           {
+               var t = await bucket;
+               try { ProcessSeries3(await t, series); }
+               catch (OperationCanceledException) { }
+               //catch (Exception exc) { Handle(exc); }
+           }
         }
-       
-      
-        
+
+        private void ProcessSeries(GetSeriesCatalogForBox2Response t, ConcurrentBag<SeriesRecord> series)
+        {
+
+            var s = t.GetSeriesCatalogForBox2Result;
+            series.Union(s);
+
+        }
+        private void ProcessSeries3(IEnumerable<SeriesRecord> t, ConcurrentBag<SeriesRecord> series)
+        {
+
+            if (t != null) { 
+               // does not work for some reason
+                //http://stackoverflow.com/questions/10177768/concurrentbag-add-multiple-items
+              //series.Concat<SeriesRecord>(t.AsEnumerable<SeriesRecord>()); 
+                t.AsParallel().ForAll(i => series.Add(i));
+                
+                //foreach (var item in t)
+                //{
+                //    series.Add(item);
+                //}
+            }
+            
+
+        }
+        //private void Process(Task<ArrayOfSeriesRecord> t, IEnumerable<SeriesRecord> series){
+        //    ArrayOfSeriesRecord aa = (ArrayOfSeriesRecord) t.Result;
+        //    series.Union(t.Result.seriesResponse);
+
+        //}
+
+
+
+
+
+        public static class AsyncTask
+        {
+            /* Async tasks. We need to get 1 degree tiles for best performance
+             * from http://blogs.msdn.com/b/pfxteam/archive/2012/08/02/processing-tasks-as-they-complete.aspx
+             * */
+
+
+            public static Task<Task<T>>[] Interleaved<T>(IEnumerable<Task<T>> tasks)
+            {
+                var inputTasks = tasks.ToList();
+
+                var buckets = new TaskCompletionSource<Task<T>>[inputTasks.Count];
+                var results = new Task<Task<T>>[buckets.Length];
+                for (int i = 0; i < buckets.Length; i++)
+                {
+                    buckets[i] = new TaskCompletionSource<Task<T>>();
+                    results[i] = buckets[i].Task;
+                }
+
+                int nextTaskIndex = -1;
+                Action<Task<T>> continuation = completed =>
+                {
+                    var bucket = buckets[Interlocked.Increment(ref nextTaskIndex)];
+                    bucket.TrySetResult(completed);
+                };
+
+                foreach (var inputTask in inputTasks)
+                    inputTask.ContinueWith(continuation, CancellationToken.None, TaskContinuationOptions.ExecuteSynchronously, TaskScheduler.Default);
+
+                return results;
+            }
+        }
+
     }
 }
