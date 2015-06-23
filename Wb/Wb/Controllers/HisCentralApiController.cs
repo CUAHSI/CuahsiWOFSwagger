@@ -18,6 +18,7 @@ using Wb.org.cuahsi.hiscentral;
 using hisCentral = Wb.org.cuahsi.hiscentral ;
 using System.Threading.Tasks;
 using System.Threading;
+using System.Runtime.Caching;
 
 namespace Wb.Controllers
 {
@@ -25,6 +26,10 @@ namespace Wb.Controllers
 
     public class HisCentralApiController : ApiController
     {
+        ObjectCache cache = MemoryCache.Default;
+        int pagesize = 1000;
+ 
+
         // GET: api/HisCentral
         /// <summary>
         /// Get Listing of Searchable Concepts
@@ -193,13 +198,38 @@ namespace Wb.Controllers
         //    return CallGetSeriesCatalogForBox2(north, south, west, east, networkIds,
         //        startTime, endTime, conceptKeyword);
         //}
-        public IEnumerable<SeriesRecord> GetWaterOneFlowServiceInfo(float north, float south, float west, float east, DateTime? startTime, DateTime? endTime, string networkIds = "", string conceptKeyword = "", string format = null)
+        public IEnumerable<SeriesRecord> GetWaterOneFlowServiceInfo(float north, float south, float west, float east, DateTime? startTime, DateTime? endTime, string networkIds = "", string conceptKeyword = "", 
+            string format = null, int? page = null)
         {
-            ConcurrentBag<SeriesRecord> seriesResponse = new ConcurrentBag<SeriesRecord>();
+            string cacheHashString = "series:box({0},{1},{2},{3}):{4}:{5}:{6}/{7}";
+            string cacheKey = string.Format(cacheHashString, south, east, north, west, 
+                networkIds, 
+                conceptKeyword, 
+                startTime.HasValue ? startTime.Value.ToString("yyyy-MM-dd") : "",
+                endTime.HasValue ? endTime.Value.ToString("yyyy-MM-dd") : "");
+            ConcurrentBag<SeriesRecord> seriesResponse = cache[cacheKey] as ConcurrentBag<SeriesRecord>;
+            if (seriesResponse == null)
+            {
+                seriesResponse = new ConcurrentBag<SeriesRecord>();
 
-            CallGetSeriesCatalogForBox3(north, south, west, east, networkIds,
-                 startTime, endTime, conceptKeyword, seriesResponse);
-             return seriesResponse;
+                CallGetSeriesCatalogForBox3(north, south, west, east, networkIds,
+                     startTime, endTime, conceptKeyword, seriesResponse);
+                // cache
+                CacheItemPolicy policy = new CacheItemPolicy();
+                policy.AbsoluteExpiration = 
+                    DateTimeOffset.Now.AddMinutes(60.0);
+                cache.Set(cacheKey, seriesResponse,policy);
+
+            }
+            if (seriesResponse.Count > pagesize)
+            {
+                var paged =  page.HasValue ? page.Value * pagesize : 0;    
+                return seriesResponse.Skip(paged).Take(pagesize);
+            }
+            else
+            {
+                return seriesResponse;
+            }
         }
 
         private async void CallGetSeriesCatalogForBox2(float north, float south, float west, float east, string networkIds, DateTime? beginDate, DateTime? endDate, string conceptKeyword, ConcurrentBag<SeriesRecord> result)
