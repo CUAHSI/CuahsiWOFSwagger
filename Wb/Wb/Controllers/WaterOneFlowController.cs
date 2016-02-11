@@ -90,22 +90,23 @@ namespace Wb.Controllers
         [SwaggerEnumValue("servUrl", BaseWOfURL)]
         [SwaggerEnumValue("servUrl", BaseWOfURL_2)]
         [ResponseType(typeof(IEnumerable<SiteInfoResponseTypeSite>))]
-        public IHttpActionResult GetSiteInfo([FromUri] string[] station, [FromUri] String servUrl = null, string format = null)
+        public IHttpActionResult GetSiteInfo([FromUri] string station, [FromUri] String servUrl = null, string format = null)
         {
             if (station.Length == 0)
             {
                 return BadRequest("Must submit a site code");
 
             }
-            foreach  (var s in station)
-            {
-                if (String.IsNullOrWhiteSpace(s))
+            //foreach  (var s in station)
+            //{
+            //    if (String.IsNullOrWhiteSpace(s))
                 
-                {
-                    station = station.Where(val => val != s).ToArray();
-                }
-            }
-            if (station.Length == 0)
+            //    {
+            //        station = station.Where(val => val != s).ToArray();
+            //    }
+            //}
+            //if (station.Length == 0)
+            if (String.IsNullOrEmpty(station))
             {
                 return BadRequest("No valid station codes. All empty.");
 
@@ -134,14 +135,22 @@ namespace Wb.Controllers
             }
             
         }
-        private IEnumerable<SiteInfoResponseTypeSite> CallGetSiteInfo(string[] sites, string servUrl)
+        // GetSiteInfoMultpleObject broken
+        //private IEnumerable<SiteInfoResponseTypeSite> CallGetSiteInfo(string[] sites, string servUrl)
+        //{
+        //    wof_1_1.WaterOneFlowClient client = getClientForURL(servUrl);
+
+        //    var respnse = client.GetSiteInfoMultpleObject(sites, null);
+        //    return respnse.site;
+        //}
+
+        private IEnumerable<SiteInfoResponseTypeSite> CallGetSiteInfo(string site, string servUrl)
         {
             wof_1_1.WaterOneFlowClient client = getClientForURL(servUrl);
 
-            var respnse = client.GetSiteInfoMultpleObject(sites, null);
+            var respnse = client.GetSiteInfoObject(site, null);
             return respnse.site;
         }
-
         /// <summary>
         /// Get Variables
         /// </summary>
